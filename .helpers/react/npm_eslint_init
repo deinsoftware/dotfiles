@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "\e[32m❯ \e[33mLinters...\e[0m"
+npm i -D eslint
+npx eslint --init

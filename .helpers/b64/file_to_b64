@@ -1,0 +1,34 @@
+#!/bin/bash
+
+while getopts ":e:p:" opt; do
+    case $opt in
+        e) ext="${OPTARG}"
+        ;;
+        p) path="${OPTARG}"
+        ;;
+        \?) echo "Invalid option -${OPTARG}" >&2
+        exit 1
+        ;;
+    esac
+done
+
+if [ -z ${ext} ]; then
+    echo "ERROR: Extension is missing"
+    exit 1
+fi
+
+if [ ! -z ${path} ]; then
+    path="${path}/"
+fi
+
+for file in ${path}*.${ext}; do
+    [ -e "${file}" ] || continue
+    filename=${file%%.*}
+
+    if [ -f ${filename}.b64 ]; then
+        rm -r ${filename}.b64
+    fi
+    base64 ${file} > ${filename}.b64
+
+    echo "SUCCESS: '${filename}.b64' file was created"
+done

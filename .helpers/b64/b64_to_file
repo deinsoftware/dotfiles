@@ -1,0 +1,34 @@
+#!/bin/bash
+
+while getopts ":p:" opt; do
+    case $opt in
+        p) path="${OPTARG}"
+        ;;
+        \?) echo "Invalid option -${OPTARG}" >&2
+        exit 1
+        ;;
+    esac
+done
+
+if [ ! -z ${path} ]; then
+    path="${path}/"
+fi
+
+for file in ${path}*.b64; do
+    [ -e "$file" ] || continue
+    filename=${file%%.*}
+    
+    base64 --decode --ignore-garbage ${file} > ${filename}.tmp
+    ext=$(file -b --mime-type ${filename}.tmp | cut -d'/' -f2)
+
+    if [ ! -z ${ext} ]; then
+        if [ -f ${filename}.${ext} ]; then
+            rm -r ${filename}.${ext}
+        fi
+        mv ${filename}.tmp ${filename}.${ext}
+
+        echo "SUCCESS: '${filename}.${ext}' file was created"
+    else
+        echo "ERROR: '${filename}.b64' has no mime-type"
+    fi
+done

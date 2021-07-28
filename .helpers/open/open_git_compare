@@ -1,0 +1,15 @@
+#!/bin/bash
+
+local base="dev" #default base branch
+if [[ ! -z $1 ]]; then
+base="$1"
+fi
+
+local url="$( git config remote.origin.url )"
+local current="$( git branch --show-current )"
+if [ "$current" != "${base}" ]; then
+url="${url}/compare/${base}...${current}"
+else
+url="${url}/compare/${base}..."
+fi
+${OPEN} ${url}

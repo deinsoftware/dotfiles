@@ -1,0 +1,13 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!.aliases
+!.hooks
+!LICENSE
+!README.md
+
+# And not this folders
+!.helpers
+!.helpers/**

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+[[ $# -eq 0 ]] && Return
+NAME=${1}
+TEMPLATE=${2---template react-ts}
+echo "\e[32m❯ \e[33mCreating...\e[0m"
+eval "npm init @vitejs/app ${NAME} ${TEMPLATE}"
+echo "\e[32m❯ \e[33mChanging dir...\e[0m"
+cd $NAME
+echo "\e[32m❯ \e[33mInstalling...\e[0m"
+npm i
+nei
+echo "\e[32m❯ \e[33mOpening...\e[0m"
+code .
+echo "\e[32m❯ \e[33mRuning dev...\e[0m"
+npm run dev

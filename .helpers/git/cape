@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cake "$@"
+echo "\e[32m❯ \e[33mInstalling...\e[0m"
+npm i
+echo "\e[32m❯ \e[33mOpening...\e[0m"
+code .

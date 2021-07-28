@@ -1,0 +1,31 @@
+#!/bin/bash
+
+while getopts ":e:p:" opt; do
+    case $opt in
+        e) ext="${OPTARG}"
+        ;;
+        p) path="${OPTARG}"
+        ;;
+        \?) echo "Invalid option -${OPTARG}" >&2
+        exit 1
+        ;;
+    esac
+done
+
+[[ $# -eq 0 ]] && return
+local last="${@: -1}"
+local rest="${@:1:${#}-1}"
+local cmd=""
+local dir="$(basename "$1" .git)"
+if [[ -z $rest ]]; then
+    cmd="$last"
+else
+    cmd="$rest $last"
+    if [[ !"$last" =~ ^"-" ]]; then
+        dir="$last"
+    fi
+fi
+echo "\e[32m❯ \e[33mCloning...\e[0m"
+git clone $cmd
+echo "\e[32m❯ \e[33mChanging dir...\e[0m"
+cd $dir

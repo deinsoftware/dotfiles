@@ -1,0 +1,122 @@
+# Hooks
+local quit="y"
+local cmd=""
+local cmd_alias=""
+
+# Reveal Executed Alias
+alias_for() {
+  [[ $1 =~ '[[:punct:]]' ]] && return
+  local search=$(echo "$1" | awk '{print $1;}')
+  local found="$( alias $search )"
+  if [[ -n $found ]]; then
+    found=${found//\\//} # Replace backslash with slash
+    found=${found%\'} # Remove end single quote
+    found=${found#"$search='"} # Remove alias name
+    echo "${found}" # Return found value
+  else
+    echo ""
+  fi
+}
+# TODO: add rest parameters on alias that include params
+
+expand_command_line() {
+  cmd_alias="$(alias_for $1)" # Check if there's an alias for the command
+  if [[ -n $cmd_alias ]]; then # If there was
+    echo "\e[32m❯ \e[33m${cmd_alias}\e[0m" # Print it
+  fi
+}
+
+danger(){
+  echo "\e[41m\e[97mDANGER:\e[0m Are you sure? really?"
+  echo "\e[32m[ANY] = Continue \e[0m| \e[31m[Ctrl+c] = Cancel \e[0m"
+  read -sk key
+  quit="n"
+}
+
+danger_validation(){
+  local cmd_current=$(echo $1 | xargs)
+
+  if [[ "$cmd_current" =~ ^"rm -rf /" ]]; then
+    danger
+  elif [[ "$cmd_current" =~ ^"git reset --hard HEAD" ]] || [[ "$cmd_current" =~ ^"guc" ]]; then
+    danger
+  elif [[ "$cmd_current" =~ ^"git clean -f -d -x" ]] || [[ "$cmd_current" =~ ^"gcc" ]]; then
+    danger
+  fi
+}
+
+cancel(){
+  echo "\e[43m\e[30mALERT:\e[0m Did you run \e[1m'$1'\e[0m command before?"
+  echo "\e[32m[ANY] = Continue \e[0m| \e[31m[Ctrl+c] = Cancel \e[0m"
+  read -sk key
+  quit="n"
+}
+
+before_validation(){
+  local cmd_validation=""
+  local cmd_previous=$(fc -ln -1 | xargs) # Get previous command from history
+  local cmd_previous_alias="$(alias_for ${cmd_previous})" # Check if there's an alias for the command
+  if [[ -n $cmd_previous_alias ]]; then # If there was
+    cmd_previous="${cmd_previous_alias}"
+  fi
+  local cmd_current=$(echo $1 | xargs)
+  
+  if [[ "$cmd_current" =~ ^"npm publish" ]] || [[ "${cmd_alias}" =~ ^"npm publish" ]]; then
+    cmd_validation="npm run build"
+  elif [[ "$cmd_current" =~ ^"git checkout" ]] || [[ "${cmd_alias}" =~ ^"git checkout" ]]; then
+    cmd_validation="git pull"
+  fi
+
+  if [[ ! -z $cmd_validation ]]; then
+    if [[ "${cmd_validation}" != "${cmd_previous}" ]]; then
+      cancel $cmd_validation # show cancel alert if is not the previous
+    fi
+  else
+    quit="n"
+  fi
+}
+
+pre_validation() {
+  quit="y" && cmd=""
+  [[ $# -eq 0 ]] && return # If there's no input, return. Else...
+  cmd="$1" # Save global for after validation
+  expand_command_line "$@"
+  danger_validation "$@"
+  before_validation "$@"
+}
+
+run(){
+  echo "\e[43m\e[30mALERT:\e[0m Do you want to run \e[1m'$1'\e[0m command after?"
+  echo "\e[32m[Y] = Yes \e[0m| \e[31m[ANY] = Cancel \e[0m"
+  read -sk key
+  if [[ "$key" == "y" ]] || [[ "$key" == "Y" ]]; then
+    echo "\e[32m❯ \e[33mRunning...\e[0m"
+    eval $1
+  fi
+}
+
+after_validation(){
+  if [[ "$cmd" =~ ^"git pull" ]] || [[ "$cmd" =~ ^"gl" ]] && [[ !"$cmd" =~ ^"glog" ]]; then
+    run "rap"
+  elif [[ "$cmd" =~ ^"git pull origin" ]] || [[ "$cmd" =~ ^"gl origin" ]]; then
+    run "rap"
+  elif [[ "$cmd" =~ ^"git checkout -b " ]] || [[ "$cmd" =~ ^"gcb " ]]; then
+    run "gpsup && git pull && rap"
+  elif [[ "$cmd" =~ ^"git checkout" ]] || [[ "$cmd" =~ ^"gco" ]] || [[ "$cmd" =~ ^"gcd" ]]; then
+    run "git pull && rap"
+  fi
+}
+
+pos_validation() {
+  [[ -z $cmd ]] && return # If there's no cmd, return. Else...
+  if [[ "$quit" == "n" ]]; then
+    after_validation
+  fi
+  quit="y"
+}
+
+autoload -U add-zsh-hook                  # Load the zsh hook module
+add-zsh-hook preexec pre_validation       # Adds the pre hook
+add-zsh-hook precmd pos_validation        # Adds the pos hook
+# add-zsh-hook -d preexec pre_validation  # Remove it for this hook
+# add-zsh-hook -d precmd pos_validation   # Remove it for this hook

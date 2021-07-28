@@ -1,0 +1,78 @@
+alias c="clear"
+alias x="exit"
+alias e="code -n ~/.zshrc"
+alias m="cmatrix"
+alias r="source ~/.zshrc"
+alias t="htop"
+alias d="ncdu --exclude /mnt --color dark " # +path
+
+alias h="history -10"
+alias hc="history -c"
+alias hg="history | grep " # +command
+alias ag="alias | grep " # +command
+
+alias rnm="rm -rf node_modules"
+alias rbn="rm -rf build node_modules"
+alias rap="rm -rf build coverage node_modules package-lock.json && npm i"
+
+alias gcum="git config user.name \"${GIT_USER_NAME}\" && git config user.email \"${GIT_USER_EMAIL}\""
+alias gcu="git config credential.username \"${GIT_USER_NAME}\""
+alias ghcum="git config user.name \"${GITHUB_USER_NAME}\" && git config user.email \"${GITHUB_USER_EMAIL}\""
+alias ghcu="git config credential.username \"${GITHUB_USER_NAME}\""
+alias gcg="git config --edit --global"
+alias gcl="git config --edit --local"
+alias guc="git reset --hard HEAD" # undo changes and preserve untracked files
+alias gcc="git clean -f -d -x" # clean ALL changes and remove untracked files
+alias gcd="git checkout dev"
+alias glod="git pull origin dev"
+alias gpnv="git push --no-verify"
+
+alias b2f="b64_to_file"
+alias f2b="file_to_b64"
+
+alias nei="npm_eslint_init"
+alias cra="create_react_app"
+alias vra="vite_react_app"
+
+alias npk="npx npkill" #clean unused node_modules
+alias nlg="npm list -g --depth 0" #list global packages installed
+
+alias ni="npm i"
+alias nis="npm i -S " # +package@version
+alias nise="npm i -S -E " # +package@version
+alias nid="npm i -D " # +package@version
+alias nide="npm i -D -E " # +package@version
+alias nr="npm r " # +package@version
+
+alias nrb="npm run build"
+alias nrbd="npm run build:dev"
+alias nrd="npm run deploy"
+alias nrs="npm run start"
+alias nrsd="npm run start:dev"
+alias nrsq="npm run start:qa"
+alias nrt="npm run test"
+alias nrtc="npm run test:c"
+alias nrtcw="npm run test:cw"
+alias nrtu="npm run test:u"
+
+alias np="npm publish"
+alias nu="npm unpublish " # +package@version
+
+alias si="sls info"
+alias sd="sls deploy"
+alias sdf="sls deploy -f " # +function_name
+alias sos="serverless offline start"
+
+alias o="${OPEN} ." # open current folder
+alias obf="${OPEN} \".\\build\"" # open build folder
+alias ocr="${OPEN} \".\\coverage\\lcov-report\\index.html\"" # browse coverage
+alias ogr="${OPEN} \"$(git config remote.origin.url)\"" # browse git repo
+alias ogp="${OPEN} \"$(git config remote.origin.url)/pulls\"" # browse git repo pulls
+alias ogc="open_git_compare " # +base branch
+alias onp="${OPEN} \"https://www.npmjs.com/package/$(npm show ./ name --silent)\"" #browse npm package
+alias onc="open_npm_clipboard"
+
+# Image Optimizer
+alias iow="npx @squoosh/cli --webp auto " # +file-name
+alias ioa="npx @squoosh/cli --avif auto " # +file-name
+alias iop="npx @squoosh/cli --oxipng auto " # +file-name
