@@ -35,6 +35,14 @@ if [ -f ~/.hooks ]; then
 fi
 ```
 
+Add execution permission:
+
+```bash
+chmod +x chmod +x ~/.helpers/**/*
+```
+
+
+
 Once finish, reopen all terminals or update his source running `source ~/.zshrc` command and now you can use it.
 
 ## Article Series
