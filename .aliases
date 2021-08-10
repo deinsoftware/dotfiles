@@ -1,6 +1,6 @@
 alias c="clear"
 alias x="exit"
-alias e="code -n ~/.zshrc"
+alias e="code -n ~/"
 alias m="cmatrix"
 alias r="source ~/.zshrc"
 alias t="htop"
@@ -35,6 +35,7 @@ alias cra="create_react_app"
 alias vra="vite_react_app"
 
 alias npk="npx npkill" #clean unused node_modules
+alias nkp="npx kill-port " # +portnumber
 alias nlg="npm list -g --depth 0" #list global packages installed
 
 alias ni="npm i"

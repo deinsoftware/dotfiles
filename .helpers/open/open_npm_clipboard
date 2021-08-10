@@ -1,7 +1,7 @@
 #!/bin/bash
 
-local url="https://www.npmjs.com/package"
-local clipboard="$( powershell.exe -Command get-clipboard )"
+url="https://www.npmjs.com/package"
+clipboard="$( powershell.exe -Command get-clipboard )"
 if [[ -n $clipboard ]]; then
 url="$url/$clipboard"
 fi
