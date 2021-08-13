@@ -4,10 +4,12 @@
 export F_RESET='\e[0m' # Reset All
 export F_BOLD='\e[1m'
 export F_DIM='\e[2m'
+export F_ITALIC='\e[3m'
 export F_UNDERLINE='\e[4m'
 export F_BLINK='\e[5m'
 export F_INVERT='\e[7m'
 export F_HIDDEN='\e[8m'
+export F_STRIKETHROUGH='\e[9m'
 
 # Text
 export T_NC='\e[39m' # No Color
