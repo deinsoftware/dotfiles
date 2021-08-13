@@ -4,6 +4,7 @@
 # But not these files...
 !.gitignore
 !.aliases
+!.colors
 !.hooks
 !LICENSE
 !README.md
@@ -11,3 +12,5 @@
 # And not this folders
 !.helpers
 !.helpers/**
+!.cheatsheet
+!.cheatsheet/**

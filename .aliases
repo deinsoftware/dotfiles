@@ -1,6 +1,6 @@
 alias c="clear"
 alias x="exit"
-alias e="code -n ~/"
+alias e="code -n ~/ ~/.zshrc ~/.aliases ~/.hooks"
 alias m="cmatrix"
 alias r="source ~/.zshrc"
 alias t="htop"
@@ -29,6 +29,10 @@ alias gpnv="git push --no-verify"
 
 alias b2f="b64_to_file"
 alias f2b="file_to_b64"
+
+alias mdv="md_viewer -s " +cheatsheet name
+alias mdvg="md_viewer -s git"
+alias mdvt="md_viewer -s test"
 
 alias nei="npm_eslint_init"
 alias cra="create_react_app"

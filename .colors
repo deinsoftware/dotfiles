@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# Format
+export F_RESET='\e[0m' # Reset All
+export F_BOLD='\e[1m'
+export F_DIM='\e[2m'
+export F_UNDERLINE='\e[4m'
+export F_BLINK='\e[5m'
+export F_INVERT='\e[7m'
+export F_HIDDEN='\e[8m'
+
+# Text
+export T_NC='\e[39m' # No Color
+export T_BLACK="\e[30m"
+export T_RED="\e[31m"
+export T_GREEN="\e[32m"
+export T_YELLOW="\e[33m"
+export T_BLUE="\e[34m"
+export T_MAGENTA="\e[35m"
+export T_CYAN="\e[36m"
+export T_LGRAY="\e[37m"
+export T_GRAY="\e[90m"
+export T_LRED="\e[91m"
+export T_LGREEN="\e[92m"
+export T_LYELLOW="\e[93m"
+export T_LBLUE="\e[94m"
+export T_LMAGENTA="\e[95m"
+export T_LCYAN="\e[96m"
+export T_WHITE="\e[97m"
+
+# Background
+export B_NC='\e[49m' # No Color
+export B_BLACK='\e[40m'
+export B_RED='\e[41m'
+export B_GREEN='\e[42m'
+export B_YELLOW='\e[43m'
+export B_BLUE='\e[44m'
+export B_MAGENTA='\e[45m'
+export B_CYAN='\e[46m'
+export B_LGRAY='\e[47m'
+export B_GRAY='\e[100m'
+export B_LRED='\e[101m'
+export B_LGREEN='\e[102m'
+export B_LYELLOW='\e[103m'
+export B_LBLUE='\e[104m'
+export B_MAGENTA='\e[105m'
+export B_LCYAN='\e[106m'
+export B_WHITE='\e[107m'
+
+# Source: https://misc.flogisoft.com/bash/tip_colors_and_formatting

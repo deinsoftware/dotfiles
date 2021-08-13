@@ -1,0 +1,11 @@
+#!/bin/bash
+
+line="$1"
+
+# |title|
+line="${line/#\|/"|«"}"
+line="${line/%\|/"|»"}"
+line=${line//«/${F_BOLD}${B_BLACK}${T_WHITE}}
+line=${line//»/${F_RESET}}
+
+echo -e "${line}"

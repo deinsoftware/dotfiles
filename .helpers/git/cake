@@ -25,7 +25,7 @@ else
         dir="$last"
     fi
 fi
-echo "\e[32m❯ \e[33mCloning...\e[0m"
+echo "${T_GREEN}❯ ${T_YELLOW}Cloning...${f_reset}"
 git clone $cmd
-echo "\e[32m❯ \e[33mChanging dir...\e[0m"
+echo "${T_GREEN}❯ ${T_YELLOW}Changing dir...${f_reset}"
 cd $dir

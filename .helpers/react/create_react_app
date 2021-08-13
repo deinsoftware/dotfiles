@@ -1,12 +1,12 @@
 #!/bin/bash
 
-[[ $# -eq 0 ]] && Return
+[[ $# -eq 0 ]] && return
 NAME=${1}
 OPTIONS=${2---use-npm}
-echo "\e[32m❯ \e[33mCreating...\e[0m"
+echo "${T_GREEN}❯ ${T_YELLOW}Creating...${f_reset}"
 eval "npx create-react-app ${NAME} ${OPTIONS}"
-echo "\e[32m❯ \e[33mChanging dir...\e[0m"
+echo "${T_GREEN}❯ ${T_YELLOW}Changing dir...${f_reset}"
 cd $NAME
-echo "\e[32m❯ \e[33mOpening...\e[0m"
+echo "${T_GREEN}❯ ${T_YELLOW}Opening...${f_reset}"
 code .
 nei

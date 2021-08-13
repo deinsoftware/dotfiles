@@ -1,16 +1,16 @@
 #!/bin/bash
 
-[[ $# -eq 0 ]] && Return
+[[ $# -eq 0 ]] && return
 NAME=${1}
 TEMPLATE=${2---template react-ts}
-echo "\e[32m❯ \e[33mCreating...\e[0m"
+echo "${T_GREEN}❯ ${T_YELLOW}Creating...${f_reset}"
 eval "npm init @vitejs/app ${NAME} ${TEMPLATE}"
-echo "\e[32m❯ \e[33mChanging dir...\e[0m"
+echo "${T_GREEN}❯ ${T_YELLOW}Changing dir...${f_reset}"
 cd $NAME
-echo "\e[32m❯ \e[33mInstalling...\e[0m"
+echo "${T_GREEN}❯ ${T_YELLOW}Installing...${f_reset}"
 npm i
 nei
-echo "\e[32m❯ \e[33mOpening...\e[0m"
+echo "${T_GREEN}❯ ${T_YELLOW}Opening...${f_reset}"
 code .
-echo "\e[32m❯ \e[33mRuning dev...\e[0m"
+echo "${T_GREEN}❯ ${T_YELLOW}Runing dev...${f_reset}"
 npm run dev

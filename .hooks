@@ -22,13 +22,13 @@ alias_for() {
 expand_command_line() {
   cmd_alias="$(alias_for $1)" # Check if there's an alias for the command
   if [[ -n $cmd_alias ]]; then # If there was
-    echo "\e[32m❯ \e[33m${cmd_alias}\e[0m" # Print it
+    echo "${T_GREEN}❯ ${T_YELLOW}${cmd_alias}${F_RESET}" # Print it
   fi
 }
 
 danger(){
-  echo "\e[41m\e[97mDANGER:\e[0m Are you sure? really?"
-  echo "\e[32m[ANY] = Continue \e[0m| \e[31m[Ctrl+c] = Cancel \e[0m"
+  echo "${B_RED}${T_WHITE}DANGER:${F_RESET} Are you sure? really?"
+  echo "${T_GREEN}[ANY] = Continue ${F_RESET}| ${T_RED}[Ctrl+c] = Cancel ${F_RESET}"
   read -sk key
   quit="n"
 }
@@ -46,8 +46,8 @@ danger_validation(){
 }
 
 cancel(){
-  echo "\e[43m\e[30mALERT:\e[0m Did you run \e[1m'$1'\e[0m command before?"
-  echo "\e[32m[ANY] = Continue \e[0m| \e[31m[Ctrl+c] = Cancel \e[0m"
+  echo "${B_YELLOW}${T_BLACK}ALERT:${F_RESET} Did you run ${F_BOLD}'$1'${F_RESET} command before?"
+  echo "${T_GREEN}[ANY] = Continue ${F_RESET}| ${T_RED}[Ctrl+c] = Cancel ${F_RESET}"
   read -sk key
   quit="n"
 }
@@ -86,11 +86,11 @@ pre_validation() {
 }
 
 run(){
-  echo "\e[43m\e[30mALERT:\e[0m Do you want to run \e[1m'$1'\e[0m command after?"
-  echo "\e[32m[Y] = Yes \e[0m| \e[31m[ANY] = Cancel \e[0m"
+  echo "${B_YELLOW}${T_BLACK}ALERT:${F_RESET} Do you want to run ${F_BOLD}'$1'${F_RESET} command after?"
+  echo "${T_GREEN}[Y] = Yes ${F_RESET}| ${T_RED}[ANY] = Cancel ${F_RESET}"
   read -sk key
   if [[ "$key" == "y" ]] || [[ "$key" == "Y" ]]; then
-    echo "\e[32m❯ \e[33mRunning...\e[0m"
+    echo "${T_GREEN}❯ ${T_YELLOW}Running...${F_RESET}"
     eval $1
   fi
 }

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+line="$1"
+
+# align columns
+#line=$(echo -e ${line} | sed 's/|/¶|/g' | column -s '¶' -t)
+line=$(echo -e ${line} | column -s '|' -t)
+
+#table
+line="${line//\|/${T_GRAY}\| ${T_NC}}"
+line="${line//\-\-\-/${T_GRAY}\-\-\-${T_NC}}"
+echo -e "${line}"

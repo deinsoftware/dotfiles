@@ -1,5 +1,5 @@
 #!/bin/bash
 
-echo "\e[32m❯ \e[33mLinters...\e[0m"
+echo "${T_GREEN}❯ ${T_YELLOW}Linters...${f_reset}"
 npm i -D eslint
 npx eslint --init
