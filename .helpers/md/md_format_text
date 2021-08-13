@@ -12,14 +12,15 @@ if [[ "${line:0:3}" == "## " ]]; then
     line="${F_BOLD}${line}${F_RESET}"
 fi
 
+
 # **Bold**
-line=$(echo ${line} | sed -r 's/\*\*([^\s][^\*]+?[^\s])\*\*/«\1»/g')
+line=$(echo ${line} | sed -r "s/\*\*([^\s][^\*]+?[^\s])\*\*/«\1»/g")
 line=${line//«/${F_BOLD}}
 line=${line//»/${F_RESET}}
 
-# *Itallic*
-#line=$(echo -e ${line} | sed -r 's/\*([^\s][^\*]+?[^\s])\*/«\1»/g')
-#line=${line//«/${F_UNDERLINE}}
+# TODO: *Itallic* 
+#line=$(echo -e ${line} | sed -r "s/\*([^\s][^\*]+?[^\s])\*/«\1»/g")
+#line=${line//«/${F_ITALIC}}
 #line=${line//»/${F_RESET}}
 
 # Horizontal Line --- 
@@ -29,34 +30,12 @@ if [[ "${line:0:3}" == "---" ]]; then
 fi
 
 # `Code`
-line=$(echo -e ${line} | sed -r 's/`([^\s][^\`]+?[^\s])`/«\1»/g')
+line=$(echo -e ${line} | sed -r "s/\`([^\s][^\`]+?[^\s])\`/«\1»/g")
 line=${line//«/${T_YELLOW}\`}
 line=${line//»/${T_YELLOW}\`${T_NC}}
 
-# `Params`
-#lines=$(echo ${line} | sed -e 's/<\([^>]*\)>/«\1»/g')
-#line=${line//«/${T_YELLOW}<}
-#line=${line//»/${T_YELLOW}>${F_RESET}}
+# <params>`
+line=${line//</${T_CYAN}<}
+line=${line//>/${T_CYAN}>${T_NC}}
 
 echo -e "${line}"
-
-
-# a='{{I am string}} with {{other}} |I am string| with |other| and |title1|title2|title3| **I am string** with **other** `I am string` with `other <params>` *I am string* with *other* <params> to <parameters>'
-
-# a='*I am string* with *other*'
-# echo -e ${a} | sed -r 's/\*([^\s][^\*]+?[^\s])\*/«\1»/g'
-
-# |I am string| with |other|
-# echo -e ${a} | sed -r 's/\|([^\s][^\|]+?[^\s])\|/|«\1»|/g'
-# echo -e ${a} | sed -r 's/(?<=\|)[^|]++(?=\|)/|«\1»|/g'
-
-# `I am string` with `other`
-# `([^\s][^\*]+?[^\s])`
-# echo -e ${a} | sed -r 's/`([^\s][^\`]+?[^\s])`/«\1»/g'
-
-# `I am string <param>` with <other>
-# `([^\s][^\*]+?[^\s])`
-# echo ${a} | sed 's/<\([^>]*\)>/«\1»/g'
-
-# {{I am string}} with {{other}}
-# echo ${a} | sed 's/{{\([^}]*\)}}/«\1»/g'
