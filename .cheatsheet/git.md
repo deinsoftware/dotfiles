@@ -74,3 +74,5 @@
 |---|---|---|
 |`gc!`|`git commit -v --amend`|I need to change the message on my last commit|
 |`gcn!`|`git commit -v --no-edit --amend`|I committed and immediately realized I need to make one small change.|
+
+⚠ You should **never** amend commits that have been pushed up to a **public/shared** branch!. Amend commits that only exists in your local copy or you're gonna have a bad time.

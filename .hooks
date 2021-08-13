@@ -19,7 +19,7 @@ alias_for() {
     echo ""
   fi
 }
-# TODO: add rest parameters on alias that include params
+# FIX: add rest parameters on alias that include params
 
 expand_command_line() {
   cmd_alias="$(alias_for $1)" # Check if there's an alias for the command
