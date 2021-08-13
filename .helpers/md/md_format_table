@@ -1,12 +1,17 @@
 #!/bin/bash
 
 line="$1"
+border="$2"
 
-# align columns
-#line=$(echo -e ${line} | sed 's/|/¶|/g' | column -s '¶' -t)
-line=$(echo -e ${line} | column -s '|' -t)
 
-#table
-line="${line//\|/${T_GRAY}\| ${T_NC}}"
-line="${line//\-\-\-/${T_GRAY}\-\-\-${T_NC}}"
+if [ "${border}" == "true" ]; then
+    # align columns
+    line=$(echo -e ${line} | sed 's/|/¶|/g' | column -s '¶' -t)
+    
+    line="${line//\|/${T_BLACK}\| ${T_NC}}"
+else
+    # align columns
+    line=$(echo -e ${line} | column -s '|' -t)
+fi
+
 echo -e "${line}"

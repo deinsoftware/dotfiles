@@ -28,7 +28,7 @@ create_table(){
 print_table(){
     text="$1"
     if [ ! -z "${text}" ]; then
-        table=$(md_format_table "${text}")
+        table=$(md_format_table "${text}" "false")
         tput rmam
         echo -e "$table"
         tput smam
