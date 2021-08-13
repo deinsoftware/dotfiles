@@ -5,7 +5,7 @@ if [[ ! -z $1 ]]; then
 base="$1"
 fi
 
-url="$( git config remote.origin.url )"
+url="$( get_repo_url )"
 current="$( git branch --show-current )"
 if [ "$current" != "${base}" ]; then
 url="${url}/compare/${base}...${current}"

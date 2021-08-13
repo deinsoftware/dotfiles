@@ -1,0 +1,4 @@
+#!/bin/bash
+
+url="$( git config remote.origin.url | sed -e "s/git@github.com:/https:\/\/github.com\//g" | rev | cut -f 2- -d '.' | rev )"
+echo "$url"

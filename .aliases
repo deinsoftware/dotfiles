@@ -1,3 +1,5 @@
+#!/bin/bash
+
 alias c="clear"
 alias x="exit"
 alias e="code -n ~/ ~/.zshrc ~/.aliases ~/.colors ~/.hooks"
@@ -71,8 +73,8 @@ alias sos="serverless offline start"
 alias o="${OPEN} ." # open current folder
 alias obf="${OPEN} \".\\build\"" # open build folder
 alias ocr="${OPEN} \".\\coverage\\lcov-report\\index.html\"" # browse coverage
-alias ogr="${OPEN} \"$(git config remote.origin.url)\"" # browse git repo
-alias ogp="${OPEN} \"$(git config remote.origin.url)/pulls\"" # browse git repo pulls
+alias ogr="open_git_repo" # browse git repo
+alias ogp="open_git_pull" # browse git repo pulls
 alias ogc="open_git_compare " # +base branch
 alias onp="${OPEN} \"https://www.npmjs.com/package/$(npm show ./ name --silent)\"" #browse npm package
 alias onc="open_npm_clipboard"
