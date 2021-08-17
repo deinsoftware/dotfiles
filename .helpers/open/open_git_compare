@@ -8,8 +8,8 @@ fi
 url="$( get_repo_url )"
 current="$( git branch --show-current )"
 if [ "$current" != "${base}" ]; then
-url="${url}/compare/${base}...${current}"
+    url="${url}/compare/${base}...${current}"
 else
-url="${url}/compare/${base}..."
+    url="${url}/compare/${base}..."
 fi
 ${OPEN} ${url}

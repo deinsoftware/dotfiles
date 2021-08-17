@@ -3,6 +3,6 @@
 url="https://www.npmjs.com/package"
 clipboard="$( powershell.exe -Command get-clipboard )"
 if [[ -n $clipboard ]]; then
-url="$url/$clipboard"
+    url="$url/$clipboard"
 fi
 ${OPEN} ${url}
