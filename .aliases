@@ -74,6 +74,7 @@ alias o="${OPEN} ." # open current folder
 alias obf="${OPEN} \".\\build\"" # open build folder
 alias ocr="${OPEN} \".\\coverage\\lcov-report\\index.html\"" # browse coverage
 alias ogr="open_git_repo" # browse git repo
+alias ogb="open_git_branch" # browse git repo on current branch
 alias ogp="open_git_pull" # browse git repo pulls
 alias ogc="open_git_compare " # +base branch
 alias onp="${OPEN} \"https://www.npmjs.com/package/$(npm show ./ name --silent)\"" #browse npm package

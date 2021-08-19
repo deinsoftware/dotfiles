@@ -1,0 +1,5 @@
+#!/bin/bash
+
+url="$( get_repo_url )"
+current="$( git branch --show-current )"
+${OPEN} "${url}/tree/${current}"
