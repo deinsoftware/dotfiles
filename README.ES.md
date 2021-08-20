@@ -1,10 +1,10 @@
 # ZSH setup
 
-Languages: [[ES]](README.ES.md) - [[EN]](README.md)
+Idiomas: [[EN]](README.md) - [[ES]](README.ES.md)
 
 ## Repo
 
-On `~` (home) path clone this repo
+En la ruta `~` (home) clonar este repositorio
 
 ```bash
 git init 
@@ -12,7 +12,7 @@ git remote add origin https://github.com/deinacademy/zsh-setup.git
 git pull origin main
 ```
 
-On `.zshrc` file add.
+En el archivo `.zshrc` adicionar.
 
 ```bash
 # Helpers
@@ -26,22 +26,22 @@ chmod +x ~/.helpers/**/*
 # Custom
 local WINHOME=$(wslpath "$(wslvar USERPROFILE)")
 
-local GIT_USER_NAME="user" # private business/work user
-local GIT_USER_EMAIL="user@mail.com" # private business/work e-mail
-local GITHUB_USER_NAME="user" # public personal user
-local GITHUB_USER_EMAIL="user@users.noreply.github.com" # public personal e-mail
+local GIT_USER_NAME="user" # usuario privado negocio/trabajo
+local GIT_USER_EMAIL="user@mail.com" # e-mail privado negocio/trabajo
+local GITHUB_USER_NAME="user" # usuario publico personal 
+local GITHUB_USER_EMAIL="user@users.noreply.github.com" # e-mail publico personal 
 [ -f ~/.aliases ] && . ~/.aliases
 [ -f ~/.colors ] && . ~/.colors
 [ -f ~/.hooks ] && . ~/.hooks
 ```
 
-Add execution permission:
+Adicionr permisos de ejecución a los scripts de los `Helpers`:
 
 ```bash
 chmod +x ~/.helpers/**/*
 ```
 
-Once finish, reopen all terminals or update his source running `source ~/.zshrc` command and now you can use it.
+Una vez termine, cierre y abra todas las terminales o actualice el archivo fuente ejecutando el comando `source ~/.zshrc` y ya queda listo para ser usado.
 
 ## Folder Structure
 
@@ -64,14 +64,14 @@ Once finish, reopen all terminals or update his source running `source ~/.zshrc`
 
 |Name|Description|
 |---|---|
-|`.cheatsheet`| Folder with basic markdown file to see a cheatsheet with `helpers` and `alias` |
-|`.helpers`| Folder with custom helper functions to use as terminal commands |
-|`.aliases`| File for aliases definitions |
-|`.colors`| File with terminal colors to use in other scripts |
-|`.hooks`| ZSH hooks file with custom functions to run as validation before and after run commands |
-|`.zshrc`| ZSH source file |
+|`.cheatsheet`| Carpeta con archivos de markdown para ver el pastel de los comandos de los `helpers` y commando `alias`|
+|`.helpers`| Carpeta con las funciones `helper` (ayudantes) para usar como comandos en la terminal |
+|`.aliases`| Archivo con la definición de los alias |
+|`.colors`| Archivo con colores de terminal para usar en otros scripts |
+|`.hooks`| Archivo con hooks de ZSH con funciones que corren antes o después de ejecutar algún comando en la terminal |
+|`.zshrc`| Archivo fuente de ZSH |
 
-## Article Series
+## Serie de Articulo (in Inglés)
 
 - [Reveal the command behind an alias with ZSH](https://dev.to/equiman/reveal-the-command-behind-an-alias-with-zsh-4d96)
 - [Useful Alias for ZSH](https://dev.to/equiman/useful-alias-for-zsh-1j8b)
