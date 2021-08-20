@@ -5,4 +5,5 @@ clipboard="$( powershell.exe -Command get-clipboard )"
 if [[ -n $clipboard ]]; then
     url="$url/$clipboard"
 fi
-${OPEN} ${url}
+
+${BROWSER} ${url}

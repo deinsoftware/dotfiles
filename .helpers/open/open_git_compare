@@ -12,4 +12,4 @@ if [ "$current" != "${base}" ]; then
 else
     url="${url}/compare/${base}..."
 fi
-${OPEN} ${url}
+${BROWSER} ${url}

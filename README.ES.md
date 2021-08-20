@@ -4,6 +4,8 @@ Idiomas: [[EN]](README.md) - [[ES]](README.ES.md)
 
 ## Repo
 
+### 1. Clonar
+
 En la ruta `~` (home) clonar este repositorio
 
 ```bash
@@ -12,11 +14,15 @@ git remote add origin https://github.com/deinacademy/zsh-setup.git
 git pull origin main
 ```
 
+### 2. Configurar
+
 En el archivo `.zshrc` adicionar.
 
 ```bash
 # Helpers
-export OPEN="explorer.exe"
+export OPEN="explorer.exe" #wsl2
+export BROWSER="${OPEN}" #wsl2
+
 export PATH="$HOME/.helpers/b64/:$PATH"
 export PATH="$HOME/.helpers/git/:$PATH"
 export PATH="$HOME/.helpers/md/:$PATH"
@@ -35,13 +41,27 @@ local GITHUB_USER_EMAIL="user@users.noreply.github.com" # e-mail publico persona
 [ -f ~/.hooks ] && . ~/.hooks
 ```
 
-Adicionr permisos de ejecución a los scripts de los `Helpers`:
+> Las constante `OPEN` y `BROWSE` necesitan ser configuradas de acuerdo al SO que se este usando. Windows (WSL2) y macOS usan el mismo comando para abrir el explorador de archivos como el navegador por defecto, en Ubuntu (Linux) se debe especificar cada uno por separado.
+
+|SO|`OPEN`|`BROWSER`|
+|---|---|---|
+|Windows (WSL2)|`"explorer.exe"`|`"${OPEN}"`|
+|macOS|`"open"`|`"${OPEN}"`|
+|Ubuntu|`"xdg-open"`, `"gnome-open"`, `"nautilus"` ...|`"googlechrome"`, `"firefox"` ...|
+
+### 3. Permisos
+
+Ahora adicione permisos de ejecución a los scripts de los `Helpers`:
 
 ```bash
 chmod +x ~/.helpers/**/*
 ```
 
-Una vez termine, cierre y abra todas las terminales o actualice el archivo fuente ejecutando el comando `source ~/.zshrc` y ya queda listo para ser usado.
+### 4. Actualizar
+
+Una vez termine, guarde el archivo `.zshrc`, cierre y reabra todas las terminales o actualice el archivo fuente ejecutando el comando `source ~/.zshrc`.
+
+¡Eso es todo amigxs! Ya quedó listo para ser usado.
 
 ## Folder Structure
 

@@ -34,7 +34,7 @@ alias f2b="file_to_b64"
 
 alias mdv="md_viewer -s " +cheatsheet name
 alias mdvg="md_viewer -s git"
-alias mdvt="md_viewer -s test"
+alias mdvo="md_viewer -s open"
 
 alias nei="npm_eslint_init"
 alias cra="create_react_app"
@@ -72,13 +72,13 @@ alias sos="serverless offline start"
 
 alias o="${OPEN} ." # open current folder
 alias obf="${OPEN} \".\\build\"" # open build folder
-alias ocr="${OPEN} \".\\coverage\\lcov-report\\index.html\"" # browse coverage
+alias ocr="${BROWSER} \".\\coverage\\lcov-report\\index.html\"" # browse coverage
 alias ogr="open_git_repo" # browse git repo
 alias ogb="open_git_branch" # browse git repo on current branch
 alias ogp="open_git_pull" # browse git repo pulls
 alias ogc="open_git_compare " # +base branch
-alias onp="${OPEN} \"https://www.npmjs.com/package/$(npm show ./ name --silent)\"" #browse npm package
-alias onc="open_npm_clipboard"
+alias onp="open_npm_package" #browse npm package
+alias onc="open_npm_clipboard" #browse npm package from clipboard
 
 # Image Optimizer
 alias iow="npx @squoosh/cli --webp auto " # +file-name

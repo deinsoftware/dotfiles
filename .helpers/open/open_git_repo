@@ -1,4 +1,4 @@
 #!/bin/bash
 
 url="$( get_repo_url )"
-${OPEN} ${url}
+${BROWSER} ${url}

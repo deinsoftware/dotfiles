@@ -4,6 +4,8 @@ Languages: [[ES]](README.ES.md) - [[EN]](README.md)
 
 ## Repo
 
+### 1. Clone
+
 On `~` (home) path clone this repo
 
 ```bash
@@ -12,11 +14,15 @@ git remote add origin https://github.com/deinacademy/zsh-setup.git
 git pull origin main
 ```
 
+### 2. Setup
+
 On `.zshrc` file add.
 
 ```bash
 # Helpers
-export OPEN="explorer.exe"
+export OPEN="explorer.exe" #wsl2
+export BROWSER=""${OPEN}"" #wsl2
+
 export PATH="$HOME/.helpers/b64/:$PATH"
 export PATH="$HOME/.helpers/git/:$PATH"
 export PATH="$HOME/.helpers/md/:$PATH"
@@ -35,13 +41,27 @@ local GITHUB_USER_EMAIL="user@users.noreply.github.com" # public personal e-mail
 [ -f ~/.hooks ] && . ~/.hooks
 ```
 
-Add execution permission:
+> `OPEN` and `BROWSE` constants need to be configured according yor OS. Windows (WSL2) and macOS use the same command to open the file explorer or the default web browser, on Ubuntu (Linux) need to be specified each one.
+
+|SO|`OPEN`|`BROWSER`|
+|---|---|---|
+|Windows (WSL2)|`"explorer.exe"`|`"${OPEN}"`|
+|macOS|`"open"`|`"${OPEN}"`|
+|Ubuntu|`"xdg-open"`, `"gnome-open"`, `"nautilus"` ...|`"googlechrome"`, `"firefox"` ...|
+
+### 3. Permissions
+
+Now add execution permission:
 
 ```bash
 chmod +x ~/.helpers/**/*
 ```
 
-Once finish, reopen all terminals or update his source running `source ~/.zshrc` command and now you can use it.
+### 4. Update
+
+Once finish, save `.zshrc` file, close and reopen all terminals or update his source running `source ~/.zshrc` command.
+
+That's all folks! It's ready to use.
 
 ## Folder Structure
 

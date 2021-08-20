@@ -1,0 +1,9 @@
+#!/bin/bash
+
+package="$(npm show ./ name --silent)"
+if [[ -z "$package" ]]; then
+    echo "No package.json found"
+    exit 1
+fi
+
+${BROWSER} "https://www.npmjs.com/package/${package}"
