@@ -4,27 +4,27 @@
 
 |Alias|Description|
 |---|---|
-|`o`|Open File Explorer on current path|
+|`o`|Open current path on file explorer or finder|
 
 ## React/Web
 
 |Alias|Description|
 |---|---|
-|`obf`|Open `.\build` folder inside current path|
+|`obf`|Open `.\build` folder inside current path on file explorer or finder|
 |`ocr`|Open coverage `.\coverage\lcov-report\index.html` report on Browser|
 
 ## GitHub
 
 |Alias|Command|Description|
 |---|---|---|
-|`ogr`|`open_git_repo`|Browse the current GitHub repo|
-|`ogb`|`open_git_branch`|Browse the current GitHub current Branch|
-|`ogp`|`open_git_pull`|Browse the current GitHub Pull Request|
-|`ogc [<branch>]`|`open_git_compare [<branch>]`|Browse the compare current brach with another base branch [`dev` by default] |
+|`ogr`|`open_git_repo`|Browse the current GitHub repo url|
+|`ogb`|`open_git_branch`|Browse the current GitHub current Branch url|
+|`ogp`|`open_git_pull`|Browse the current GitHub Pull Request url|
+|`ogc [<branch>]`|`open_git_compare [<branch>]`|Browse the compare current branch with another base branch [`dev` by default] |
 
 ## NPM
 
 |Alias|Command|Description|
 |---|---|---|
-|`onp`|`open_npm_package`| Browse the NPM package|
-|`onc`|`open_npm_clipboard`|Browse the NPM package with the name on clipboard|
+|`onp`|`open_npm_package`| Browse the NPM package on `package.json`|
+|`onc`|`open_npm_clipboard`|Browse the NPM package on browser searching by name on clipboard|
