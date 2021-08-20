@@ -1,6 +1,6 @@
 # Configuración de ZSH
 
-Idiomas: [[EN]](README.md) - [[ES]](README.ES.md)
+Idiomas: [🇺🇸] [English](README.md) - [🇪🇸] [Español](README.ES.md)
 
 ## Repo
 

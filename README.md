@@ -1,6 +1,6 @@
 # ZSH Setup
 
-Languages: [[ES]](README.ES.md) - [[EN]](README.md)
+Languages: [🇪🇸] [Español](README.ES.md) - [🇺🇸] [English](README.md)
 
 ## Repo
 
