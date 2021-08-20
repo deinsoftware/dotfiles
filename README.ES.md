@@ -1,4 +1,4 @@
-# ZSH setup
+# Configuración de ZSH
 
 Idiomas: [[EN]](README.md) - [[ES]](README.ES.md)
 
@@ -7,7 +7,7 @@ Idiomas: [[EN]](README.md) - [[ES]](README.ES.md)
 En la ruta `~` (home) clonar este repositorio
 
 ```bash
-git init 
+git init
 git remote add origin https://github.com/deinacademy/zsh-setup.git
 git pull origin main
 ```

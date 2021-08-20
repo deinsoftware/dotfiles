@@ -1,4 +1,4 @@
-# ZSH setup
+# ZSH Setup
 
 Languages: [[ES]](README.ES.md) - [[EN]](README.md)
 
