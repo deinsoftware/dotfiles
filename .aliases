@@ -15,7 +15,7 @@ alias ag="alias | grep " # +command
 # Utils
 # https://github.com/abishekvashok/cmatrix
 # sudo apt install cmatrix / brew install cmatrix
-alias m="cmatrix"
+alias m="cmatrix -s"
 # https://htop.dev/
 # sudo apt install htop / brew install htop
 alias t="htop"
