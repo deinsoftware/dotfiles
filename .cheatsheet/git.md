@@ -5,7 +5,7 @@
 |Alias|Command|Description|
 |---|---|---|
 |`g init`|`git init`|Initialize a local Git repository|
-|`g clone`|`git clone <path>`|Create a local copy of a remote repository|
+|`g clone <repo> [<path>]`|`git clone <repo> [<path>]`|Create a local copy of a remote repository|
 
 ## Snappshoting
 
@@ -14,6 +14,8 @@
 |`gst`|`git status`|Check status|
 |`gaa`|`git add --all`|Add all new and changed files to the staging area|
 |`grh`|`git reset`|Removes all files from staging area|
+|`guc`|`git reset --hard HEAD`|Undo changes and preserve untracked files|
+|`gcc`|`git clean -f -d -x`|Clean ALL changes and remove untracked files|
 |`ga <file>`|`git add <file>`|Add a file to the staging area|
 |`gru <file>`|`git reset -- <file>`|Remove a file from staging area|
 |`gcmsg "<message>"`|`git commit -m "<message>"`|Commit changes with message description|
@@ -41,6 +43,7 @@
 |`gbd <branch-name>`|`git branch -d <branch-name>`|Delete a branch|
 |`gcb <branch-name>`|`git checkout -b <branch-name>`|Create a new branch and switch to it|
 |`gco <branch-name>`|`git checkout <branch-name>`|Switch to a branch|
+|`gcd`|`git checkout dev`|Switch to dev branch|
 |`gco -`|`git checkout -`|Switch to previous branch|
 
 ## Remote
@@ -54,7 +57,9 @@
 |`gfa`|`git fetch --all --prune`|Fetch all remote branches, delete branch if upstream is gone|
 |`gl`|`git pull`|Incorporates changes from 'origin' into local repo|
 |`gl <repo> <branch-name>`|`git pull <repo> <branch-name>`|Incorporates changes from remote <repo> on <branch> into local repo|
+|`glod`|`git pull origin dev`|Incorporates changes from remote origin dev into local repo|
 |`gp`|`git push`|Incorporates changes from local repo into 'origin'|
+|`gpnv`|`git push --no-verify`|Incorporates changes from local repo into 'origin skipping commit hooks'|
 |`gpsup`|`git push --set-upstream origin <currentbranch>`|Set upstream current branch|
 |`gp <repo> <branch-name>`|`git push <repo> <branch>`|Incorporates changes from local repo into remote <repo> on <branch-name>|
 |`gp -d <remote> <branch>`|`git push -d <remote> <branch>`|Delete remote branch|
@@ -76,3 +81,14 @@
 |`gcn!`|`git commit -v --no-edit --amend`|I committed and immediately realized I need to make one small change.|
 
 ⚠ You should **never** amend commits that have been pushed up to a **public/shared** branch!. Amend commits that only exists in your local copy or you're gonna have a bad time.
+
+## Config
+
+|Alias|Command|Description|
+|---|---|---|
+|`gcum`|`git config user.name <git_user> && git config user.email <git_mail>`|Set git config user and email|
+|`gcu`|`git config credential.username <git_user>`|Set git credentials|
+|`ghcum`|`git config user.name <github_user> && git config user.email <github_mail>`|Set GitHub config user and email|
+|`ghcu`|`git config credential.username <github_user>`|Set GitHub credentials|
+|`gcg`|`git config --edit --global`|Edit git global configurations|
+|`gcl`|`git config --edit --local`|Edit git local configurations|

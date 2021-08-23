@@ -1,22 +1,33 @@
 #!/bin/bash
 
+# Terminal
 alias c="clear"
 alias x="exit"
 alias e="code -n ~/ ~/.zshrc ~/.aliases ~/.colors ~/.hooks"
-alias m="cmatrix"
 alias r="source ~/.zshrc"
-alias t="htop"
-alias d="ncdu --exclude /mnt --color dark " # +path
 
 alias h="history -10"
 alias hc="history -c"
 alias hg="history | grep " # +command
 alias ag="alias | grep " # +command
 
-alias rnm="rm -rf node_modules"
-alias rbn="rm -rf build node_modules"
-alias rap="rm -rf build coverage node_modules package-lock.json && npm i"
 
+# Utils
+# sudo apt install cmatrix / brew install cmatrix
+alias m="cmatrix"
+# sudo apt install htop / brew install htop
+alias t="htop"
+# sudo apt install ncdu / brew install ncdu
+alias d="ncdu --exclude /mnt --color dark " # +path
+
+
+# Markdown Cheatsheets
+alias mdv="md_viewer -s " +cheatsheet name
+alias mdvg="md_viewer -s git"
+alias mdvo="md_viewer -s open"
+
+
+# Git
 alias gcum="git config user.name \"${GIT_USER_NAME}\" && git config user.email \"${GIT_USER_EMAIL}\""
 alias gcu="git config credential.username \"${GIT_USER_NAME}\""
 alias ghcum="git config user.name \"${GITHUB_USER_NAME}\" && git config user.email \"${GITHUB_USER_EMAIL}\""
@@ -29,16 +40,16 @@ alias gcd="git checkout dev"
 alias glod="git pull origin dev"
 alias gpnv="git push --no-verify"
 
-alias b2f="b64_to_file"
-alias f2b="file_to_b64"
 
-alias mdv="md_viewer -s " +cheatsheet name
-alias mdvg="md_viewer -s git"
-alias mdvo="md_viewer -s open"
+# Docker
+alias dsa="docker stop $(docker ps -a -q)"
+alias drm="docker rm $(docker ps -a -q)"
 
-alias nei="npm_eslint_init"
-alias cra="create_react_app"
-alias vra="vite_react_app"
+
+# npm
+alias rnm="rm -rf node_modules"
+alias rbn="rm -rf build node_modules"
+alias rap="rm -rf build coverage node_modules package-lock.json && npm i"
 
 alias npk="npx npkill" #clean unused node_modules
 alias nkp="npx kill-port " # +portnumber
@@ -65,11 +76,22 @@ alias nrtu="npm run test:u"
 alias np="npm publish"
 alias nu="npm unpublish " # +package@version
 
+alias nei="npm_eslint_init"
+
+
+# React
+alias cra="create_react_app"
+alias vra="vite_react_app"
+
+
+# Serverless
 alias si="sls info"
 alias sd="sls deploy"
 alias sdf="sls deploy -f " # +function_name
 alias sos="serverless offline start"
 
+
+# Open
 alias o="${OPEN} ." # open current folder
 alias obf="${OPEN} \".\\build\"" # open build folder
 alias ocr="${BROWSER} \".\\coverage\\lcov-report\\index.html\"" # browse coverage
@@ -80,7 +102,13 @@ alias ogc="open_git_compare " # +base branch
 alias onp="open_npm_package" #browse npm package
 alias onc="open_npm_clipboard" #browse npm package from clipboard
 
+
 # Image Optimizer
 alias iow="npx @squoosh/cli --webp auto " # +file-name
 alias ioa="npx @squoosh/cli --avif auto " # +file-name
 alias iop="npx @squoosh/cli --oxipng auto " # +file-name
+
+
+# Base 64
+alias b2f="b64_to_file"
+alias f2b="file_to_b64"
