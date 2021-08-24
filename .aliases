@@ -13,15 +13,19 @@ alias ag="alias | grep " # +command
 
 
 # Utils
+
 # https://github.com/abishekvashok/cmatrix
 # sudo apt install cmatrix / brew install cmatrix
-alias m="cmatrix -s"
+alias m="cmatrix -abs"
+
 # https://htop.dev/
 # sudo apt install htop / brew install htop
 alias t="htop"
+
 # https://dev.yorhel.nl/ncdu
 # sudo apt install ncdu / brew install ncdu
 alias d="ncdu --exclude /mnt --color dark " # +path
+
 # https://www.speedtest.net/apps/cli
 alias st="speedtest"
 
