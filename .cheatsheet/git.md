@@ -86,9 +86,11 @@
 
 |Alias|Command|Description|
 |---|---|---|
-|`gcum`|`git config user.name <git_user> && git config user.email <git_mail>`|Set git config user and email|
+|`gcum`|`git config user.name <git_user>`|Set git config user and email|
+| |`git config user.email <git_mail>`| |
 |`gcu`|`git config credential.username <git_user>`|Set git credentials|
-|`ghcum`|`git config user.name <github_user> && git config user.email <github_mail>`|Set GitHub config user and email|
+|`ghcum`|`git config user.name <github_user>`|Set GitHub config user and email|
+| |`git config user.email <github_mail>`| |
 |`ghcu`|`git config credential.username <github_user>`|Set GitHub credentials|
 |`gcg`|`git config --edit --global`|Edit git global configurations|
 |`gcl`|`git config --edit --local`|Edit git local configurations|
