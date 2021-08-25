@@ -8,8 +8,8 @@ alias r="source ~/.zshrc"
 
 alias h="history -10"
 alias hc="history -c"
-alias hg="history | grep " # +command
-alias ag="alias | grep " # +command
+alias hg="history | grep" # +command
+alias ag="alias | grep" # +command
 
 
 # Utils
@@ -24,14 +24,14 @@ alias t="htop"
 
 # https://dev.yorhel.nl/ncdu
 # sudo apt install ncdu / brew install ncdu
-alias d="ncdu --exclude /mnt --color dark " # +path
+alias d="ncdu --exclude /mnt --color dark" # +path
 
 # https://www.speedtest.net/apps/cli
 alias st="speedtest"
 
 
 # Markdown Cheatsheets
-alias mdv="md_viewer -s " +cheatsheet name
+alias mdv="md_viewer -s" +cheatsheet name
 alias mdvg="md_viewer -s git"
 alias mdvo="md_viewer -s open"
 
@@ -61,15 +61,15 @@ alias rbn="rm -rf build node_modules"
 alias rap="rm -rf build coverage node_modules package-lock.json && npm i"
 
 alias npk="npx npkill" #clean unused node_modules
-alias nkp="npx kill-port " # +portnumber
+alias nkp="npx kill-port" # +portnumber
 alias nlg="npm list -g --depth 0" #list global packages installed
 
 alias ni="npm i"
-alias nis="npm i -S " # +package@version
-alias nise="npm i -S -E " # +package@version
-alias nid="npm i -D " # +package@version
-alias nide="npm i -D -E " # +package@version
-alias nr="npm r " # +package@version
+alias nis="npm i -S" # +package@version
+alias nise="npm i -S -E" # +package@version
+alias nid="npm i -D" # +package@version
+alias nide="npm i -D -E" # +package@version
+alias nr="npm r" # +package@version
 
 alias nrb="npm run build"
 alias nrbd="npm run build:dev"
@@ -83,7 +83,7 @@ alias nrtcw="npm run test:cw"
 alias nrtu="npm run test:u"
 
 alias np="npm publish"
-alias nu="npm unpublish " # +package@version
+alias nu="npm unpublish" # +package@version
 
 alias nei="npm_eslint_init"
 
@@ -96,7 +96,7 @@ alias vra="vite_react_app"
 # Serverless
 alias si="sls info"
 alias sd="sls deploy"
-alias sdf="sls deploy -f " # +function_name
+alias sdf="sls deploy -f" # +function_name
 alias sos="serverless offline start"
 
 
@@ -107,15 +107,15 @@ alias ocr="${BROWSER} \".\\coverage\\lcov-report\\index.html\"" # browse coverag
 alias ogr="open_git_repo" # browse git repo
 alias ogb="open_git_branch" # browse git repo on current branch
 alias ogp="open_git_pull" # browse git repo pulls
-alias ogc="open_git_compare " # +base branch
+alias ogc="open_git_compare" # +base branch
 alias onp="open_npm_package" #browse npm package
 alias onc="open_npm_clipboard" #browse npm package from clipboard
 
 
 # Image Optimizer
-alias iow="npx @squoosh/cli --webp auto " # +file-name
-alias ioa="npx @squoosh/cli --avif auto " # +file-name
-alias iop="npx @squoosh/cli --oxipng auto " # +file-name
+alias iow="npx @squoosh/cli --webp auto" # +file-name
+alias ioa="npx @squoosh/cli --avif auto" # +file-name
+alias iop="npx @squoosh/cli --oxipng auto" # +file-name
 
 
 # Base 64
