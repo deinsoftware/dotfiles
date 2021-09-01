@@ -2,6 +2,8 @@
 
 Languages: [🇪🇸] [Español](README.ES.md) - [🇺🇸] [English](README.md)
 
+ZSH setup and productivity tools for developers
+
 ## Repo
 
 ### 1. Clone
@@ -93,10 +95,10 @@ That's all folks! It's ready to use.
 
 ## Article Series
 
-- [Reveal the command behind an alias with ZSH](https://dev.to/equiman/reveal-the-command-behind-an-alias-with-zsh-4d96)
 - [Useful Alias for ZSH](https://dev.to/equiman/useful-alias-for-zsh-1j8b)
-- [Automatic change directory after git clone](https://dev.to/equiman/automatic-change-directory-after-git-clone-8ei)
+- [Reveal the command behind an alias with ZSH](https://dev.to/equiman/reveal-the-command-behind-an-alias-with-zsh-4d96)
 - [Command validations with ZSH](https://dev.to/equiman/command-validations-with-zsh-2boa)
 - [Open File Explorer and Browser from ZSH](https://dev.to/equiman/open-file-explorer-and-browser-mbb)
+- [Automatic change directory after git clone](https://dev.to/equiman/automatic-change-directory-after-git-clone-8ei)
 - [ZSH cheatsheet for git plugin](https://dev.to/equiman/zsh-cheatsheet-for-git-plugin-1f6a)
 - [base64 encode/decode multiple files](https://dev.to/equiman/base64-encode-decode-multiple-files-2ol1)
