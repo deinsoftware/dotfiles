@@ -2,7 +2,7 @@
 
 Idiomas: [🇺🇸] [English](README.md) - [🇪🇸] [Español](README.ES.md)
 
-Configuración de ZSH y herramientas de productividad para desarrolladores
+Configuración de ZSH y herramientas de productividad para desarrollo
 
 ## Repo
 

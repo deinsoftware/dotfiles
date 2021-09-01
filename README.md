@@ -2,7 +2,7 @@
 
 Languages: [🇪🇸] [Español](README.ES.md) - [🇺🇸] [English](README.md)
 
-ZSH setup and productivity tools for developers
+ZSH setup and productivity tools for development
 
 ## Repo
 
