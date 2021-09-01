@@ -24,9 +24,11 @@ expand_command_line() {
   first=$(echo "$1" | awk '{print $1;}')
   rest=$(echo ${${1}/"${first}"/})
 
-  cmd_alias="$(alias_for "${first}" "${rest:1}")" # Check if there's an alias for the command
-  if [[ -n $cmd_alias ]]; then # If there was
-    echo "${T_GREEN}❯ ${T_YELLOW}${cmd_alias}${F_RESET}" # Print it
+  if [[ -n "${first//-//}" ]]; then # is not hypen
+    cmd_alias="$(alias_for "${first}" "${rest:1}")" # Check if there's an alias for the command
+    if [[ -n $cmd_alias ]]; then # If there was
+      echo "${T_GREEN}❯ ${T_YELLOW}${cmd_alias}${F_RESET}" # Print it
+    fi
   fi
 }
 
