@@ -88,11 +88,11 @@ That's all folks! It's ready to use.
 |---|---|
 |`.cheatsheet`| Folder with basic markdown file to see a cheatsheet with `helpers` and `alias` |
 |`.helpers`| Folder with custom helper functions to use as terminal commands |
-|  `b64`| Helper commands for file conversions to/from base64 |
-|  `git`| Helper commands for git cloning with extra features (WIP) |
-|  `md`| Helper commands to see MarkDown files on terminal (WIP) |
-|  `open`| Helper commands to open file/folder on the File Explorer or open files/url on the Browser |
-|  `react`| Helper commands to create React project with extra features (WIP) |
+| ── `b64`| Helper commands for file conversions to/from base64 |
+| ── `git`| Helper commands for git cloning with extra features (WIP) |
+| ── `md`| Helper commands to see MarkDown files on terminal (WIP) |
+| ── `open`| Helper commands to open file/folder on the File Explorer or open files/url on the Browser |
+| ── `react`| Helper commands to create React project with extra features (WIP) |
 |`.aliases`| File for aliases definitions |
 |`.colors`| File with terminal colors to use in other scripts |
 |`.hooks`| ZSH hooks file with custom functions to run as validation before and after run commands |
