@@ -67,6 +67,8 @@ alias rap="rm -rf build coverage node_modules package-lock.json && npm i"
 
 alias npk="npx npkill" #clean unused node_modules
 alias nkp="npx kill-port" # +portnumber
+alias nfk="npx fkill-cli" # +[<pid|name|:port> …] #kill processes
+
 alias nlg="npm list -g --depth 0" #list global packages installed
 
 alias ni="npm i"
