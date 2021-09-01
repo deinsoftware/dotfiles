@@ -10,20 +10,18 @@ while getopts ":p:" opt; do
     esac
 done
 
-launcher=${OPEN}
 case $path in
     build)
         path="./build"
     ;;
     coverage)
-        launcher=${BROWSER}
-        path="./coverage/lcov-report/index.html"
+        path="./coverage"
     ;;
 esac
 
 isWSL=$(uname -a | grep WSL)
-if [ -n "${isWSL}" ]; then
+if [[ -n "${isWSL}" ]]; then
     path=$(wslpath -w ${path})
 fi
 
-${launcher} "${path}"
+${OPEN} "${path}"

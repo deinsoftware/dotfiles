@@ -1,0 +1,39 @@
+#!/bin/bash
+
+while getopts ":f:u:" opt; do
+    case $opt in
+        f) file="${OPTARG}"
+        ;;
+        u) url="${OPTARG}"
+        ;;
+        \?) echo "Invalid option -${OPTARG}" >&2
+        exit 1
+        ;;
+    esac
+done
+
+address=""
+if [ -n "${file}" ]; then
+    case $file in
+        coverage)
+            launcher=${BROWSER}
+            file="./coverage/lcov-report/index.html"
+        ;;
+    esac
+
+    isWSL=$(uname -a | grep WSL)
+    if [[ -n "${isWSL}" ]]; then
+        file=$(wslpath -w ${file})
+    fi
+    address="${file}"
+fi
+
+if [ -n "${url}" ]; then
+    pattern="~^(?:f|ht)tps?://~i"
+    if [[ ! ${url} =~ ${pattern} ]]; then
+        url="https://${url}"
+    fi
+    address="${url}"
+fi
+
+${BROWSER} "${address}"

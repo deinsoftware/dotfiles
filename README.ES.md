@@ -20,6 +20,7 @@ En el archivo `.zshrc` adicionar.
 
 ```bash
 # Helpers
+export WINHOME=$(wslpath "$(wslvar USERPROFILE)")
 export OPEN="explorer.exe" #wsl2
 export BROWSER="${OPEN}" #wsl2
 
@@ -30,12 +31,11 @@ export PATH="$HOME/.helpers/open/:$PATH"
 chmod +x ~/.helpers/**/*
 
 # Custom
-local WINHOME=$(wslpath "$(wslvar USERPROFILE)")
 
-local GIT_USER_NAME="user" # usuario privado negocio/trabajo
-local GIT_USER_EMAIL="user@mail.com" # e-mail privado negocio/trabajo
-local GITHUB_USER_NAME="user" # usuario publico personal 
-local GITHUB_USER_EMAIL="user@users.noreply.github.com" # e-mail publico personal 
+export GIT_USER_NAME="user" # usuario privado negocio/trabajo
+export GIT_USER_EMAIL="user@mail.com" # e-mail privado negocio/trabajo
+export GITHUB_USER_NAME="user" # usuario publico personal 
+export GITHUB_USER_EMAIL="user@users.noreply.github.com" # e-mail publico personal 
 [ -f ~/.aliases ] && . ~/.aliases
 [ -f ~/.colors ] && . ~/.colors
 [ -f ~/.hooks ] && . ~/.hooks
