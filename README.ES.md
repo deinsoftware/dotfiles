@@ -33,7 +33,6 @@ export PATH="$HOME/.helpers/open/:$PATH"
 chmod +x ~/.helpers/**/*
 
 # Custom
-
 export GIT_USER_NAME="user" # usuario privado negocio/trabajo
 export GIT_USER_EMAIL="user@mail.com" # e-mail privado negocio/trabajo
 export GITHUB_USER_NAME="user" # usuario publico personal 
