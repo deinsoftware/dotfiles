@@ -12,7 +12,7 @@ On `~` (home) path clone this repo
 
 ```bash
 git init 
-git remote add origin https://github.com/deinacademy/zsh-setup.git
+git remote add origin https://github.com/deinsoftware/zsh-dev-toolkit.git
 git pull origin main
 ```
 
