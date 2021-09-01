@@ -1,4 +1,4 @@
-# Configuración de ZSH
+# ZSH Dev Toolkit
 
 Idiomas: [🇺🇸] [English](README.md) - [🇪🇸] [Español](README.ES.md)
 
