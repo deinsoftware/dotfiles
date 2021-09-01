@@ -88,6 +88,11 @@ Una vez termine, guarde el archivo `.zshrc`, cierre y reabra todas las terminale
 |---|---|
 |`.cheatsheet`| Carpeta con archivos de markdown para ver el pastel de los comandos de los `helpers` y commando `alias`|
 |`.helpers`| Carpeta con las funciones `helper` (ayudantes) para usar como comandos en la terminal |
+|  `b64`| Comandos para la conversion de archivos desde/hacia base64 |
+|  `git`| Comandos para clonar repositorios de git con opciones extra (TEP) |
+|  `md`| Comandos para ver archivos MarkDown en la terminal (TEP) |
+|  `open`| Commandos para abrir archivos/rutas en el Explorador de Archivos o abrir archivos/url en el Navegador |
+|  `react`| Comandos para crear proyectos de React con opciones extra (TEP) |
 |`.aliases`| Archivo con la definición de los alias |
 |`.colors`| Archivo con colores de terminal para usar en otros scripts |
 |`.hooks`| Archivo con hooks de ZSH con funciones que corren antes o después de ejecutar algún comando en la terminal |
