@@ -29,6 +29,11 @@ alias d="ncdu --exclude /mnt --color dark" # +path
 # https://www.speedtest.net/apps/cli
 alias st="speedtest"
 
+# https://github.com/sindresorhus/clipboard-cli
+# npm install -g clipboard-cli
+alias cp="clipboard"
+
+
 
 # Markdown Cheatsheets
 alias mdv="md_viewer -s" +cheatsheet name
@@ -102,8 +107,9 @@ alias sos="serverless offline start"
 
 # Open
 alias o="${OPEN} ." # open current folder
-alias obf="${OPEN} \".\\build\"" # open build folder
-alias ocr="${BROWSER} \".\\coverage\\lcov-report\\index.html\"" # browse coverage
+alias op="open_path -p " # +path
+alias opb="open_path -p build" # open build folder
+alias ocr="open_path -p coverage" # browse coverage
 alias ogr="open_git_repo" # browse git repo
 alias ogb="open_git_branch" # browse git repo on current branch
 alias ogp="open_git_pull" # browse git repo pulls

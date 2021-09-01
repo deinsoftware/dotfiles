@@ -18,17 +18,18 @@ for file in ${path}*.b64; do
     [ -e "$file" ] || continue
     filename=${file%%.*}
     
-    base64 --decode --ignore-garbage ${file} > ${filename}.tmp
+    base64 --decode --ignore-garbage ${file} > "${filename}.tmp"
     ext=$(file -b --mime-type ${filename}.tmp | cut -d'/' -f2)
 
     if [ ! -z ${ext} ]; then
-        if [ -f ${filename}.${ext} ]; then
-            rm -r ${filename}.${ext}
+        if [ -f "${filename}.${ext}" ]; then
+            rm -r "${filename}.${ext}"
         fi
-        mv ${filename}.tmp ${filename}.${ext}
+        mv "${filename}.tmp" "${filename}.${ext}"
 
         echo "SUCCESS: '${filename}.${ext}' file was created"
     else
+        rm -r "${filename}.tmp"
         echo "ERROR: '${filename}.b64' has no mime-type"
     fi
 done

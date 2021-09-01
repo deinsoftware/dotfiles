@@ -1,9 +1,13 @@
 #!/bin/bash
 
+# Requires:
+# https://github.com/sindresorhus/clipboard-cli
+# npm install -g clipboard-cli
+
 url="https://www.npmjs.com/package"
-clipboard="$( powershell.exe -Command get-clipboard )"
-if [[ -n $clipboard ]]; then
-    url="$url/$clipboard"
+value="$( clipboard )"
+if [[ -n $value ]]; then
+    url="$url/$value"
 fi
 
 ${BROWSER} ${url}

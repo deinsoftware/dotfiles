@@ -21,7 +21,7 @@ On `.zshrc` file add.
 ```bash
 # Helpers
 export OPEN="explorer.exe" #wsl2
-export BROWSER=""${OPEN}"" #wsl2
+export BROWSER="${OPEN}" #wsl2
 
 export PATH="$HOME/.helpers/b64/:$PATH"
 export PATH="$HOME/.helpers/git/:$PATH"

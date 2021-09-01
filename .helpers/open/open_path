@@ -1,0 +1,29 @@
+#!/bin/bash
+
+while getopts ":p:" opt; do
+    case $opt in
+        p) path="${OPTARG}"
+        ;;
+        \?) echo "Invalid option -${OPTARG}" >&2
+        exit 1
+        ;;
+    esac
+done
+
+launcher=${OPEN}
+case $path in
+    build)
+        path="./build"
+    ;;
+    coverage)
+        launcher=${BROWSER}
+        path="./coverage/lcov-report/index.html"
+    ;;
+esac
+
+isWSL=$(uname -a | grep WSL)
+if [ -n "${isWSL}" ]; then
+    path=$(wslpath -w ${path})
+fi
+
+${launcher} "${path}"
