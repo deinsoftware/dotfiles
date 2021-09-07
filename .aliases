@@ -31,7 +31,7 @@ alias st="speedtest"
 
 # https://github.com/sindresorhus/clipboard-cli
 # npm install -g clipboard-cli
-alias cp="clipboard"
+alias cb="clipboard"
 
 
 
