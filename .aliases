@@ -55,12 +55,6 @@ alias glod="git pull origin dev"
 alias gpnv="git push --no-verify"
 
 
-# Docker
-alias dls="docker container ls"
-alias dsa="docker stop \"$(docker ps -a -q)\""
-alias drm="docker rm \"$(docker ps -a -q)\""
-
-
 # npm
 alias rnm="rm -rf node_modules"
 alias rbn="rm -rf build node_modules"
