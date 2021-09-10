@@ -21,7 +21,7 @@
 |`obf`|`open_path -p build`|Open `.\build` folder inside current path on file explorer or finder|
 |`obc`|`open_path -p coverage`|Open `.\coverage` folder inside current path on file explorer or finder|
 |`bcr`|`open_browser -f coverage`|Open coverage `.\coverage\lcov-report\index.html` report on Browser|
-|`blh`|`open_browser -u http://localhost:3000`|Open a browser as `localhost`|
+|`blh`|`open_browser -u http://localhost[:port]`|Open a browser as `localhost`|
 
 ## GitHub
 
