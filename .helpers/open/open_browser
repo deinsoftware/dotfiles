@@ -1,10 +1,12 @@
 #!/bin/bash
 
-while getopts ":f:u:" opt; do
+while getopts ":f:u:p:" opt; do
     case $opt in
         f) file="${OPTARG}"
         ;;
         u) url="${OPTARG}"
+        ;;
+        p) port="${OPTARG}"
         ;;
         \?) echo "Invalid option -${OPTARG}" >&2
         exit 1
@@ -28,9 +30,16 @@ if [ -n "${file}" ]; then
     address="${file}"
 fi
 
+if [ -n "${port}" ]; then
+    pattern="^([0-9]{1,4}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])$"
+    if [[ ${port} =~ ${pattern} ]]; then
+        url="${url}:${port}"
+    fi
+fi
+
 if [ -n "${url}" ]; then
-    pattern="~^(?:f|ht)tps?://~i"
-    if [[ ! ${url} =~ ${pattern} ]]; then
+    pattern="^(http|https)://"
+    if (! [[ "${url}" =~ ${pattern} ]]); then
         url="https://${url}"
     fi
     address="${url}"

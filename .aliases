@@ -110,7 +110,8 @@ alias opc="open_path -p coverage" # open coverage path
 # Browse
 alias b="open_browser -f ./index.html" # browse index.html
 alias bu="open_browser -u" # +url
-alias blh="open_browser -u http://localhost" # +[:port]
+alias blh="open_browser -u http://localhost"
+alias blhp="open_browser -u http://localhost -p" # +port
 alias bcr="open_browser -f coverage" # browse coverage
 alias bgr="open_git_repo" # browse git repo
 alias bgb="open_git_branch" # browse git repo on current branch
