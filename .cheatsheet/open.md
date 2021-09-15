@@ -2,7 +2,7 @@
 
 ## File Explorer
 
-|Alias|Description|
+|Alias|Command|Description|
 |---|---|---|
 |`o`|`open_p -p .`|Open current path on file explorer or finder|
 |`o <path>`|`open_p -p <path>`|Open a relative or absolute path on file explorer or finder|
