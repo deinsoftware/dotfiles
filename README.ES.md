@@ -30,6 +30,7 @@ export PATH="$HOME/.helpers/b64/:$PATH"
 export PATH="$HOME/.helpers/git/:$PATH"
 export PATH="$HOME/.helpers/md/:$PATH"
 export PATH="$HOME/.helpers/open/:$PATH"
+export PATH="$HOME/.helpers/search/:$PATH"
 chmod +x ~/.helpers/**/*
 
 # Custom
@@ -92,6 +93,7 @@ Una vez termine, guarde el archivo `.zshrc`, cierre y reabra todas las terminale
 | ── `md`| Comandos para ver archivos MarkDown en la terminal (TEP) |
 | ── `open`| Commandos para abrir archivos/rutas en el Explorador de Archivos o abrir archivos/url en el Navegador |
 | ── `react`| Comandos para crear proyectos de React con opciones extra (TEP) |
+| ── `search`| Comandos para buscar textos en los archivos |
 |`.aliases`| Archivo con la definición de los alias |
 |`.colors`| Archivo con colores de terminal para usar en otros scripts |
 |`.hooks`| Archivo con hooks de ZSH con funciones que corren antes o después de ejecutar algún comando en la terminal |

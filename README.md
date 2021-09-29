@@ -30,6 +30,7 @@ export PATH="$HOME/.helpers/b64/:$PATH"
 export PATH="$HOME/.helpers/git/:$PATH"
 export PATH="$HOME/.helpers/md/:$PATH"
 export PATH="$HOME/.helpers/open/:$PATH"
+export PATH="$HOME/.helpers/search/:$PATH"
 chmod +x ~/.helpers/**/*
 
 # Custom
@@ -92,6 +93,7 @@ That's all folks! It's ready to use.
 | ── `md`| Helper commands to see MarkDown files on terminal (WIP) |
 | ── `open`| Helper commands to open file/folder on the File Explorer or open files/url on the Browser |
 | ── `react`| Helper commands to create React project with extra features (WIP) |
+| ── `search`| Helper commands to search text inside files |
 |`.aliases`| File for aliases definitions |
 |`.colors`| File with terminal colors to use in other scripts |
 |`.hooks`| ZSH hooks file with custom functions to run as validation before and after run commands |

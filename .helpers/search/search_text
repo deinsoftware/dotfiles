@@ -1,0 +1,20 @@
+#!/bin/bash
+
+while getopts ":t:p:" opt; do
+    case $opt in
+        t) text="${OPTARG}"
+        ;;
+        p) path="${OPTARG}"
+        ;;
+        \?) echo "Invalid option -${OPTARG}" >&2
+        exit 1
+        ;;
+    esac
+done
+
+if [ -z "${text}" ]; then
+    echo -e "${B_RED}${T_WHITE}ERROR:${F_RESET} text parameter is missing"
+    exit 1
+fi
+
+grep -rlw "${text}" ${path}
