@@ -14,7 +14,7 @@ alias_for() {
     found=${found//\\//} # Replace backslash with slash
     found=${found%\'} # Remove end single quote
     found=${found#"$search='"} # Remove alias name
-    echo "${found} ${2}" # Return found value (with parameters)
+    echo "${found} ${2}" | xargs # Return found value (with parameters)
   else
     echo ""
   fi
@@ -66,7 +66,7 @@ before_validation(){
     cmd_previous="${cmd_previous_alias}"
   fi
   local cmd_current=$(echo $1 | xargs)
-  
+
   if [[ "$cmd_current" =~ ^"npm publish" ]] || [[ "${cmd_alias}" =~ ^"npm publish" ]]; then
     cmd_validation="npm run build"
   elif [[ "$cmd_current" =~ ^"git checkout" ]] || [[ "${cmd_alias}" =~ ^"git checkout" ]]; then
