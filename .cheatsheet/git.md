@@ -15,7 +15,7 @@
 |`gaa`|`git add --all`|Add all new and changed files to the staging area|
 |`grh`|`git reset`|Removes all files from staging area|
 |`guc`|`git reset --hard HEAD`|Undo changes and preserve untracked files|
-|`gcc`|`git clean -f -d -x`|Clean ALL changes and remove untracked files|
+|`gcu`|`git clean -f -d -x`|Clean ALL changes and remove untracked files|
 |`ga <file>`|`git add <file>`|Add a file to the staging area|
 |`gru <file>`|`git reset -- <file>`|Remove a file from staging area|
 |`gcmsg "<message>"`|`git commit -m "<message>"`|Commit changes with message description|
@@ -71,6 +71,7 @@
 |`gd <source-branch> <target-branch>`|`git diff <source-branch> <target-branch>`|Preview changes before merging|
 |`gm <branch-name>`|`git merge <branch-name>`|Merge a branch into the active branch|
 |`gm <source-branch> <target-branch>`|`git merge  <source-branch> <target-branch>`|Merge a branch into a target branch|
+|`gma`|`git merge --abort`|Cancel the whole merge process|
 |`glog`|`git log --oneline --decorate --graph`|View changes|
 
 ## Oh Shit!
