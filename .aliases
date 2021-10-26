@@ -137,7 +137,7 @@ alias f2b="file_to_b64"
 
 # Updates
 alias npo="npm -g outdated"
-alias npu="npm update -g"
+alias npu="npm -g update"
 alias apd="sudo apt update #update repositories"
 alias apl="sudo apt list --upgradable"
 alias apg="sudo apt upgrade #update installed packages"
