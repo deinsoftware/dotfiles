@@ -133,3 +133,12 @@ alias iop="npx @squoosh/cli --oxipng auto" # +file-name
 # Base 64
 alias b2f="b64_to_file"
 alias f2b="file_to_b64"
+
+
+# Updates
+alias npo="npm -g outdated"
+alias npu="npm update -g"
+alias apd="sudo apt update #update repositories"
+alias apl="sudo apt list --upgradable"
+alias apg="sudo apt upgrade #update installed packages"
+alias apr="sudo apt autoremove"
