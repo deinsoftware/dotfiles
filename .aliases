@@ -64,8 +64,6 @@ alias npk="npx npkill" #clean unused node_modules
 alias nkp="npx kill-port" # +portnumber
 alias nfk="npx fkill-cli" # +[<pid|name|:port> …] #kill processes
 
-alias nlg="npm list -g --depth 0" #list global packages installed
-
 alias ni="npm i"
 alias nis="npm i -S" # +package@version
 alias nise="npm i -S -E" # +package@version
@@ -136,6 +134,7 @@ alias f2b="file_to_b64"
 
 
 # Updates
+alias npl="npm -g list --depth 0" #list global packages installed
 alias npo="npm -g outdated"
 alias npu="npm -g update"
 alias apd="sudo apt update #update repositories"
@@ -147,3 +146,7 @@ alias bro="brew outdated"
 alias brg="brew upgrade"
 alias brc="brew cleanup && brew cask cleanup"
 alias brd="brew doctor"
+
+
+# VSCode extensions
+alias cep="vsce package"
