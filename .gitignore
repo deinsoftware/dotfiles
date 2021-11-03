@@ -11,6 +11,8 @@
 !README.ES.md
 
 # And not this folders
+!.github
+!.github/**
 !.helpers
 !.helpers/**
 !.cheatsheet
