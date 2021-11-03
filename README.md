@@ -108,3 +108,34 @@ That's all folks! It's ready to use.
 - [Automatic change directory after git clone](https://dev.to/equiman/automatic-change-directory-after-git-clone-8ei)
 - [ZSH cheatsheet for git plugin](https://dev.to/equiman/zsh-cheatsheet-for-git-plugin-1f6a)
 - [base64 encode/decode multiple files](https://dev.to/equiman/base64-encode-decode-multiple-files-2ol1)
+
+---
+
+## About
+
+### Built With
+
+- [VS Code](https://code.visualstudio.com/) - Code editing redefined.
+- [Widows Terminal](https://github.com/Microsoft/Terminal/) - A modern terminal application for users of command-line tools and shells.
+
+### Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [Arrow Function Snippets](https://github.com/deinsoftware/zsh-dev-toolkit/tags) on GitHub.
+
+### Authors
+
+- **Camilo Martinez** [[Equiman](http://stackoverflow.com/story/equiman)]
+
+See also the list of [contributors](https://github.com/deinsoftware/zsh-dev-toolkit/contributors) who participated in this project.
+
+### Sponsors
+
+If this project helps you, consider buying me a cup of coffee.
+
+[![paypal](https://img.shields.io/badge/-PayPal-gray?style=flat&labelColor=00457C&logo=paypal&logoColor=white&link=https://paypal.me/equiman/3)](https://paypal.me/equiman/3)
+[![patreon](https://img.shields.io/badge/-Patreon-gray?style=flat&labelColor=052d49&logo=patreon&logoColor=F96854&link=https://patreon.com/equiman)](https://patreon.com/equiman)
+[![buymeacoffee](https://img.shields.io/badge/-Buy%20Me%20A%20Coffee-gray?style=flat&labelColor=FF813F&logo=buy-me-a-coffee&logoColor=white&link=https://buymeacoff.ee/equiman)](https://www.buymeacoffee.com/equiman)
+
+### License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
