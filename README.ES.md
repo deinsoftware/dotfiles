@@ -99,24 +99,45 @@ Una vez termine, guarde el archivo `.zshrc`, cierre y reabra todas las terminale
 |`.hooks`| Archivo con hooks de ZSH con funciones que corren antes o después de ejecutar algún comando en la terminal |
 |`.zshrc`| Archivo fuente de ZSH |
 
+## ZSH plugins
+
+Hay un monton de [plugins para ZSH](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins), estos son los mas utiles que he encontrado.
+
+### Oficiales
+
+* [git](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)
+* [git-lfs](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git-lfs)
+* [history-substring-search](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/history-substring-search)
+* [node](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/node)
+* [npm](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/npm)
+* [sudo](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo)
+* [ubuntu](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/ubuntu)
+* [web-search](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search)
+* [z](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/z)
+
+### Extras
+
+* [zsh-nvm](https://github.com/lukechilds/zsh-nvm)
+* [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+* [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+
 ## Serie de Articulo (en Inglés)
 
-- [Useful Alias for ZSH](https://dev.to/equiman/useful-alias-for-zsh-1j8b)
-- [Reveal the command behind an alias with ZSH](https://dev.to/equiman/reveal-the-command-behind-an-alias-with-zsh-4d96)
-- [Command validations with ZSH](https://dev.to/equiman/command-validations-with-zsh-2boa)
-- [Open File Explorer and Browser from ZSH](https://dev.to/equiman/open-file-explorer-and-browser-mbb)
-- [Automatic change directory after git clone](https://dev.to/equiman/automatic-change-directory-after-git-clone-8ei)
-- [ZSH cheatsheet for git plugin](https://dev.to/equiman/zsh-cheatsheet-for-git-plugin-1f6a)
-- [base64 encode/decode multiple files](https://dev.to/equiman/base64-encode-decode-multiple-files-2ol1)
-
+* [Useful Alias for ZSH](https://dev.to/equiman/useful-alias-for-zsh-1j8b)
+* [Reveal the command behind an alias with ZSH](https://dev.to/equiman/reveal-the-command-behind-an-alias-with-zsh-4d96)
+* [Command validations with ZSH](https://dev.to/equiman/command-validations-with-zsh-2boa)
+* [Open File Explorer and Browser from ZSH](https://dev.to/equiman/open-file-explorer-and-browser-mbb)
+* [Automatic change directory after git clone](https://dev.to/equiman/automatic-change-directory-after-git-clone-8ei)
+* [ZSH cheatsheet for git plugin](https://dev.to/equiman/zsh-cheatsheet-for-git-plugin-1f6a)
+* [base64 encode/decode multiple files](https://dev.to/equiman/base64-encode-decode-multiple-files-2ol1)*
 ---
 
 ## Acerca
 
 ### Construido
 
-- [VS Code](https://code.visualstudio.com/) - Edición de código re-definida.
-- [Widows Terminal](https://github.com/Microsoft/Terminal/) - Una aplicación de terminal moderna para usuarios de la línea de comandos.
+*-* [VS Code](https://code.visualstudio.com/) - Edición de código re-definida.
+*-* [Widows Terminal](https://github.com/Microsoft/Terminal/) - Una aplicación de terminal moderna para usuarios de la línea de comandos.
 
 ### Versionamiento
 
@@ -124,7 +145,7 @@ Usamos [SemVer](https://semver.org/lang/es/) para el versionamiento. Para las ve
 
 ### Authors
 
-- **Camilo Martinez** [[Equiman](http://stackoverflow.com/story/equiman)]
+* **Camilo Martinez** [[Equiman](http://stackoverflow.com/story/equiman)]
 
 Tambien puede ver la lista de los [contribuyentes](https://github.com/deinsoftware/zsh-dev-toolkit/contributors) que han participado en este proyecto.
 
@@ -134,7 +155,7 @@ Si este proyecto te ayudó, por favor considera invitarme a un café.
 
 [![paypal](https://img.shields.io/badge/-PayPal-gray?style=flat&labelColor=00457C&logo=paypal&logoColor=white&link=https://paypal.me/equiman/3)](https://paypal.me/equiman/3)
 [![patreon](https://img.shields.io/badge/-Patreon-gray?style=flat&labelColor=052d49&logo=patreon&logoColor=F96854&link=https://patreon.com/equiman)](https://patreon.com/equiman)
-[![buymeacoffee](https://img.shields.io/badge/-Buy%20Me%20A%20Coffee-gray?style=flat&labelColor=FF813F&logo=buy-me-a-coffee&logoColor=white&link=https://buymeacoff.ee/equiman)](https://www.buymeacoffee.com/equiman)
+[![buymeacoffee](https://img.shields.io/badge/-Buy%20Me%20A%20Coffee-gray?style=flat&labelColor=FF813F&logo=buy-me-a-coffee&logoColor=white&link=https://www.buymeacoffee.com/equiman)](https://www.buymeacoffee.com/equiman)
 
 ### Licencia
 
