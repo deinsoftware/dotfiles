@@ -70,6 +70,7 @@ alias nise="npm i -S -E" # +package@version
 alias nid="npm i -D" # +package@version
 alias nide="npm i -D -E" # +package@version
 alias nr="npm r" # +package@version
+alias ncc="npm cache clean --force"
 
 alias nrb="npm run build"
 alias nrbd="npm run build:dev"
