@@ -59,6 +59,7 @@ alias gpnv="git push --no-verify"
 alias rnm="rm -rf node_modules"
 alias rbn="rm -rf build node_modules"
 alias rap="rm -rf build coverage node_modules package-lock.json && npm i"
+alias crap="clear && rm -rf build coverage node_modules package-lock.json && npm i"
 
 alias npk="npx npkill" #clean unused node_modules
 alias nkp="npx kill-port" # +portnumber
