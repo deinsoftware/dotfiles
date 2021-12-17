@@ -150,8 +150,9 @@ alias brc="brew cleanup && brew cask cleanup"
 alias brd="brew doctor"
 
 
-# VSCode extensions
-alias cep="vsce package"
+# VSCode
+alias vc="code"
+alias vcp="vsce package"
 
 
 # WSL
