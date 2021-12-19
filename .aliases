@@ -163,6 +163,7 @@ alias vpn="volta pin node@16.13.1 && volta pin npm@8.1.2"
 alias vla="volta list all"
 alias vln="volta list node"
 alias vlp="volta list npm"
+alias vcv="node -v && npm -v"
 
 
 # WSL
