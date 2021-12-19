@@ -155,6 +155,13 @@ alias vc="code"
 alias vcp="vsce package"
 
 
+# Volta
+alias vi14="volta install node@14"
+alias vi16="volta install node@lts"
+alias vla="volta list all"
+alias vln="volta list node"
+
+
 # WSL
 alias wsls="wsl --shutdown"
 alias wsll="wsl -l -v"
