@@ -141,7 +141,7 @@ Hay un monton de [plugins para ZSH](https://github.com/ohmyzsh/ohmyzsh/tree/mast
 
 ### Versionamiento
 
-Usamos [SemVer](https://semver.org/lang/es/) para el versionamiento. Para las versiones disponible, vaya a [Arrow Function Snippets](https://github.com/deinsoftware/zsh-dev-toolkit/tags) en GitHub.
+Usamos [SemVer](https://semver.org/lang/es/) para el versionamiento. Para las versiones disponible, vaya a [ZSH Dev Toolkit](https://github.com/deinsoftware/zsh-dev-toolkit/tags) en GitHub.
 
 ### Authors
 

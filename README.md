@@ -142,7 +142,7 @@ There are a lot of [plugins for ZSH](https://github.com/ohmyzsh/ohmyzsh/tree/mas
 
 ### Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [Arrow Function Snippets](https://github.com/deinsoftware/zsh-dev-toolkit/tags) on GitHub.
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [ZSH Dev Toolkit](https://github.com/deinsoftware/zsh-dev-toolkit/tags) on GitHub.
 
 ### Authors
 
