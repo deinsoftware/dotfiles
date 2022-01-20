@@ -121,7 +121,9 @@ Hay un monton de [plugins para ZSH](https://github.com/ohmyzsh/ohmyzsh/tree/mast
 * [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
-## Serie de Articulo (en Inglés)
+## Serie de Articulo 
+
+Inglés: 
 
 * [Useful Alias for ZSH](https://dev.to/equiman/useful-alias-for-zsh-1j8b)
 * [Reveal the command behind an alias with ZSH](https://dev.to/equiman/reveal-the-command-behind-an-alias-with-zsh-4d96)
@@ -129,7 +131,12 @@ Hay un monton de [plugins para ZSH](https://github.com/ohmyzsh/ohmyzsh/tree/mast
 * [Open File Explorer and Browser from ZSH](https://dev.to/equiman/open-file-explorer-and-browser-mbb)
 * [Automatic change directory after git clone](https://dev.to/equiman/automatic-change-directory-after-git-clone-8ei)
 * [ZSH cheatsheet for git plugin](https://dev.to/equiman/zsh-cheatsheet-for-git-plugin-1f6a)
-* [base64 encode/decode multiple files](https://dev.to/equiman/base64-encode-decode-multiple-files-2ol1)*
+* [base64 encode/decode multiple files](https://dev.to/equiman/base64-encode-decode-multiple-files-2ol1)
+
+Español:
+
+* [Mover el Sistema de Archivos de WSL a otro disco](https://dev.to/equimancho/mover-el-sistema-de-archivos-de-wsl-a-otro-disco-3fbi)
+
 ---
 
 ## Acerca
