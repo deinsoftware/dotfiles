@@ -75,6 +75,7 @@ alias ncc="npm cache clean --force"
 
 # https://github.com/dylang/npm-check
 # npm install -g npm-check
+alias nc="npm-check"
 alias ncu="npm-check -u"
 
 alias nrb="npm run build"
