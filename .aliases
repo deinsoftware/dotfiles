@@ -159,6 +159,7 @@ alias brd="brew doctor"
 
 # VSCode
 alias vc="code"
+alias vco="code ."
 alias vcp="vsce package"
 
 
