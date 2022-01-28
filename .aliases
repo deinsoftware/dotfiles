@@ -169,6 +169,8 @@ alias vi16="volta install node@lts"
 alias vpn="volta pin node@16.13.1 && volta pin npm@8.1.2"
 alias vla="volta list all"
 alias vln="volta list node"
+alias vlnc="volta list node --current --format plain"
+alias vlnd="volta list node --default --format plain"
 alias vlp="volta list npm"
 alias vcv="node -v && npm -v"
 
