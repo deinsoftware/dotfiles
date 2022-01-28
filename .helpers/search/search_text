@@ -17,4 +17,4 @@ if [ -z "${text}" ]; then
     exit 1
 fi
 
-grep -rlw "${text}" ${path} --exclude-dir={node_modules,build,coverage,.git}
+grep -rlw "${text}" ${path} --exclude-dir={node_modules,build,coverage,.gi}
