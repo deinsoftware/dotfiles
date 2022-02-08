@@ -176,12 +176,14 @@ alias vlp="volta list npm"
 alias vcv="node -v && npm -v"
 
 
-#Pyenv
-alias peu="cd $(pyenv root) && git pull"
-alias pil="pyenv install --list"
-alias piv="pyenv versions"
-alias pgv="pyenv global " # +version
-alias plv="pyenv local " # +version
+#PyEnv
+alias peup="git -c $(pyenv root) pull"
+alias peil="pyenv install --list"
+alias peiv="pyenv versions"
+alias pei="pyenv install" # +version
+alias peu="pyenv uninstall " # +version
+alias peg="pyenv global " # +version
+alias pel="pyenv local " # +version
 alias pcv="python --version"
 
 
