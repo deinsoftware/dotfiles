@@ -147,16 +147,17 @@ alias f2b="file_to_b64"
 alias npl="npm -g list --depth 0" #list global packages installed
 alias npo="npm -g outdated"
 alias npu="npm -g update"
-alias apd="sudo apt update #update repositories"
-alias apl="sudo apt list --upgradable"
-alias apg="sudo apt upgrade #update installed packages"
-alias apr="sudo apt autoremove"
+
 alias brd="brew update"
 alias bro="brew outdated"
 alias brg="brew upgrade"
 alias brc="brew cleanup && brew cask cleanup"
 alias brd="brew doctor"
 
+alias apd="sudo apt update" #update repositories
+alias alu="apt list --upgradable" #outdated
+alias apg="sudo apt upgrade -y" #update installed packages
+alias arm="sudo apt --purge autoremove"
 
 # VSCode
 alias vc="code"
@@ -186,10 +187,7 @@ alias peg="pyenv global " # +version
 alias pel="pyenv local " # +version
 alias pcv="python --version"
 
-
-# WSL
-alias wsls="wsl --shutdown"
-alias wsll="wsl -l -v"
-alias wsl="wsl"
-alias wslu="wsl --distribution Ubuntu"
-alias wsls="wsl --status"
+#Ubuntu
+alias uv="cat /etc/os-release"
+#sudo apt install update-manager-core
+alias uu="sudo do-release-upgrade" #update ubuntu

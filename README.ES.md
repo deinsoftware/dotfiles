@@ -65,6 +65,40 @@ Una vez termine, guarde el archivo `.zshrc`, cierre y reabra todas las terminale
 
 ¡Eso es todo amigxs! Ya quedó listo para ser usado.
 
+### 5. Extra
+
+Una lista úitl de alias de PowerShell para lidiar con `WSL`.
+
+```powershell
+# Alias
+function getAliases() {(Get-Alias).DisplayName}
+Set-Alias a -value getAliases
+
+# Perfil
+function checkIfProfileExist() {Test-Path $profile}
+Set-Alias pe -value checkIfProfileExist
+function createProfile() {New-Item -path $PROFILE -type file -force}
+Set-Alias pc -value createProfile
+function editProfile() {code $PROFILE}
+Set-Alias e -value editProfile
+function reloadProfile() {. $PROFILE}
+Set-Alias r -value reloadProfile
+
+# WSL
+function editWslConfig() {code $HOME/.wslconfig}
+Set-Alias wc -value editWslConfig
+function wslShutdown() {wsl --shutdown}
+Set-Alias ws -value wslShutdown
+function wslList() {wsl -l -v}
+Set-Alias ws -value wslList
+function wslRun() {wsl}
+Set-Alias wr -value wslRun
+function wslRunUbuntu() {wsl --distribution Ubuntu}
+Set-Alias wr -value wslRunUbuntu
+function wslStatus() {wsl --status}
+Set-Alias wst -value wslStatus
+```
+
 ## Folder Structure
 
 ```bash
