@@ -71,31 +71,64 @@ Usefull alias to use on PowerShell side to deal with `WSL`.
 
 ```powershell
 # Alias
-function getAliases() {(Get-Alias).DisplayName}
+function getAliases() {
+    echo "(Get-Alias).DisplayName"
+    (Get-Alias).DisplayName
+}
 Set-Alias a -value getAliases
 
 # Profile
-function checkIfProfileExist() {Test-Path $profile}
+function checkIfProfileExist() {
+    echo "Test-Path $profile"
+    Test-Path $profile
+}
 Set-Alias pe -value checkIfProfileExist
-function createProfile() {New-Item -path $PROFILE -type file -force}
+function createProfile() {
+    echo "New-Item -path $PROFILE -type file -force"
+    New-Item -path $PROFILE -type file -force
+}
 Set-Alias pc -value createProfile
-function editProfile() {code $PROFILE}
+function editProfile() {
+    echo "code $PROFILE"
+    code $PROFILE
+}
 Set-Alias e -value editProfile
-function reloadProfile() {. $PROFILE}
+function reloadProfile() {
+    echo ". $PROFILE"
+    . $PROFILE
+}
 Set-Alias r -value reloadProfile
 
 # WSL
-function editWslConfig() {code $HOME/.wslconfig}
+function editWslConfig() {
+    echo "code $HOME/.wslconfig"
+    code $HOME/.wslconfig
+}
 Set-Alias wc -value editWslConfig
-function wslShutdown() {wsl --shutdown}
+function wslShutdown() {
+    echo "wsl --shutdown"
+    wsl --shutdown
+}
 Set-Alias ws -value wslShutdown
-function wslList() {wsl -l -v}
+function wslList() {
+    echo "wsl -l -v"
+    wsl -l -v
+}
 Set-Alias ws -value wslList
-function wslRun() {wsl}
+function wslRun() {
+    echo "wsl"
+    wsl
+}
 Set-Alias wr -value wslRun
-function wslRunUbuntu() {wsl --distribution Ubuntu}
+function wslRunUbuntu() {
+    echo "wsl --distribution Ubuntu"
+    wsl --distribution Ubuntu
+}
 Set-Alias wr -value wslRunUbuntu
-function wslStatus() {wsl --status}
+function wslStatus() {
+    echo "wsl --status"
+    wsl --status
+}
 Set-Alias wst -value wslStatus
 ```
 
