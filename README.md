@@ -114,7 +114,7 @@ function wslList() {
     echo "wsl -l -v"
     wsl -l -v
 }
-Set-Alias ws -value wslList
+Set-Alias wl -value wslList
 function wslRun() {
     echo "wsl"
     wsl
@@ -124,7 +124,7 @@ function wslRunUbuntu() {
     echo "wsl --distribution Ubuntu"
     wsl --distribution Ubuntu
 }
-Set-Alias wr -value wslRunUbuntu
+Set-Alias wru -value wslRunUbuntu
 function wslStatus() {
     echo "wsl --status"
     wsl --status
