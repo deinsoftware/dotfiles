@@ -43,13 +43,16 @@ export GITHUB_USER_EMAIL="user@users.noreply.github.com" # e-mail publico person
 [ -f ~/.hooks ] && . ~/.hooks
 ```
 
-> Las constante `OPEN` y `BROWSE` necesitan ser configuradas de acuerdo al SO que se este usando. Windows (WSL2) y macOS usan el mismo comando para abrir el explorador de archivos como el navegador por defecto, en Ubuntu (Linux) se debe especificar cada uno por separado.
+> Las constantes `OPEN` y `BROWSE` necesitan ser configuradas de acuerdo al SO que se este usando. Windows (WSL2) y macOS usan el mismo comando para abrir el explorador de archivos como el navegador por defecto, en Ubuntu (Linux) se debe especificar cada uno por separado.
 
 |SO|`OPEN`|`BROWSER`|
 |---|---|---|
 |Windows (WSL2)|`"explorer.exe"`|`"${OPEN}"`|
 |macOS|`"open"`|`"${OPEN}"`|
 |Ubuntu|`"xdg-open"`, `"gnome-open"`, `"nautilus"` ...|`"googlechrome"`, `"firefox"` ...|
+
+> La constante `PACKAGE` necesita ser configurada de acuerdo al Package Manager que estes usando `"NPM"`, `"YARN"`, `"PNPM"`.
+
 
 ### 3. Permisos
 

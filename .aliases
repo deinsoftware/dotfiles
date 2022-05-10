@@ -3,7 +3,7 @@
 # Terminal
 alias c="clear"
 alias x="exit"
-alias e="code -n ~/ ~/.zshrc ~/.aliases ~/.colors ~/.hooks"
+alias e="code -n ~/ ~/.zshrc ~/.aliases ~/.colors ~/.hooks ~/.packages"
 alias r="source ~/.zshrc"
 
 alias h="history -10"
@@ -34,7 +34,6 @@ alias st="speedtest"
 alias cb="clipboard"
 
 
-
 # Markdown Cheatsheets
 alias mdv="md_viewer -s" +cheatsheet name
 alias mdvg="md_viewer -s git"
@@ -56,45 +55,48 @@ alias glod="git pull origin dev"
 alias gpnv="git push --no-verify"
 
 
-# npm
+# Packages
+alias psn="PACKAGE=\"NPM\""
+alias psy="PACKAGE=\"YARN\""
+alias psp="PACKAGE=\"PNPM\""
+alias pc="pkg_current"
+
+alias pi="pkg_install"
+alias pae="pkg_add -E" # +package@version
+alias pad="pkg_add -D" # +package@version
+alias pade="pkg_add -D -E" # +package@version
+alias pr="pkg_uninstall" # +package@version
+alias pcc="pkg cache clean --force"
+
 alias rnm="rm -rf node_modules"
 alias rbn="rm -rf build node_modules"
-alias rap="rm -rf build coverage node_modules package-lock.json && npm i"
+alias rap="rm -rf build coverage node_modules *lock.* && pi"
 alias cap="clear && rap"
 
 alias npk="npx npkill" #clean unused node_modules
 alias nkp="npx kill-port" # +portnumber
 alias nfk="npx fkill-cli" # +[<pid|name|:port> …] #kill processes
 
-alias ni="npm i"
-alias nis="npm i -S" # +package@version
-alias nise="npm i -S -E" # +package@version
-alias nid="npm i -D" # +package@version
-alias nide="npm i -D -E" # +package@version
-alias nr="npm r" # +package@version
-alias ncc="npm cache clean --force"
-
 # https://github.com/dylang/npm-check
 # npm install -g npm-check
 alias nc="npm-check"
 alias ncu="npm-check -u"
 
-alias nrb="npm run build"
-alias nrbd="npm run build:dev"
-alias nrd="npm run deploy"
-alias nrs="npm run start"
-alias nrd="npm run dev"
-alias nrsd="npm run start:dev"
-alias nrsq="npm run start:qa"
-alias nrt="npm run test"
-alias nrtc="npm run test:c"
-alias nrtcw="npm run test:cw"
-alias nrtu="npm run test:u"
-
-alias np="npm publish"
-alias nu="npm unpublish" # +package@version
-
-alias nei="npm_eslint_init"
+alias ppi="pkg init"
+alias prb="pkg run build"
+alias prbd="pkg run build:dev"
+alias prd="pkg run deploy"
+alias prs="pkg run start"
+alias prd="pkg run dev"
+alias prsd="pkg run start:dev"
+alias prsq="pkg run start:qa"
+alias prt="pkg run test"
+alias prtc="pkg run test:c"
+alias prtw="pkg run test:w"
+alias prtwc="pkg run test:wc"
+alias pp="pkg publish"
+alias pu="pkg unpublish" # +package@version
+alias pei="pkg_eslint_init"
 
 
 # React
@@ -128,14 +130,16 @@ alias bgc="open_git_compare" # +base branch
 alias bnp="open_npm_package" #browse npm package
 alias bnc="open_npm_clipboard" #browse npm package from clipboard
 
+
 # Search
 alias stp="search_text" # +-t <text> -p <path>
 alias sff="find " # <path> -type d -name <folder> 
 
+
 # Image Optimizer
-alias iow="npx @squoosh/cli --webp auto" # +file-name
-alias ioa="npx @squoosh/cli --avif auto" # +file-name
-alias iop="npx @squoosh/cli --oxipng auto" # +file-name
+alias iow="pkg_run @squoosh/cli --webp auto" # +file-name
+alias ioa="pkg_run @squoosh/cli --avif auto" # +file-name
+alias iop="pkg_run @squoosh/cli --oxipng auto" # +file-name
 
 
 # Base 64

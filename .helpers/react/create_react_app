@@ -4,7 +4,7 @@
 NAME=${1}
 OPTIONS=${2---use-npm}
 echo "${T_GREEN}❯ ${T_YELLOW}Creating...${f_reset}"
-eval "npx create-react-app ${NAME} ${OPTIONS}"
+eval "${(P)${:-${PACKAGE_PIN:-$PACKAGE}_RUN}} create-react-app ${NAME} ${OPTIONS}"
 echo "${T_GREEN}❯ ${T_YELLOW}Changing dir...${f_reset}"
 cd $NAME
 echo "${T_GREEN}❯ ${T_YELLOW}Opening...${f_reset}"

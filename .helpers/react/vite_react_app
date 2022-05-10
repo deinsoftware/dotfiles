@@ -4,7 +4,7 @@
 NAME=${1}
 TEMPLATE=${2---template react-ts}
 echo "${T_GREEN}❯ ${T_YELLOW}Creating...${f_reset}"
-eval "npm init @vitejs/app ${NAME} ${TEMPLATE}"
+eval "${(P){:-${PACKAGE_PIN:-$PACKAGE}}} init @vitejs/app ${NAME} ${TEMPLATE}"
 echo "${T_GREEN}❯ ${T_YELLOW}Changing dir...${f_reset}"
 cd $NAME
 echo "${T_GREEN}❯ ${T_YELLOW}Installing...${f_reset}"

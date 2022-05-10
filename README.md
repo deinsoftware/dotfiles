@@ -51,6 +51,8 @@ export GITHUB_USER_EMAIL="user@users.noreply.github.com" # public personal e-mai
 |macOS|`"open"`|`"${OPEN}"`|
 |Ubuntu|`"xdg-open"`, `"gnome-open"`, `"nautilus"` ...|`"googlechrome"`, `"firefox"` ...|
 
+> `PACKAGE` constant need to be configured according the package manager you use `"NPM"`, `"YARN"`, `"PNPM"`.
+
 ### 3. Permissions
 
 Now add execution permission:
