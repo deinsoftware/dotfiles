@@ -1,9 +1,0 @@
-#!/bin/zsh
-
-params=""
-if [[ ! -z $@ ]]; then
-    params="$@"
-fi
-
-echo "${T_GREEN}❯ ${(P)${:-${PACKAGE}_RUN}} ${params}" # Print it
-${(P)${:-${PACKAGE}_RUN}} ${params}

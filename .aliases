@@ -73,9 +73,9 @@ alias rbn="rm -rf build node_modules"
 alias rap="rm -rf build coverage node_modules *lock.* && pi"
 alias cap="clear && rap"
 
-alias ppk="pkx npkill" #clean unused node_modules
-alias pkp="pkx kill-port" # +portnumber
-alias pfk="pkx fkill-cli" # +[<pid|name|:port> …] #kill processes
+alias ppk="npx npkill" #clean unused node_modules
+alias pkp="npx kill-port" # +portnumber
+alias pfk="npx fkill-cli" # +[<pid|name|:port> …] #kill processes
 
 alias ppi="pkg init"
 alias prb="pkg run build"
@@ -93,15 +93,15 @@ alias pp="pkg publish"
 alias pu="pkg unpublish" # +package@version
 alias pei="pkg_eslint_init"
 
-alias pui="pkx unimported"
-alias pch="pkx npm-check"
-alias pcu="pkx npm-check -u"
+alias pui="npx unimported"
+alias pch="npx npm-check"
+alias pcu="npx npm-check -u"
 
 
 # Image Optimizer
-alias iow="pkx @squoosh/cli --webp auto" # +file-name
-alias ioa="pkx @squoosh/cli --avif auto" # +file-name
-alias iop="pkx @squoosh/cli --oxipng auto" # +file-name
+alias iow="npx @squoosh/cli --webp auto" # +file-name
+alias ioa="npx @squoosh/cli --avif auto" # +file-name
+alias iop="npx @squoosh/cli --oxipng auto" # +file-name
 
 
 # React
