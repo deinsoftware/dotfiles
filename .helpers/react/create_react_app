@@ -9,4 +9,4 @@ echo "${T_GREEN}❯ ${T_YELLOW}Changing dir...${f_reset}"
 cd $NAME
 echo "${T_GREEN}❯ ${T_YELLOW}Opening...${f_reset}"
 code .
-nei
+pei
