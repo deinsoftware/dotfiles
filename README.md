@@ -51,6 +51,8 @@ export GITHUB_USER_EMAIL="user@users.noreply.github.com" # public personal e-mai
 |macOS|`"open"`|`"${OPEN}"`|
 |Ubuntu|`"xdg-open"`, `"gnome-open"`, `"nautilus"` ...|`"googlechrome"`, `"firefox"` ...|
 
+> `PACKAGE` constant need to be configured according the package manager you use `"NPM"`, `"YARN"`, `"PNPM"`.
+
 ### 3. Permissions
 
 Now add execution permission:
@@ -64,6 +66,73 @@ chmod +x ~/.helpers/**/*
 Once finish, save `.zshrc` file, close and reopen all terminals or update his source running `source ~/.zshrc` command.
 
 That's all folks! It's ready to use.
+
+### 5. Extra
+
+Usefull alias to use on PowerShell side to deal with `WSL`.
+
+```powershell
+# Alias
+function getAliases() {
+    echo "(Get-Alias).DisplayName"
+    (Get-Alias).DisplayName
+}
+Set-Alias a -value getAliases
+
+# Profile
+function checkIfProfileExist() {
+    echo "Test-Path $profile"
+    Test-Path $profile
+}
+Set-Alias pe -value checkIfProfileExist
+function createProfile() {
+    echo "New-Item -path $PROFILE -type file -force"
+    New-Item -path $PROFILE -type file -force
+}
+Set-Alias pc -value createProfile
+function editProfile() {
+    echo "code $PROFILE"
+    code $PROFILE
+}
+Set-Alias e -value editProfile
+function reloadProfile() {
+    echo ". $PROFILE"
+    . $PROFILE
+}
+Set-Alias r -value reloadProfile
+
+# WSL
+function editWslConfig() {
+    echo "code $HOME/.wslconfig"
+    code $HOME/.wslconfig
+}
+Set-Alias wc -value editWslConfig
+function wslShutdown() {
+    echo "wsl --shutdown"
+    wsl --shutdown
+}
+Set-Alias ws -value wslShutdown
+function wslList() {
+    echo "wsl -l -v"
+    wsl -l -v
+}
+Set-Alias wl -value wslList
+function wslRun() {
+    echo "wsl"
+    wsl
+}
+Set-Alias wr -value wslRun
+function wslRunUbuntu() {
+    echo "wsl --distribution Ubuntu"
+    wsl --distribution Ubuntu
+}
+Set-Alias wru -value wslRunUbuntu
+function wslStatus() {
+    echo "wsl --status"
+    wsl --status
+}
+Set-Alias wst -value wslStatus
+```
 
 ## Folder Structure
 
@@ -99,15 +168,37 @@ That's all folks! It's ready to use.
 |`.hooks`| ZSH hooks file with custom functions to run as validation before and after run commands |
 |`.zshrc`| ZSH source file |
 
+## ZSH plugins
+
+There are a lot of [plugins for ZSH](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins), those are the most useful that I found.
+
+### Official
+
+* [git](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)
+* [git-lfs](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git-lfs)
+* [history-substring-search](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/history-substring-search)
+* [node](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/node)
+* [npm](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/npm)
+* [sudo](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo)
+* [ubuntu](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/ubuntu)
+* [web-search](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search)
+* [z](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/z)
+
+### Extras
+
+* [zsh-nvm](https://github.com/lukechilds/zsh-nvm)
+* [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+* [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+
 ## Article Series
 
-- [Useful Alias for ZSH](https://dev.to/equiman/useful-alias-for-zsh-1j8b)
-- [Reveal the command behind an alias with ZSH](https://dev.to/equiman/reveal-the-command-behind-an-alias-with-zsh-4d96)
-- [Command validations with ZSH](https://dev.to/equiman/command-validations-with-zsh-2boa)
-- [Open File Explorer and Browser from ZSH](https://dev.to/equiman/open-file-explorer-and-browser-mbb)
-- [Automatic change directory after git clone](https://dev.to/equiman/automatic-change-directory-after-git-clone-8ei)
-- [ZSH cheatsheet for git plugin](https://dev.to/equiman/zsh-cheatsheet-for-git-plugin-1f6a)
-- [base64 encode/decode multiple files](https://dev.to/equiman/base64-encode-decode-multiple-files-2ol1)
+* [Useful Alias for ZSH](https://dev.to/equiman/useful-alias-for-zsh-1j8b)
+* [Reveal the command behind an alias with ZSH](https://dev.to/equiman/reveal-the-command-behind-an-alias-with-zsh-4d96)
+* [Command validations with ZSH](https://dev.to/equiman/command-validations-with-zsh-2boa)
+* [Open File Explorer and Browser from ZSH](https://dev.to/equiman/open-file-explorer-and-browser-mbb)
+* [Automatic change directory after git clone](https://dev.to/equiman/automatic-change-directory-after-git-clone-8ei)
+* [ZSH cheatsheet for git plugin](https://dev.to/equiman/zsh-cheatsheet-for-git-plugin-1f6a)
+* [Move WSL File System to another Drive](https://dev.to/equimancho/mover-el-sistema-de-archivos-de-wsl-a-otro-disco-3fbi)
 
 ---
 
@@ -115,12 +206,12 @@ That's all folks! It's ready to use.
 
 ### Built With
 
-- [VS Code](https://code.visualstudio.com/) - Code editing redefined.
-- [Widows Terminal](https://github.com/Microsoft/Terminal/) - A modern terminal application for users of command-line tools and shells.
+* [VS Code](https://code.visualstudio.com/) - Code editing redefined.
+* [Widows Terminal](https://github.com/Microsoft/Terminal/) - A modern terminal application for users of command-line tools and shells.
 
 ### Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [Arrow Function Snippets](https://github.com/deinsoftware/zsh-dev-toolkit/tags) on GitHub.
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [ZSH Dev Toolkit](https://github.com/deinsoftware/zsh-dev-toolkit/tags) on GitHub.
 
 ### Authors
 
@@ -134,7 +225,7 @@ If this project helps you, consider buying me a cup of coffee.
 
 [![paypal](https://img.shields.io/badge/-PayPal-gray?style=flat&labelColor=00457C&logo=paypal&logoColor=white&link=https://paypal.me/equiman/3)](https://paypal.me/equiman/3)
 [![patreon](https://img.shields.io/badge/-Patreon-gray?style=flat&labelColor=052d49&logo=patreon&logoColor=F96854&link=https://patreon.com/equiman)](https://patreon.com/equiman)
-[![buymeacoffee](https://img.shields.io/badge/-Buy%20Me%20A%20Coffee-gray?style=flat&labelColor=FF813F&logo=buy-me-a-coffee&logoColor=white&link=https://buymeacoff.ee/equiman)](https://www.buymeacoffee.com/equiman)
+[![buymeacoffee](https://img.shields.io/badge/-Buy%20Me%20A%20Coffee-gray?style=flat&labelColor=FF813F&logo=buy-me-a-coffee&logoColor=white&link=https://www.buymeacoffee.com/equiman)](https://www.buymeacoffee.com/equiman)
 
 ### License
 

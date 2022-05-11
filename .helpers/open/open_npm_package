@@ -1,6 +1,6 @@
 #!/bin/bash
 
-package="$(npm show ./ name --silent)"
+package="$(node -p "require('./package.json').name")"
 if [[ -z "$package" ]]; then
     echo "No package.json found"
     exit 1

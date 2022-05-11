@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+echo "${T_GREEN}❯ ${T_YELLOW}Linters...${f_reset}"
+${(P){:-${PACKAGE_PIN:-$PACKAGE}}} ${(P)${:-${PACKAGE_PIN:-$PACKAGE}_INSTALL}} -D eslint
+${(P)${:-${PACKAGE}_RUN}} eslint --init

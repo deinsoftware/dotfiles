@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+echo "${T_GREEN}❯ ${(P)PACKAGE} ${(P)${:-${PACKAGE}_INSTALL}}" # Print it
+${(P)PACKAGE} ${(P)${:-${PACKAGE}_INSTALL}}

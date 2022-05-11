@@ -1,5 +1,0 @@
-#!/bin/bash
-
-echo "${T_GREEN}❯ ${T_YELLOW}Linters...${f_reset}"
-npm i -D eslint
-npx eslint --init
