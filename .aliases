@@ -73,14 +73,9 @@ alias rbn="rm -rf build node_modules"
 alias rap="rm -rf build coverage node_modules *lock.* && pi"
 alias cap="clear && rap"
 
-alias npk="npx npkill" #clean unused node_modules
-alias nkp="npx kill-port" # +portnumber
-alias nfk="npx fkill-cli" # +[<pid|name|:port> …] #kill processes
-
-# https://github.com/dylang/npm-check
-# npm install -g npm-check
-alias nc="npm-check"
-alias ncu="npm-check -u"
+alias ppk="pkx npkill" #clean unused node_modules
+alias pkp="pkx kill-port" # +portnumber
+alias pfk="pkx fkill-cli" # +[<pid|name|:port> …] #kill processes
 
 alias ppi="pkg init"
 alias prb="pkg run build"
@@ -97,6 +92,16 @@ alias prtwc="pkg run test:wc"
 alias pp="pkg publish"
 alias pu="pkg unpublish" # +package@version
 alias pei="pkg_eslint_init"
+
+alias pui="pkx unimported"
+alias pch="pkx npm-check"
+alias pcu="pkx npm-check -u"
+
+
+# Image Optimizer
+alias iow="pkx @squoosh/cli --webp auto" # +file-name
+alias ioa="pkx @squoosh/cli --avif auto" # +file-name
+alias iop="pkx @squoosh/cli --oxipng auto" # +file-name
 
 
 # React
@@ -134,12 +139,6 @@ alias bnc="open_npm_clipboard" #browse npm package from clipboard
 # Search
 alias stp="search_text" # +-t <text> -p <path>
 alias sff="find " # <path> -type d -name <folder> 
-
-
-# Image Optimizer
-alias iow="pkg_run @squoosh/cli --webp auto" # +file-name
-alias ioa="pkg_run @squoosh/cli --avif auto" # +file-name
-alias iop="pkg_run @squoosh/cli --oxipng auto" # +file-name
 
 
 # Base 64
