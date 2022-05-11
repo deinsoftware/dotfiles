@@ -70,7 +70,7 @@ alias pcc="pkg cache clean --force"
 
 alias rnm="rm -rf node_modules"
 alias rbn="rm -rf build node_modules"
-alias rap="rm -rf build coverage node_modules *lock.* && pi"
+alias rap="rm -rf build coverage node_modules package-lock.json yarn.lock yarn.log pnpm-lock.yaml && pi"
 alias cap="clear && rap"
 
 alias ppk="npx npkill" #clean unused node_modules

@@ -5,5 +5,5 @@ if [[ ! -z $@ ]]; then
     params="$@"
 fi
 
-echo "${T_GREEN}❯ ${(P)PACKAGE} ${(P)${:-${PACKAGE}_UNINSTALL}} ${params}" # Print it
+echo "${T_GREEN}❯ ${T_YELLOW}${(P)PACKAGE} ${(P)${:-${PACKAGE}_UNINSTALL}} ${params}${F_RESET}" # Print it
 ${(P)PACKAGE} ${(P)${:-${PACKAGE}_UNINSTALL}} ${params}

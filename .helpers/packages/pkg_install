@@ -1,4 +1,4 @@
 #!/bin/zsh
 
-echo "${T_GREEN}❯ ${(P)PACKAGE} ${(P)${:-${PACKAGE}_INSTALL}}" # Print it
+echo "${T_GREEN}❯ ${T_YELLOW}${(P)PACKAGE} ${(P)${:-${PACKAGE}_INSTALL}}${F_RESET}" # Print it
 ${(P)PACKAGE} ${(P)${:-${PACKAGE}_INSTALL}}
