@@ -8,8 +8,8 @@ alias r="source ~/.zshrc"
 
 alias h="history -10"
 alias hc="history -c"
-alias hg="history | grep" # +command
-alias ag="alias | grep" # +command
+alias hg="history | grep" # <command>
+alias ag="alias | grep" # <command>
 
 
 # Utils
@@ -24,7 +24,7 @@ alias t="htop"
 
 # https://dev.yorhel.nl/ncdu
 # sudo apt install ncdu / brew install ncdu
-alias d="ncdu --exclude /mnt --color dark" # +path
+alias d="ncdu --exclude /mnt --color dark" # <path>
 
 # https://www.speedtest.net/apps/cli
 alias st="speedtest"
@@ -43,7 +43,7 @@ alias ela='exa --long --all'
 
 
 # Markdown Cheatsheets
-alias mdv="md_viewer -s" +cheatsheet name
+alias mdv="md_viewer -s" # <name>
 alias mdvg="md_viewer -s git"
 alias mdvo="md_viewer -s open"
 
@@ -70,10 +70,10 @@ alias psp="PACKAGE=\"PNPM\""
 alias pc="pkg_current"
 
 alias pi="pkg_install"
-alias pae="pkg_add -E" # +package@version
-alias pad="pkg_add -D" # +package@version
-alias pade="pkg_add -D -E" # +package@version
-alias pr="pkg_uninstall" # +package@version
+alias pae="pkg_add -E" # <package@version>
+alias pad="pkg_add -D" # <package@version>
+alias pade="pkg_add -D -E" # <package@version>
+alias pr="pkg_uninstall" # <package@version>
 alias pcc="pkg cache clean --force"
 
 alias rnm="rm -rf node_modules"
@@ -84,8 +84,8 @@ alias rap="rnm && rlf && rbn && rcv && pi"
 alias cap="clear && rap"
 
 alias ppk="npx npkill" #clean unused node_modules
-alias pkp="npx kill-port" # +portnumber
-alias pfk="npx fkill-cli" # +[<pid|name|:port> …] #kill processes
+alias pkp="npx kill-port" # <port>
+alias pfk="npx fkill-cli" # [<pid|name|:port> …] #kill processes
 
 alias ppi="pkg init"
 alias prb="pkg run build"
@@ -100,18 +100,19 @@ alias prtc="pkg run test:c"
 alias prtw="pkg run test:w"
 alias prtwc="pkg run test:wc"
 alias pp="pkg publish"
-alias pu="pkg unpublish" # +package@version
+alias pu="pkg unpublish" # <package@version>
 alias pei="pkg_eslint_init"
 
-alias pui="npx unimported"
-alias pch="npx npm-check"
-alias pcu="npx npm-check -u"
+alias pcl="npx npm-check"
+alias pcg="npx npm-check -g"
+alias pul="npx npm-check -u"
+alias pug="npx npm-check -gu"
 
 
 # Image Optimizer
-alias iow="npx @squoosh/cli --webp auto" # +file-name
-alias ioa="npx @squoosh/cli --avif auto" # +file-name
-alias iop="npx @squoosh/cli --oxipng auto" # +file-name
+alias iow="npx @squoosh/cli --webp auto" # <file-name>
+alias ioa="npx @squoosh/cli --avif auto" # <file-name>
+alias iop="npx @squoosh/cli --oxipng auto" # <file-name>
 
 
 # React
@@ -122,32 +123,32 @@ alias vra="vite_react_app"
 # Serverless
 alias si="sls info"
 alias sd="sls deploy"
-alias sdf="sls deploy -f" # +function_name
+alias sdf="sls deploy -f" # <function-name>
 alias sos="serverless offline start"
 alias rsb="rm -rf .serverless"
 
 
 # Open
 alias o="open_path -p ." # open current folder
-alias op="open_path -p" # +path
+alias op="open_path -p" # <path>
 alias opb="open_path -p build" # open build path
 alias opc="open_path -p coverage" # open coverage path
 # Browse
 alias b="open_browser -f ./index.html" # browse index.html
-alias bu="open_browser -u" # +url
+alias bu="open_browser -u" # <url>
 alias blh="open_browser -u http://localhost"
-alias blhp="open_browser -u http://localhost -p" # +port
+alias blhp="open_browser -u http://localhost -p" # <port>
 alias bcr="open_browser -f coverage" # browse coverage
 alias bgr="open_git_repo" # browse git repo
 alias bgb="open_git_branch" # browse git repo on current branch
 alias bgp="open_git_pull" # browse git repo pulls
-alias bgc="open_git_compare" # +base branch
+alias bgc="open_git_compare" # <base-branch>
 alias bnp="open_npm_package" #browse npm package
 alias bnc="open_npm_clipboard" #browse npm package from clipboard
 
 
 # Search
-alias stp="search_text" # +-t <text> -p <path>
+alias stp="search_text" # -t <text> [-p <path>]
 alias sff="find " # <path> -type d -name <folder> 
 
 
@@ -194,10 +195,10 @@ alias vcv="node -v && npm -v"
 alias peup="git -c $(pyenv root) pull"
 alias peil="pyenv install --list"
 alias peiv="pyenv versions"
-alias pei="pyenv install " # +version
-alias peu="pyenv uninstall " # +version
-alias peg="pyenv global " # +version
-alias pel="pyenv local " # +version
+alias pei="pyenv install " # <version>
+alias peu="pyenv uninstall " # <version>
+alias peg="pyenv global " # <version>
+alias pel="pyenv local " # <version>
 alias pcv="python --version"
 
 #Ubuntu
