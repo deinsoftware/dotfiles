@@ -67,8 +67,8 @@ before_validation(){
   fi
   local cmd_current=$(echo $1 | xargs)
 
-  if [[ "$cmd_current" =~ ^"npm publish" ]] || [[ "${cmd_alias}" =~ ^"npm publish" ]]; then
-    cmd_validation="npm run build"
+  if [[ "$cmd_current" =~ ^"pkg publish" ]] || [[ "${cmd_alias}" =~ ^"pkg publish" ]]; then
+    cmd_validation="pkg run build"
   elif [[ "$cmd_current" =~ ^"git checkout" ]] || [[ "${cmd_alias}" =~ ^"git checkout" ]]; then
     cmd_validation="git pull"
   fi
