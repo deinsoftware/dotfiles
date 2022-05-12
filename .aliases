@@ -33,6 +33,14 @@ alias st="speedtest"
 # npm install -g clipboard-cli
 alias cb="clipboard"
 
+# https://the.exa.website/install/linux
+# apt install exa
+alias et='exa --icons --tree'
+alias et1='exa --icons --tree --level=1 --ignore-glob="*node_modules*"'
+alias et2='exa --icons --tree --level=2 --ignore-glob="*node_modules*"'
+alias els='exa --long'
+alias ela='exa --long --all'
+
 
 # Markdown Cheatsheets
 alias mdv="md_viewer -s" +cheatsheet name
@@ -69,8 +77,10 @@ alias pr="pkg_uninstall" # +package@version
 alias pcc="pkg cache clean --force"
 
 alias rnm="rm -rf node_modules"
-alias rbn="rm -rf build node_modules"
-alias rap="rm -rf build coverage node_modules package-lock.json yarn.lock yarn.log pnpm-lock.yaml && pi"
+alias rlf="rm -rf package-lock.json yarn.lock yarn.log pnpm-lock.yaml"
+alias rbn="rm -rf build"
+alias rcv="rm -rf coverage"
+alias rap="rnm && rlf && rbn && rcv && pi"
 alias cap="clear && rap"
 
 alias ppk="npx npkill" #clean unused node_modules
