@@ -80,7 +80,8 @@ alias rnm="rm -rf node_modules"
 alias rlf="rm -rf package-lock.json yarn.lock yarn.log pnpm-lock.yaml"
 alias rbn="rm -rf build"
 alias rcv="rm -rf coverage"
-alias rap="rnm && rlf && rbn && rcv && pi"
+alias rzi="rm -rf **/*Zone.Identifier"
+alias rap="rnm && rlf && rbn && rcv && rzi && pi"
 alias cap="clear && rap"
 
 alias ppk="npx npkill" #clean unused node_modules
