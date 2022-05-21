@@ -3,7 +3,7 @@
 # Terminal
 alias c="clear"
 alias x="exit"
-alias e="code -n ~/ ~/.zshrc ~/.aliases ~/.colors ~/.hooks ~/.packages"
+alias e="code -n ~/ ~/.zshrc ~/.aliases ~/.colors ~/.hooks"
 alias r="source ~/.zshrc"
 
 alias h="history -10"
