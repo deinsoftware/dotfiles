@@ -66,18 +66,18 @@ alias gpnv="git push --no-verify"
 # npm install --global swpm
 # Switch Packages Manager
 alias spn="swpm --pin npm"
-alias spt="swpm --pin yarn"
+alias spy="swpm --pin yarn"
 alias spp="swpm --pin pnpm"
 alias sin="swpm --info"
 
 alias si="swpm install"
 alias sifl="swpm install -FL"
-alias sa="swpm add" # <package@version> 
-alias sag="swpm add -g" # <package@version> 
-alias sae="swpm add -E" # <package@version> 
-alias sad="swpm add -D" # <package@version> 
-alias sade="swpm add -D -E" # <package@version> 
-#alias pr="pkg_uninstall" # <package@version> 
+alias sa='swpm add' # <package@version>
+alias sag='swpm add -g' # <package@version>
+alias sae='swpm add -E' # <package@version>
+alias sad='swpm add -D' # <package@version>
+alias sade='swpm add -D -E' # <package@version>
+#alias pr="pkg_uninstall" # <package@version>
 #alias pcc="pkg cache clean --force"
 
 alias rnm="rm -rf node_modules"
@@ -93,6 +93,8 @@ alias pkp="npx kill-port" # <port>
 alias pfk="npx fkill-cli" # [<pid|name|:port> …] #kill processes
 
 alias sit="swpm init"
+alias sity="swpm init -y"
+alias scl="swpm config list"
 alias srb="swpm run build"
 alias srbd="swpm run build:dev"
 alias srd="swpm run deploy"
@@ -206,6 +208,7 @@ alias peu="pyenv uninstall " # <version>
 alias peg="pyenv global " # <version>
 alias pel="pyenv local " # <version>
 alias pcv="python --version"
+
 
 #Ubuntu
 alias uv="cat /etc/os-release"
