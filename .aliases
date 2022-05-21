@@ -62,47 +62,51 @@ alias gcd="git checkout dev"
 alias glod="git pull origin dev"
 alias gpnv="git push --no-verify"
 
+# https://github.com/deinsoftware/swpm
+# npm install --global swpm
+# Switch Packages Manager
+alias spn="swpm --pin npm"
+alias spt="swpm --pin yarn"
+alias spp="swpm --pin pnpm"
+alias sin="swpm --info"
 
-# Packages
-alias psn="PACKAGE=\"NPM\""
-alias psy="PACKAGE=\"YARN\""
-alias psp="PACKAGE=\"PNPM\""
-alias pc="pkg_current"
-
-alias pi="pkg_install"
-alias pae="pkg_add -E" # <package@version>
-alias pad="pkg_add -D" # <package@version>
-alias pade="pkg_add -D -E" # <package@version>
-alias pr="pkg_uninstall" # <package@version>
-alias pcc="pkg cache clean --force"
+alias si="swpm install"
+alias sifl="swpm install -FL"
+alias sa="swpm add" # <package@version> 
+alias sag="swpm add -g" # <package@version> 
+alias sae="swpm add -E" # <package@version> 
+alias sad="swpm add -D" # <package@version> 
+alias sade="swpm add -D -E" # <package@version> 
+#alias pr="pkg_uninstall" # <package@version> 
+#alias pcc="pkg cache clean --force"
 
 alias rnm="rm -rf node_modules"
 alias rlf="rm -rf package-lock.json yarn.lock yarn.log pnpm-lock.yaml"
 alias rbn="rm -rf build"
 alias rcv="rm -rf coverage"
 alias rzi="rm -rf **/*Zone.Identifier"
-alias rap="rnm && rlf && rbn && rcv && rzi && pi"
+alias rap="rnm && rlf && rbn && rcv && pi"
 alias cap="clear && rap"
 
 alias ppk="npx npkill" #clean unused node_modules
 alias pkp="npx kill-port" # <port>
 alias pfk="npx fkill-cli" # [<pid|name|:port> …] #kill processes
 
-alias ppi="pkg init"
-alias prb="pkg run build"
-alias prbd="pkg run build:dev"
-alias prd="pkg run deploy"
-alias prs="pkg run start"
-alias prd="pkg run dev"
-alias prsd="pkg run start:dev"
-alias prsq="pkg run start:qa"
-alias prt="pkg run test"
-alias prtc="pkg run test:c"
-alias prtw="pkg run test:w"
-alias prtwc="pkg run test:wc"
-alias pp="pkg publish"
-alias pu="pkg unpublish" # <package@version>
-alias pei="pkg_eslint_init"
+alias sit="swpm init"
+alias srb="swpm run build"
+alias srbd="swpm run build:dev"
+alias srd="swpm run deploy"
+alias srs="swpm run start"
+alias srd="swpm run dev"
+alias srsd="swpm run start:dev"
+alias srsq="swpm run start:qa"
+alias srt="swpm run test"
+alias srtc="swpm run test:c"
+alias srtw="swpm run test:w"
+alias srtwc="swpm run test:wc"
+alias sp="swpm publish"
+alias su="swpm unpublish" # <package@version>
+#alias pei="pkg_eslint_init"
 
 alias pcl="npx npm-check"
 alias pcg="npx npm-check -g"
@@ -183,6 +187,7 @@ alias vcp="vsce package"
 # Volta
 alias vi14="volta install node@14"
 alias vi16="volta install node@lts"
+alias vi18="volta install node@18"
 alias vpn="volta pin node@16.13.1 && volta pin npm@8.1.2"
 alias vla="volta list all"
 alias vln="volta list node"
