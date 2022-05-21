@@ -126,11 +126,11 @@ alias vra="vite_react_app"
 
 
 # Serverless
-alias si="sls info"
-alias sd="sls deploy"
-alias sdf="sls deploy -f" # <function-name>
-alias sos="serverless offline start"
-alias rsb="rm -rf .serverless"
+alias sli="sls info"
+alias sld="sls deploy"
+alias sldf="sls deploy -f" # <function-name>
+alias slos="serverless offline start"
+alias rsl="rm -rf .serverless"
 
 
 # Open
