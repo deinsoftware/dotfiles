@@ -73,10 +73,10 @@ alias sin="swpm --info"
 alias si="swpm install"
 alias sifl="swpm install -FL"
 alias sa='swpm add' # <package@version>
-alias sag='swpm add -g' # <package@version>
-alias sae='swpm add -E' # <package@version>
-alias sad='swpm add -D' # <package@version>
-alias sade='swpm add -D -E' # <package@version>
+alias sag='swpm_sag' # <package@version>
+alias sae='swpm_sae' # <package@version>
+alias sad='swpm_sad' # <package@version>
+alias sade='swpm_sade' # <package@version>
 #alias pr="pkg_uninstall" # <package@version>
 #alias pcc="pkg cache clean --force"
 
