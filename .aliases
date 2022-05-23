@@ -73,11 +73,13 @@ alias sin="swpm --info"
 alias si="swpm install"
 alias sifl="swpm install -FL"
 alias sa='swpm add' # <package@version>
-alias sag='swpm_sag' # <package@version>
 alias sae='swpm_sae' # <package@version>
 alias sad='swpm_sad' # <package@version>
 alias sade='swpm_sade' # <package@version>
-#alias pr="pkg_uninstall" # <package@version>
+alias sag='swpm_sag' # <package@version>
+alias su="swpm remove" # <package@version>
+alias sud='swpm_sud' # <package@version>
+alias sug='swpm_sug' # <package@version>
 #alias pcc="pkg cache clean --force"
 
 alias rnm="rm -rf node_modules"
@@ -108,7 +110,6 @@ alias srtw="swpm run test:w"
 alias srtwc="swpm run test:wc"
 alias sp="swpm publish"
 alias su="swpm unpublish" # <package@version>
-#alias pei="pkg_eslint_init"
 
 alias pcl="npx npm-check"
 alias pcg="npx npm-check -g"
@@ -120,11 +121,6 @@ alias pug="npx npm-check -gu"
 alias iow="npx @squoosh/cli --webp auto" # <file-name>
 alias ioa="npx @squoosh/cli --avif auto" # <file-name>
 alias iop="npx @squoosh/cli --oxipng auto" # <file-name>
-
-
-# React
-alias cra="create_react_app"
-alias vra="vite_react_app"
 
 
 # Serverless

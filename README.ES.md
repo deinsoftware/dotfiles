@@ -147,7 +147,7 @@ Set-Alias wst -value wslStatus
 │   ├── git
 │   ├── md
 │   ├── open
-│   └── react
+│   └── search
 ├── .aliases
 ├── .colors
 ├── .hooks
@@ -162,7 +162,6 @@ Set-Alias wst -value wslStatus
 | ── `git`| Comandos para clonar repositorios de git con opciones extra (TEP) |
 | ── `md`| Comandos para ver archivos MarkDown en la terminal (TEP) |
 | ── `open`| Commandos para abrir archivos/rutas en el Explorador de Archivos o abrir archivos/url en el Navegador |
-| ── `react`| Comandos para crear proyectos de React con opciones extra (TEP) |
 | ── `search`| Comandos para buscar textos en los archivos |
 |`.aliases`| Archivo con la definición de los alias |
 |`.colors`| Archivo con colores de terminal para usar en otros scripts |

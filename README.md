@@ -146,7 +146,7 @@ Set-Alias wst -value wslStatus
 │   ├── git
 │   ├── md
 │   ├── open
-│   └── react
+│   └── search
 ├── .aliases
 ├── .colors
 ├── .hooks
@@ -161,7 +161,6 @@ Set-Alias wst -value wslStatus
 | ── `git`| Helper commands for git cloning with extra features (WIP) |
 | ── `md`| Helper commands to see MarkDown files on terminal (WIP) |
 | ── `open`| Helper commands to open file/folder on the File Explorer or open files/url on the Browser |
-| ── `react`| Helper commands to create React project with extra features (WIP) |
 | ── `search`| Helper commands to search text inside files |
 |`.aliases`| File for aliases definitions |
 |`.colors`| File with terminal colors to use in other scripts |
