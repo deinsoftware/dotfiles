@@ -161,9 +161,9 @@ alias f2b="file_to_b64"
 
 
 # Updates
-alias npl="npm -g list --depth 0" #list global packages installed
-alias npo="npm -g outdated"
-alias npu="npm -g update"
+alias npl="swpm -g list --depth 0" #list global packages installed
+alias npo="swpm -g outdated"
+alias npu="swpm -g update"
 
 alias brd="brew update"
 alias bro="brew outdated"
