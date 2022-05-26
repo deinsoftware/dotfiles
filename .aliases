@@ -176,6 +176,7 @@ alias alu="apt list --upgradable" #outdated
 alias apg="sudo apt upgrade -y" #update installed packages
 alias arm="sudo apt --purge autoremove"
 
+
 # VSCode
 alias vc="code"
 alias vco="code ."
