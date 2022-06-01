@@ -77,25 +77,26 @@ alias sae='swpm_sae' # <package@version>
 alias sad='swpm_sad' # <package@version>
 alias sade='swpm_sade' # <package@version>
 alias sag='swpm_sag' # <package@version>
-alias su="swpm remove" # <package@version>
+alias srm="swpm remove" # <package@version>
 alias sud='swpm_sud' # <package@version>
 alias sug='swpm_sug' # <package@version>
 #alias pcc="pkg cache clean --force"
 
-alias rnm="rm -rf node_modules"
-alias rlf="rm -rf package-lock.json yarn.lock yarn.log pnpm-lock.yaml"
-alias rbn="rm -rf build"
-alias rcv="rm -rf coverage"
+alias scn="swpm clean --node-modules"
+alias scl="swpm clean --lock"
+alias scb="swpm clean --build"
+alias scc="swpm clean --coverage"
+alias sca="swpm clean --all"
 alias rzi="rm -rf **/*Zone.Identifier"
-alias rap="rnm && rlf && rbn && rcv && si"
-alias cap="clear && rap"
+alias sci="sca && si"
+alias cci="clear && sci"
 
 alias ppk="npx npkill" #clean unused node_modules
 alias pkp="npx kill-port" # <port>
 alias pfk="npx fkill-cli" # [<pid|name|:port> …] #kill processes
 
-alias sit="swpm init"
-alias sity="swpm init -y"
+alias sip="swpm init"
+alias sipy="swpm init -y"
 alias scl="swpm config list"
 alias srb="swpm run build"
 alias srbd="swpm run build:dev"

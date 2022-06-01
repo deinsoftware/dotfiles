@@ -103,13 +103,13 @@ run(){
 
 after_validation(){
   if [[ "$cmd" =~ ^"git pull" ]] || [[ "$cmd" =~ ^"gl" ]] && [[ !"$cmd" =~ ^"glog" ]]; then
-    run "rap"
+    run "sci"
   elif [[ "$cmd" =~ ^"git pull origin" ]] || [[ "$cmd" =~ ^"gl origin" ]]; then
-    run "rap"
+    run "sci"
   elif [[ "$cmd" =~ ^"git checkout -b " ]] || [[ "$cmd" =~ ^"gcb " ]]; then
-    run "gpsup && git pull && rap"
+    run "gpsup && git pull && sci"
   elif [[ "$cmd" =~ ^"git checkout" ]] || [[ "$cmd" =~ ^"gco" ]] || [[ "$cmd" =~ ^"gcd" ]]; then
-    run "git pull && rap"
+    run "git pull && sci"
   fi
 }
 
