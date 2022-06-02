@@ -162,9 +162,10 @@ alias f2b="file_to_b64"
 
 
 # Updates
-alias npl="swpm -g list --depth 0" #list global packages installed
-alias npo="swpm -g outdated"
-alias npu="swpm -g update"
+alias spl="swpm list --depth 0 -g" #list global packages installed
+alias spo="swpm outdated -g"
+alias spu="swpm interactive -g"
+alias spi="swpm interactive -g"
 
 alias brd="brew update"
 alias bro="brew outdated"
@@ -181,6 +182,7 @@ alias arm="sudo apt --purge autoremove"
 # VSCode
 alias vc="code"
 alias vco="code ."
+# npm install --global vsce
 alias vcp="vsce package"
 
 
