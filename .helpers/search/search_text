@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo $1
+
 while getopts ":t:p:" opt; do
     case $opt in
         t) text="${OPTARG}"
@@ -8,9 +10,12 @@ while getopts ":t:p:" opt; do
         ;;
         \?) echo "Invalid option -${OPTARG}" >&2
         exit 1
-        ;;
     esac
 done
+
+if [ -z "${text}" ] && [ -n "${1}" ]; then
+    text=$1
+fi
 
 if [ -z "${text}" ]; then
     echo -e "${B_RED}${T_WHITE}ERROR:${F_RESET} text parameter is missing"
