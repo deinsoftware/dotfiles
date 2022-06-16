@@ -152,7 +152,7 @@ alias bnc="open_npm_clipboard" #browse npm package from clipboard
 
 
 # Search
-alias stp="search_text" # -t <text> [-p <path>]
+alias st="search_text" # -t <text> [-p <path>]
 alias sff="find " # <path> -type d -name <folder> 
 
 
