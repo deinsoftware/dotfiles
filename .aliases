@@ -175,8 +175,8 @@ alias brg="brew upgrade"
 alias brc="brew cleanup && brew cask cleanup"
 alias brd="brew doctor"
 
-# sudo apt install neofetch
-alias lv="neofetch"
+# sudo apt install neofetch 
+alias lv="neofetch" # wslfetch
 alias apd="sudo apt update" #update repositories
 alias alu="apt list --upgradable" #outdated
 alias apg="sudo apt upgrade -y" #update installed packages
