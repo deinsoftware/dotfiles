@@ -129,6 +129,7 @@ alias iop="npx @squoosh/cli --oxipng auto" # <file-name>
 # Serverless
 alias sli="sls info"
 alias sld="sls deploy"
+alias sldf="sls deploy --force"
 alias sldf="sls deploy function --function" # <function-name>
 alias sldff="sls deploy function --force --function" # <function-name>
 alias slos="serverless offline start"
