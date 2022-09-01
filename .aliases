@@ -81,6 +81,7 @@ alias srm="swpm remove" # <package@version>
 alias sud='swpm_sud' # <package@version>
 alias sug='swpm_sug' # <package@version>
 #alias pcc="pkg cache clean --force"
+alias sr="swpm run" # <script>
 
 alias scn="swpm clean --node-modules"
 alias scl="swpm clean --lock"
