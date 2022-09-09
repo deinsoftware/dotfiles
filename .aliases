@@ -149,6 +149,7 @@ alias bu="open_browser -u" # <url>
 alias blh="open_browser -u http://localhost"
 alias blhp="open_browser -u http://localhost -p" # <port>
 alias bcr="open_browser -f coverage" # browse coverage
+alias cgr="copy_git_repo" # browse git repo
 alias bgr="open_git_repo" # browse git repo
 alias bgb="open_git_branch" # browse git repo on current branch
 alias bgp="open_git_pull" # browse git repo pulls
