@@ -61,6 +61,7 @@ alias gca="git clean -f -d -x" # clean ALL changes and remove untracked files
 alias gcd="git checkout dev"
 alias glod="git pull origin dev"
 alias gpnv="git push --no-verify"
+alias gcae="git commit --allow-empty -m " # <message>
 
 # https://github.com/deinsoftware/swpm
 # npm install --global swpm
@@ -92,10 +93,6 @@ alias rzi="rm -rf **/*Zone.Identifier"
 alias sci="sca && si"
 alias cci="clear && sci"
 
-alias ppk="npx npkill" #clean unused node_modules
-alias pkp="npx kill-port" # <port>
-alias pfk="npx fkill-cli" # [<pid|name|:port> …] #kill processes
-
 alias sip="swpm init"
 alias sipy="swpm init -y"
 alias scl="swpm config list"
@@ -116,11 +113,14 @@ alias srtwc="swpm run test:wc"
 alias sp="swpm publish"
 alias su="swpm unpublish" # <package@version>
 
-alias pcl="npx npm-check"
-alias pcg="npx npm-check -g"
-alias pul="npx npm-check -u"
-alias pug="npx npm-check -gu"
+alias ncl="npx npm-check"
+alias ncg="npx npm-check -g"
+alias nul="npx npm-check -u"
+alias nug="npx npm-check -gu"
 
+alias npk="npx npkill" #clean unused node_modules
+alias nkp="npx kill-port" # <port>
+alias nfk="npx fkill-cli" # [<pid|name|:port> …] #kill processes
 
 # Image Optimizer
 alias iow="npx @squoosh/cli --webp auto" # <file-name>
