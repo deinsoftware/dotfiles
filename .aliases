@@ -191,6 +191,8 @@ alias arm="sudo apt --purge autoremove"
 # VSCode
 alias vc="code"
 alias vco="code ."
+alias vcn="code --profile \".Net\""
+alias vcno="code --profile \".Net\" ."
 # npm install --global vsce
 alias vcp="vsce package"
 
