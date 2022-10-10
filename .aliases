@@ -3,7 +3,7 @@
 # Terminal
 alias c="clear"
 alias x="exit"
-alias e="code -n ~/ ~/.zshrc ~/.aliases ~/.colors ~/.hooks"
+alias e="code --profile \"Default\" -n ~/ ~/.zshrc ~/.aliases ~/.colors ~/.hooks"
 alias r="source ~/.zshrc"
 
 alias h="history -10"
@@ -160,7 +160,7 @@ alias bnc="open_npm_clipboard" #browse npm package from clipboard
 
 # Search
 alias s="search_text" # -t <text> [-p <path>]
-alias sff="find " # <path> -type d -name <folder> 
+alias sff="find " # <path> -type d -name <folder>
 
 
 # Base 64
@@ -180,7 +180,7 @@ alias brg="brew upgrade"
 alias brc="brew cleanup && brew cask cleanup"
 alias brd="brew doctor"
 
-# sudo apt install neofetch 
+# sudo apt install neofetch
 alias lv="neofetch" # wslfetch
 alias apd="sudo apt update" #update repositories
 alias alu="apt list --upgradable" #outdated
@@ -191,17 +191,21 @@ alias arm="sudo apt --purge autoremove"
 # VSCode
 alias vc="code"
 alias vco="code ."
-alias vcn="code --profile \".Net\""
-alias vcno="code --profile \".Net\" ."
+alias vd="code --profile \".Net\""
+alias vdo="code --profile \".Net\" ."
+alias vr="code --profile \"React\""
+alias vro="code --profile \"React\" ."
+alias vn="code --profile \"Node\""
+alias vno="code --profile \"Node\" ."
 # npm install --global vsce
 alias vcp="vsce package"
 
 
 # Volta
 alias vi14="volta install node@14"
-alias vi16="volta install node@lts"
+alias vil="volta install node@lts"
 alias vi18="volta install node@18"
-alias vpn="volta pin node@16.13.1 && volta pin npm@8.1.2"
+alias vp16="volta pin node@16.13.1 && volta pin npm@8.1.2"
 alias vla="volta list all"
 alias vln="volta list node"
 alias vlnc="volta list node --current --format plain"
@@ -211,17 +215,17 @@ alias vcv="node -v && npm -v"
 
 
 #PyEnv
-alias peup="git -c $(pyenv root) pull"
-alias peil="pyenv install --list"
-alias peiv="pyenv versions"
-alias pei="pyenv install " # <version>
-alias peu="pyenv uninstall " # <version>
-alias peg="pyenv global " # <version>
-alias pel="pyenv local " # <version>
-alias pcv="python --version"
+# alias peup="git -c $(pyenv root) pull"
+# alias peil="pyenv install --list"
+# alias peiv="pyenv versions"
+# alias pei="pyenv install " # <version>
+# alias peu="pyenv uninstall " # <version>
+# alias peg="pyenv global " # <version>
+# alias pel="pyenv local " # <version>
+# alias pcv="python --version"
 
 
 #Ubuntu
-alias uv="cat /etc/os-release"
-#sudo apt install update-manager-core
-alias uu="sudo do-release-upgrade" #update ubuntu
+# alias uv="cat /etc/os-release"
+# #sudo apt install update-manager-core
+# alias uu="sudo do-release-upgrade" #update ubuntu
