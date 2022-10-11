@@ -1,0 +1,56 @@
+#!/bin/bash
+
+# https://github.com/deinsoftware/swpm
+# npm install --global swpm
+# Switch Packages Manager
+alias spn="swpm --pin npm"
+alias spy="swpm --pin yarn"
+alias spp="swpm --pin pnpm"
+alias sin="swpm --info"
+
+alias si="swpm install"
+alias sifl="swpm install -FL"
+alias sa='swpm add' # <package@version>
+alias sae='swpm_sae' # <package@version>
+alias sad='swpm_sad' # <package@version>
+alias sade='swpm_sade' # <package@version>
+alias sag='swpm_sag' # <package@version>
+alias srm="swpm remove" # <package@version>
+alias sud='swpm_sud' # <package@version>
+alias sug='swpm_sug' # <package@version>
+alias sr="swpm run" # <script>
+alias sccf="swpm cache clean --force"
+
+alias scn="swpm clean --node-modules"
+alias scl="swpm clean --lock"
+alias scb="swpm clean --build"
+alias scc="swpm clean --coverage"
+alias sca="swpm clean --all"
+alias sci="sca && si"
+alias cci="clear && sci"
+
+alias sip="swpm init"
+alias sipy="swpm init -y"
+alias scl="swpm config list"
+alias srb="swpm run build"
+alias srbd="swpm run build:dev"
+alias srd="swpm run deploy"
+alias srs="swpm run start"
+alias srd="swpm run dev"
+alias srsd="swpm run start:dev"
+alias srsq="swpm run start:qa"
+alias srss="swpm run start:stg"
+alias srsp="swpm run start:prod"
+alias srt="swpm run test"
+alias srtui="swpm run test:ui"
+alias srtc="swpm run test:c"
+alias srtw="swpm run test:w"
+alias srtwc="swpm run test:wc"
+alias sp="swpm publish"
+alias su="swpm unpublish" # <package@version>
+
+# Updates
+alias spl="swpm list --depth 0 -g" #list global packages installed
+alias spo="swpm outdated -g"
+alias spu="swpm interactive -g"
+alias spi="swpm interactive -g"

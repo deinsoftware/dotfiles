@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# https://www.speedtest.net/apps/cli
+alias st="speedtest"
+
+# https://github.com/sindresorhus/clipboard-cli
+# npm install -g clipboard-cli
+alias cb="clipboard"

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Volta
+alias vil="volta install node@lts"
+alias vpl="volta pin node@16.17.1 && volta pin npm@8.15.0"
+alias vi18="volta install node@18"
+alias vp18="volta pin node@18.10.0 && volta pin npm@8.19.2"
+alias vla="volta list all"
+alias vln="volta list node"
+alias vlc="volta list node --current --format plain"
+alias vld="volta list node --default --format plain"
+alias vlp="volta list npm"
+alias vcv="node -v && npm -v"
+
+# Delete versions
+# unix:     ~/.volta/tools/image/node/
+# win:      %LOCALAPPDATA%/Volta/tools/image/node/
+# git bash: $(cygpath $LOCALAPPDATA)/Volta/tools/image/node/

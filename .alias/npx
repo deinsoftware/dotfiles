@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Packages
+alias ncl="npx npm-check"
+alias ncg="npx npm-check -g"
+alias nul="npx npm-check -u"
+alias nug="npx npm-check -gu"
+
+# Files and Ports
+alias npk="npx npkill" #clean unused node_modules
+alias nkp="npx kill-port" # <port>
+alias nfk="npx fkill-cli" # [<pid|name|:port> …] #kill processes
+
+# Image Optimizer
+alias iow="npx @squoosh/cli --webp auto" # <file-name>
+alias ioa="npx @squoosh/cli --avif auto" # <file-name>
+alias iop="npx @squoosh/cli --oxipng auto" # <file-name>

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Python
+if [ -x "$(command -v pyenv)" ]; then
+    alias peup="git -c $(pyenv root) pull"
+    alias peil="pyenv install --list"
+    alias peiv="pyenv versions"
+    alias pei="pyenv install " # <version>
+    alias peu="pyenv uninstall " # <version>
+    alias peg="pyenv global " # <version>
+    alias pel="pyenv local " # <version>
+fi
+alias pcv="python --version"

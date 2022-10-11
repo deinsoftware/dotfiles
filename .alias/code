@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# VSCode
+alias vc="code"
+alias vco="vc ."
+alias vd="code --profile \".Net\""
+alias vdo="cd ."
+alias vr="code --profile \"React\""
+alias vro="vr ."
+alias vn="code --profile \"Node\""
+alias vno="vn ."
+# npm install --global vsce
+alias vcp="vsce package"

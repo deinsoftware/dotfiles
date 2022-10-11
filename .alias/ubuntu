@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# sudo apt install neofetch
+alias lv="neofetch" # wslfetch
+alias apd="sudo apt update" #update repositories
+alias alu="apt list --upgradable" #outdated
+alias apg="sudo apt upgrade -y" #update installed packages
+alias arm="sudo apt --purge autoremove"
+
+#Ubuntu
+alias uv="cat /etc/os-release"
+#sudo apt install update-manager-core
+alias uu="sudo do-release-upgrade" #update ubuntu

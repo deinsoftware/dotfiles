@@ -12,6 +12,8 @@
 !README.ES.md
 
 # And not this folders
+!.alias
+!.alias/**
 !.github
 !.github/**
 !.helpers
