@@ -52,9 +52,6 @@ export GITHUB_USER_EMAIL="user@users.noreply.github.com" # e-mail publico person
 |macOS|`"open"`|`"${OPEN}"`|
 |Ubuntu|`"xdg-open"`, `"gnome-open"`, `"nautilus"` ...|`"googlechrome"`, `"firefox"` ...|
 
-> La constante `PACKAGE` necesita ser configurada de acuerdo al Package Manager que estes usando `"NPM"`, `"YARN"`, `"PNPM"`.
-
-
 ### 3. Permisos
 
 Ahora adicione permisos de ejecución a los scripts de los `Helpers`:
@@ -71,7 +68,7 @@ Una vez termine, guarde el archivo `.zshrc`, cierre y reabra todas las terminale
 
 ### 5. Extra
 
-Una lista úitl de alias de PowerShell para lidiar con `WSL`.
+Una lista útil de alias de PowerShell para lidiar con `WSL`.
 
 ```powershell
 # Alias
@@ -171,15 +168,24 @@ Set-Alias wst -value wslStatus
 
 ## ZSH plugins
 
-Hay un monton de [plugins para ZSH](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins), estos son los mas utiles que he encontrado.
+Hay un montón de [plugins para ZSH](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins), estos son los mas útiles que he encontrado.
 
 ### Oficiales
 
+* [adb](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/adb)
+* [command-not-found](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/command-not-found)
+* [deno](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/deno)
+* [docker](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker)
 * [git](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)
 * [git-lfs](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git-lfs)
+* [github](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/github)
+* [gitignore](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/gitignore)
 * [history-substring-search](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/history-substring-search)
 * [node](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/node)
 * [npm](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/npm)
+* [yarn](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/yarn)
+* [volta](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/volta)
+* [vscode](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vscode)
 * [sudo](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo)
 * [ubuntu](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/ubuntu)
 * [web-search](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search)
@@ -191,9 +197,9 @@ Hay un monton de [plugins para ZSH](https://github.com/ohmyzsh/ohmyzsh/tree/mast
 * [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
-## Serie de Articulo 
+## Serie de Articulo
 
-Inglés: 
+Inglés:
 
 * [Useful Alias for ZSH](https://dev.to/equiman/useful-alias-for-zsh-1j8b)
 * [Reveal the command behind an alias with ZSH](https://dev.to/equiman/reveal-the-command-behind-an-alias-with-zsh-4d96)
@@ -224,15 +230,14 @@ Usamos [SemVer](https://semver.org/lang/es/) para el versionamiento. Para las ve
 
 * **Camilo Martinez** [[Equiman](http://stackoverflow.com/story/equiman)]
 
-Tambien puede ver la lista de los [contribuyentes](https://github.com/deinsoftware/zsh-dev-toolkit/contributors) que han participado en este proyecto.
+También puede ver la lista de los [contribuyentes](https://github.com/deinsoftware/zsh-dev-toolkit/contributors) que han participado en este proyecto.
 
 ### Patrocinadores
 
 Si este proyecto te ayudó, por favor considera invitarme a un café.
 
 [![paypal](https://img.shields.io/badge/-PayPal-gray?style=flat&labelColor=00457C&logo=paypal&logoColor=white&link=https://paypal.me/equiman/3)](https://paypal.me/equiman/3)
-[![patreon](https://img.shields.io/badge/-Patreon-gray?style=flat&labelColor=052d49&logo=patreon&logoColor=F96854&link=https://patreon.com/equiman)](https://patreon.com/equiman)
-[![buymeacoffee](https://img.shields.io/badge/-Buy%20Me%20A%20Coffee-gray?style=flat&labelColor=FF813F&logo=buy-me-a-coffee&logoColor=white&link=https://www.buymeacoffee.com/equiman)](https://www.buymeacoffee.com/equiman)
+[![ko-fi](https://img.shields.io/badge/-Ko–Fi-gray?style=flat&labelColor=fd444a&logo=ko-fi&logoColor=white&link=https://ko-fi.com/equiman)](https://ko-fi.com/equiman)
 
 ### Licencia
 

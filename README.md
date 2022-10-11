@@ -52,8 +52,6 @@ export GITHUB_USER_EMAIL="user@users.noreply.github.com" # public personal e-mai
 |macOS|`"open"`|`"${OPEN}"`|
 |Ubuntu|`"xdg-open"`, `"gnome-open"`, `"nautilus"` ...|`"googlechrome"`, `"firefox"` ...|
 
-> `PACKAGE` constant need to be configured according the package manager you use `"NPM"`, `"YARN"`, `"PNPM"`.
-
 ### 3. Permissions
 
 Now add execution permission:
@@ -70,7 +68,7 @@ That's all folks! It's ready to use.
 
 ### 5. Extra
 
-Usefull alias to use on PowerShell side to deal with `WSL`.
+Useful alias to use on PowerShell side to deal with `WSL`.
 
 ```powershell
 # Alias
@@ -174,11 +172,20 @@ There are a lot of [plugins for ZSH](https://github.com/ohmyzsh/ohmyzsh/tree/mas
 
 ### Official
 
+* [adb](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/adb)
+* [command-not-found](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/command-not-found)
+* [deno](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/deno)
+* [docker](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker)
 * [git](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)
 * [git-lfs](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git-lfs)
+* [github](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/github)
+* [gitignore](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/gitignore)
 * [history-substring-search](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/history-substring-search)
 * [node](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/node)
 * [npm](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/npm)
+* [yarn](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/yarn)
+* [volta](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/volta)
+* [vscode](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vscode)
 * [sudo](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo)
 * [ubuntu](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/ubuntu)
 * [web-search](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search)
@@ -215,7 +222,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ### Authors
 
-- **Camilo Martinez** [[Equiman](http://github.com/equiman)]
+* **Camilo Martinez** [Equiman](http://github.com/equiman)]
 
 See also the list of [contributors](https://github.com/deinsoftware/zsh-dev-toolkit/contributors) who participated in this project.
 
