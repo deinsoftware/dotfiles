@@ -30,6 +30,7 @@ export PATH="$HOME/.helpers/b64/:$PATH"
 export PATH="$HOME/.helpers/git/:$PATH"
 export PATH="$HOME/.helpers/md/:$PATH"
 export PATH="$HOME/.helpers/open/:$PATH"
+export PATH="$HOME/.helpers/os/:$PATH"
 export PATH="$HOME/.helpers/search/:$PATH"
 chmod +x ~/.helpers/**/*
 
