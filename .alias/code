@@ -4,7 +4,7 @@
 alias vc="code"
 alias vco="vc ."
 alias vd="code --profile \".Net\""
-alias vdo="cd ."
+alias vdo="vd ."
 alias vr="code --profile \"React\""
 alias vro="vr ."
 alias vn="code --profile \"Node\""
