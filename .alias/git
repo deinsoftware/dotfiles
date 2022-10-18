@@ -12,5 +12,6 @@ alias guc="git reset --hard HEAD" # undo changes and preserve untracked files
 alias gca="git clean -f -d -x" # clean ALL changes and remove untracked files
 alias gcd="git checkout dev"
 alias glod="git pull origin dev"
+alias glom="git pull origin main"
 alias gpnv="git push --no-verify"
 alias gcae="git commit --allow-empty -m " # <message>
