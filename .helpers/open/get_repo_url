@@ -2,7 +2,7 @@
 
 url="$( git config remote.origin.url | sed -e "s/git@github.com:/https:\/\/github.com\//g" )"
 if [ "${url:(-4)}" == ".git" ]; then
-    url="$( echo "${url}" | rev | cut -f 2- -d '.' | rev )"
+    url="$( echo "${url%.*}" )"
 fi
 
 echo "$url"
