@@ -12,4 +12,4 @@ alias vno="vn ."
 
 # Extensions
 # npm install --global vsce
-alias vcp="vsce package"
+alias vcp="vsce package --out build/"
