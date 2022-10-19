@@ -9,5 +9,7 @@ alias vr="code --profile \"React\""
 alias vro="vr ."
 alias vn="code --profile \"Node\""
 alias vno="vn ."
+
+# Extensions
 # npm install --global vsce
 alias vcp="vsce package"
