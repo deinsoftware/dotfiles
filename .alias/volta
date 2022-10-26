@@ -2,9 +2,9 @@
 
 # Volta
 alias vil="volta install node@lts"
-alias vpl="volta pin node@16.17.1 && volta pin npm@8.15.0"
-alias vi18="volta install node@18"
-alias vp18="volta pin node@18.10.0 && volta pin npm@8.19.2"
+alias vpl="volta pin node@18.12.0 && volta pin npm@8.19.2"
+alias vi19="volta install node@19"
+alias vp19="volta pin node@19.0.0 && volta pin npm@8.19.2"
 alias vla="volta list all"
 alias vln="volta list node"
 alias vlc="volta list node --current --format plain"
