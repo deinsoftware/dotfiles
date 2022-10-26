@@ -11,5 +11,5 @@ alias vn="code --profile \"Node\""
 alias vno="vn ."
 
 # Extensions
-# npm install --g vsce
+# npm install -g vsce
 alias vcp="vsce package --out build/"
