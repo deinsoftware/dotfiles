@@ -19,3 +19,7 @@ alias et1='exa --icons --tree --level=1 --ignore-glob="*node_modules*"'
 alias et2='exa --icons --tree --level=2 --ignore-glob="*node_modules*"'
 alias els='exa --long'
 alias ela='exa --long --all'
+
+# https://www.speedtest.net/apps/cli
+# speed test
+alias sp='speedtest'

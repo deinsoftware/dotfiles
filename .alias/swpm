@@ -5,7 +5,7 @@
 # Switch Packages Manager
 alias spn="swpm --pin npm"
 alias spy="swpm --pin yarn"
-alias spp="swpm --pin pnpm"
+alias spp="swpm --pin pnpm" 
 alias sin="swpm --info"
 
 alias si="swpm install"

@@ -1,10 +1,12 @@
 #!/bin/bash
 
 # VSCode
-alias vc="code"
+alias vc="code --profile \"Default\""
 alias vco="vc ."
-alias vd="code --profile \".Net\""
+alias vcn="vc . -n"
+alias vd="code --profile \"DotNet\""
 alias vdo="vd ."
+alias vdn="vd . n"
 alias vr="code --profile \"React\""
 alias vro="vr ."
 alias vn="code --profile \"Node\""
