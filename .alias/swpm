@@ -9,9 +9,7 @@ alias spp="swpm --pin pnpm"
 alias spn="swpm --pin bun"
 alias sin="swpm --info"
 
-alias si="swpm install"
 alias sifl="swpm install -FL"
-alias sa='swpm add' # <package@version>
 alias sae='swpm_sae' # <package@version>
 alias sad='swpm_sad' # <package@version>
 alias sade='swpm_sade' # <package@version>
@@ -21,14 +19,6 @@ alias sud='swpm_sud' # <package@version>
 alias sug='swpm_sug' # <package@version>
 alias sr="swpm run" # <script>
 alias sccf="swpm cache clean --force"
-
-alias scn="swpm clean --node-modules"
-alias scl="swpm clean --lock"
-alias scb="swpm clean --build"
-alias scc="swpm clean --coverage"
-alias sca="swpm clean --all"
-alias sci="sca && si"
-alias cci="clear && sci"
 
 alias sip="swpm init"
 alias sipy="swpm init -y"
