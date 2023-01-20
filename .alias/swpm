@@ -10,7 +10,6 @@ alias spn="swpm --pin bun"
 alias sin="swpm --info"
 
 alias sifl="swpm install -FL"
-alias sae='swpm_sae' # <package@version>
 alias sad='swpm_sad' # <package@version>
 alias sade='swpm_sade' # <package@version>
 alias sag='swpm_sag' # <package@version>

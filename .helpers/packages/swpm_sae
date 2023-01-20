@@ -1,9 +1,0 @@
-#!/bin/zsh
-
-params=""
-if [[ ! -z $@ ]]; then
-    params="$@"
-fi
-
-cmd="swpm add ${params} -E"
-eval " ${cmd}"
