@@ -38,5 +38,4 @@ alias su="swpm unpublish" # <package@version>
 # Updates
 alias spl="swpm list --depth 0 -g" #list global packages installed
 alias spo="swpm outdated -g"
-alias spu="swpm interactive -g"
 alias spi="swpm interactive -g"

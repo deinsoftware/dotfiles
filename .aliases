@@ -10,7 +10,7 @@
 [ -f ~/.alias/code ] && . ~/.alias/code
 [ -f ~/.alias/git ] && . ~/.alias/git
 [ -f ~/.alias/swpm ] && . ~/.alias/swpm
-[ -f ~/.alias/npx ] && . ~/.alias/npx
+[ -f ~/.alias/swpx ] && . ~/.alias/swpx
 [ -f ~/.alias/serverless ] && . ~/.alias/serverless
 [ -f ~/.alias/volta ] && . ~/.alias/volta
 [ -f ~/.alias/python ] && . ~/.alias/python
