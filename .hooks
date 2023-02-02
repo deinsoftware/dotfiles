@@ -70,7 +70,7 @@ before_validation(){
   fi
   local cmd_current=$(echo $1 | xargs)
 
-  if [[ -f "$file" ]] && [[ "$cmd_current" =~ ^"swpm publish" ]] || [[ "${cmd_alias}" =~ ^"swpm publish" ]]; then
+  if [[ -f "$file" ]] && ( [[ "$cmd_current" =~ ^"swpm publish" ]] || [[ "${cmd_alias}" =~ ^"swpm publish" ]] ); then
     cmd_validation="swpm run build"
   elif [[ "$cmd_current" =~ ^"git checkout" ]] || [[ "${cmd_alias}" =~ ^"git checkout" ]]; then
     cmd_validation="git pull"
@@ -105,9 +105,9 @@ run(){
 }
 
 after_validation(){
-  if [[ -f "$file" ]] && [[ "$cmd" =~ ^"git pull" ]] || [[ "$cmd" =~ ^"gl" ]] && [[ !"$cmd" =~ ^"glog" ]]; then
+  if [[ -f "$file" ]] && ( [[ "$cmd" =~ ^"git pull" ]] || [[ "$cmd" =~ ^"gl" ]] && [[ !"$cmd" =~ ^"glog" ]] ); then
     run "sci"
-  elif [[ -f "$file" ]] && [[ "$cmd" =~ ^"git pull origin" ]] || [[ "$cmd" =~ ^"gl origin" ]]; then
+  elif [[ -f "$file" ]] && ( [[ "$cmd" =~ ^"git pull origin" ]] || [[ "$cmd" =~ ^"gl origin" ]] ); then
     run "sci"
   elif [[ "$cmd" =~ ^"git checkout -b " ]] || [[ "$cmd" =~ ^"gcb " ]]; then
     if [[ -f "$file" ]]; then
