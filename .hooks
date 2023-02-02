@@ -109,18 +109,14 @@ after_validation(){
     run "sci"
   elif [[ -f "$file" ]] && ( [[ "$cmd" =~ ^"git pull origin" ]] || [[ "$cmd" =~ ^"gl origin" ]] ); then
     run "sci"
-  elif [[ "$cmd" =~ ^"git checkout -b " ]] || [[ "$cmd" =~ ^"gcb " ]]; then
-    if [[ -f "$file" ]]; then
+  elif [[ -f "$file" ]] && ( [[ "$cmd" =~ ^"git checkout -b " ]] || [[ "$cmd" =~ ^"gcb " ]] ); then
       run "gpsup && git pull && sci"
-    else
-      run "gpsup && git pull"
-    fi
-  elif [[ "$cmd" =~ ^"git checkout" ]] || [[ "$cmd" =~ ^"gco" ]] || [[ "$cmd" =~ ^"gcd" ]]; then
-    if [[ -f "$file" ]]; then
+  elif [[ "$cmd" =~ ^"git checkout -b " ]] || [[ "$cmd" =~ ^"gcb " ]]; then
+    run "gpsup && git pull"
+  elif [[ -f "$file" ]] && ( [[ "$cmd" =~ ^"git checkout" ]] || [[ "$cmd" =~ ^"gco" ]] || [[ "$cmd" =~ ^"gcd" ]] ); then
       run "git pull && sci"
-    else
-      run "git pull"
-    fi
+  elif [[ "$cmd" =~ ^"git checkout" ]] || [[ "$cmd" =~ ^"gco" ]] || [[ "$cmd" =~ ^"gcd" ]]; then
+    run "git pull"
   fi
 }
 
