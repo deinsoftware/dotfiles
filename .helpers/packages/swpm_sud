@@ -1,9 +1,0 @@
-#!/bin/zsh
-
-params=""
-if [[ ! -z $@ ]]; then
-    params="$@"
-fi
-
-cmd="swpm remove ${params} -D"
-eval " ${cmd}"
