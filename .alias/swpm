@@ -5,12 +5,12 @@
 # Switch Packages Manager
 alias sin="swpm --info"
 
-alias sifl="swpm install -F"
-alias sccf="swpm cache clean --force"
-
 alias sip="swpm init"
 alias sipy="swpm init -y"
 alias scl="swpm config list"
+alias sccf="swpm cache clean --force"
+
+# Run
 alias srb="sr build"
 alias srbd="sr build:dev"
 alias srd="sr deploy"
@@ -25,10 +25,12 @@ alias srtui="sr test:ui"
 alias srtc="sr test:c"
 alias srtw="sr test:w"
 alias srtwc="sr test:wc"
+
+# Pubish
 alias sp="swpm publish"
 alias su="swpm unpublish" # <package@version>
 
 # Updates
 alias spl="swpm list --depth 0 -g" #list global packages installed
 alias spo="swpm outdated -g"
-alias spi="swpm interactive -g"
+alias suig="sui -g"
