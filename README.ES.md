@@ -35,10 +35,6 @@ export PATH="$HOME/.helpers/search/:$PATH"
 chmod +x ~/.helpers/**/*
 
 # Custom
-export GIT_USER_NAME="user" # usuario privado negocio/trabajo
-export GIT_USER_EMAIL="user@mail.com" # e-mail privado negocio/trabajo
-export GITHUB_USER_NAME="user" # usuario publico personal 
-export GITHUB_USER_EMAIL="user@users.noreply.github.com" # e-mail publico personal 
 [ -f ~/.aliases ] && . ~/.aliases
 [ -f ~/.colors ] && . ~/.colors
 [ -f ~/.hooks ] && . ~/.hooks
@@ -205,7 +201,6 @@ Inglés:
 * [Reveal the command behind an alias with ZSH](https://dev.to/equiman/reveal-the-command-behind-an-alias-with-zsh-4d96)
 * [Command validations with ZSH](https://dev.to/equiman/command-validations-with-zsh-2boa)
 * [Open File Explorer and Browser from ZSH](https://dev.to/equiman/open-file-explorer-and-browser-mbb)
-* [Automatic change directory after git clone](https://dev.to/equiman/automatic-change-directory-after-git-clone-8ei)
 * [ZSH cheatsheet for git plugin](https://dev.to/equiman/zsh-cheatsheet-for-git-plugin-1f6a)
 * [base64 encode/decode multiple files](https://dev.to/equiman/base64-encode-decode-multiple-files-2ol1)
 

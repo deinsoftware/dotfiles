@@ -35,10 +35,6 @@ export PATH="$HOME/.helpers/search/:$PATH"
 chmod +x ~/.helpers/**/*
 
 # Custom
-export GIT_USER_NAME="user" # private business/work user
-export GIT_USER_EMAIL="user@mail.com" # private business/work e-mail
-export GITHUB_USER_NAME="user" # public personal user
-export GITHUB_USER_EMAIL="user@users.noreply.github.com" # public personal e-mail
 [ -f ~/.aliases ] && . ~/.aliases
 [ -f ~/.colors ] && . ~/.colors
 [ -f ~/.hooks ] && . ~/.hooks
@@ -203,7 +199,6 @@ There are a lot of [plugins for ZSH](https://github.com/ohmyzsh/ohmyzsh/tree/mas
 * [Reveal the command behind an alias with ZSH](https://dev.to/equiman/reveal-the-command-behind-an-alias-with-zsh-4d96)
 * [Command validations with ZSH](https://dev.to/equiman/command-validations-with-zsh-2boa)
 * [Open File Explorer and Browser from ZSH](https://dev.to/equiman/open-file-explorer-and-browser-mbb)
-* [Automatic change directory after git clone](https://dev.to/equiman/automatic-change-directory-after-git-clone-8ei)
 * [ZSH cheatsheet for git plugin](https://dev.to/equiman/zsh-cheatsheet-for-git-plugin-1f6a)
 * [Move WSL File System to another Drive](https://dev.to/equiman/move-wsl-file-system-to-another-drive-2a3d)
 * [ZSH on Windows without WSL](https://dev.to/equiman/zsh-on-windows-without-wsl-4ah9)

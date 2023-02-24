@@ -1,11 +1,6 @@
 #!/bin/bash
 
 # Git
-alias gcum="git config user.name \"${GIT_USER_NAME}\" && git config user.email \"${GIT_USER_EMAIL}\""
-alias gcu="git config credential.username \"${GIT_USER_NAME}\""
-alias gc="gcu && gcum"
-alias ghcum="git config user.name \"${GITHUB_USER_NAME}\" && git config user.email \"${GITHUB_USER_EMAIL}\""
-alias ghcu="git config credential.username \"${GITHUB_USER_NAME}\""
 alias gcg="git config --edit --global"
 alias gcl="git config --edit --local"
 alias guc="git reset --hard HEAD" # undo changes and preserve untracked files
