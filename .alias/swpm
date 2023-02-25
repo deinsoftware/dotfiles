@@ -10,6 +10,8 @@ alias sipy="swpm init -y"
 alias scl="swpm config list"
 alias sccf="swpm cache clean --force"
 
+alias sci="sca && si"
+
 # Run
 alias srb="sr build"
 alias srbd="sr build:dev"
