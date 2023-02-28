@@ -28,6 +28,9 @@ alias srtc="sr test:c"
 alias srtw="sr test:w"
 alias srtwc="sr test:wc"
 
+# Pack
+alias spk="swpm pack --pack-destination build"
+
 # Pubish
 alias sp="swpm publish"
 alias su="swpm unpublish" # <package@version>
