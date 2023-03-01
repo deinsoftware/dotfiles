@@ -4,5 +4,17 @@
 alias st="speedtest"
 
 # https://github.com/sindresorhus/clipboard-cli
-# npm install -g clipboard-cli
+# sag clipboard-cli
 alias cb="clipboard"
+
+# https://www.npmjs.com/package/trash-cli
+# sag trash-cli
+alias rm="trash"
+
+# https://www.npmjs.com/package/internal-ip-cli
+# sag internal-ip-cli
+alias ip="internal-ip-cli"
+
+# https://www.npmjs.com/package/public-ip-cli
+# sag public-ip-cli
+alias ipp="public-ip-cli"

@@ -19,5 +19,10 @@
 [ -f ~/.alias/files ] && . ~/.alias/files
 
 # Updates
-[ -f ~/.alias/brew ] && . ~/.alias/brew
-[ -f ~/.alias/ubuntu ] && . ~/.alias/ubuntu
+if [[ "$(uname -s)" == "Darwin" ]]; then
+    [ -f ~/.alias/brew ] && . ~/.alias/brew
+fi
+if [[ "$(uname -s)" == "Linux" ]]; then
+    [ -f ~/.alias/ubuntu ] && . ~/.alias/ubuntu
+fi
+
