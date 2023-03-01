@@ -13,8 +13,8 @@ alias rm="trash"
 
 # https://www.npmjs.com/package/internal-ip-cli
 # sag internal-ip-cli
-alias ip="internal-ip-cli"
+alias ip="internal-ip"
 
 # https://www.npmjs.com/package/public-ip-cli
 # sag public-ip-cli
-alias ipp="public-ip-cli"
+alias ipp="public-ip"
