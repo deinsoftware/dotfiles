@@ -9,7 +9,7 @@ alias cb="clipboard"
 
 # https://www.npmjs.com/package/trash-cli
 # sag trash-cli
-alias rm="trash"
+alias rt="trash"
 
 # https://www.npmjs.com/package/internal-ip-cli
 # sag internal-ip-cli
