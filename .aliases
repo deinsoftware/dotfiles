@@ -25,4 +25,3 @@ fi
 if [[ "$(uname -s)" == "Linux" ]]; then
     [ -f ~/.alias/ubuntu ] && . ~/.alias/ubuntu
 fi
-
