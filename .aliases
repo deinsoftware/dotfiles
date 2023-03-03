@@ -3,7 +3,6 @@
 # Utils
 [ -f ~/.alias/terminal ] && . ~/.alias/terminal
 [ -f ~/.alias/utils ] && . ~/.alias/utils
-[ -f ~/.alias/unix ] && . ~/.alias/unix
 [ -f ~/.alias/markdown ] && . ~/.alias/markdown
 
 # Development
@@ -23,5 +22,6 @@ if [[ "$(uname -s)" == "Darwin" ]]; then
     [ -f ~/.alias/brew ] && . ~/.alias/brew
 fi
 if [[ "$(uname -s)" == "Linux" ]]; then
+    [ -f ~/.alias/unix ] && . ~/.alias/unix
     [ -f ~/.alias/ubuntu ] && . ~/.alias/ubuntu
 fi

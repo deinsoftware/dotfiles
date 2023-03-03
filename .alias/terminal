@@ -5,7 +5,9 @@ alias x="exit"
 alias e="code --profile \"Default\" -n ~/ ~/.zshrc ~/.aliases ~/.colors ~/.hooks"
 alias r="source ~/.zshrc"
 
-alias h="history -10"
+alias mu="history -10"
 alias hc="history -c"
 alias hg="history | grep" # <command>
 alias ag="alias | grep" # <command>
+
+alias mu="history | awk ' "
