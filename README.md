@@ -76,8 +76,8 @@ Set-Alias a -value getAliases
 
 # Profile
 function checkIfProfileExist() {
-    echo "Test-Path $profile"
-    Test-Path $profile
+    echo "Test-Path $PROFILE"
+    Test-Path $PROFILE
 }
 Set-Alias pe -value checkIfProfileExist
 function createProfile() {
