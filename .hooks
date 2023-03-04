@@ -49,7 +49,7 @@ danger_validation(){
     danger
   elif [[ "$cmd_current" =~ ^"git reset --hard HEAD" ]] || [[ "$cmd_current" =~ ^"guc" ]]; then
     danger
-  elif [[ "$cmd_current" =~ ^"git clean -f -d -x" ]] || [[ "$cmd_current" =~ ^"gcc" ]]; then
+  elif [[ "$cmd_current" =~ ^"git clean -f -d -x" ]] || [[ "$cmd_current" =~ ^"gca" ]]; then
     danger
   fi
 }
