@@ -117,6 +117,7 @@ function wslList() {
     wsl -l -v
 }
 Set-Alias wl -value wslList
+
 function wslRun() {
     echo "wsl"
     wsl
