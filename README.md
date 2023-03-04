@@ -80,16 +80,19 @@ function checkIfProfileExist() {
     Test-Path $PROFILE
 }
 Set-Alias pe -value checkIfProfileExist
+
 function createProfile() {
     echo "New-Item -path $PROFILE -type file -force"
     New-Item -path $PROFILE -type file -force
 }
 Set-Alias pc -value createProfile
+
 function editProfile() {
     echo "code $PROFILE"
     code $PROFILE
 }
 Set-Alias e -value editProfile
+
 function reloadProfile() {
     echo ". $PROFILE"
     . $PROFILE
@@ -102,11 +105,13 @@ function editWslConfig() {
     code $HOME/.wslconfig
 }
 Set-Alias wc -value editWslConfig
+
 function wslShutdown() {
     echo "wsl --shutdown"
     wsl --shutdown
 }
 Set-Alias ws -value wslShutdown
+
 function wslList() {
     echo "wsl -l -v"
     wsl -l -v
@@ -117,11 +122,13 @@ function wslRun() {
     wsl
 }
 Set-Alias wr -value wslRun
+
 function wslRunUbuntu() {
     echo "wsl --distribution Ubuntu"
     wsl --distribution Ubuntu
 }
 Set-Alias wru -value wslRunUbuntu
+
 function wslStatus() {
     echo "wsl --status"
     wsl --status
