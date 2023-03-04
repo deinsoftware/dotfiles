@@ -1,15 +1,19 @@
 #!/bin/bash
 
 # VSCode
-alias vc="code --profile \"Default\""
-alias vco="vc ."
-alias vcn="vc . -n"
+alias cc="code --profile \"Default\""
+alias vco="code --profile \"Default\" ."
+alias vcn="code --profile \"Default\" . -n"
 alias vd="code --profile \"DotNet\""
-alias vdo="vd ."
+alias vdo="code --profile \"DotNet\" ."
 alias vr="code --profile \"React\""
-alias vro="vr ."
+alias vro="code --profile \"React\" ."
 alias vn="code --profile \"Node\""
-alias vno="vn ."
+alias vno="code --profile \"Node\" ."
+alias vw="code --profile \"WSL\" --remote wsl+Ubuntu --goto"
+alias vwo="code --profile \"WSL\" --remote wsl+Ubuntu --goto "$PWD"/"
+
+
 
 # Extensions
 # npm install -g vsce
