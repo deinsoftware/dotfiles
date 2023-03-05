@@ -2,17 +2,13 @@
 
 # VSCode
 alias vc="code --new-window --profile Default"
-alias vco="code --new-window --profile Default ."
-alias vcr="code --new-window --profile Default --remote wsl+Ubuntu --goto \"`pwd`\"/"
+alias vco=".open_code -p Default"
 alias vd="code --new-window --profile DotNet"
-alias vdo="code --new-window --profile DotNet ."
-alias vdr="code --new-window --profile DotNet --remote wsl+Ubuntu --goto \"`pwd`\"/"
+alias vdo=".open_code -p DotNet"
 alias vr="code --new-window --profile React"
-alias vro="code --new-window --profile React ."
-alias vrr="code --new-window --profile React --remote wsl+Ubuntu --goto \"`pwd`\"/"
+alias vro=".open_code -p React"
 alias vn="code --new-window --profile Node"
-alias vno="code --new-window --profile Node ."
-alias vnr="code --new-window --profile Node --remote wsl+Ubuntu --goto \"`pwd`\"/"
+alias vno=".open_code -p Node"
 
 # Extensions
 # npm install -g vsce

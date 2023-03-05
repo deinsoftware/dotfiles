@@ -1,0 +1,8 @@
+#!/bin/bash
+
+path="."
+if [[ "$(uname -s)" == "Linux" ]]; then
+    path="--remote wsl+Ubuntu"
+fi
+
+echo "$path"

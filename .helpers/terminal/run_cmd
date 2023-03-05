@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if [ -n "${1}" ]; then
+    echo -e "${T_GREEN}❯ ${T_YELLOW}${1}${F_RESET}" # Print it
+    eval $1
+fi

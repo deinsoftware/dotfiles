@@ -2,8 +2,7 @@
 
 alias c="clear"
 alias x="exit"
-alias e="vc ~/ ~/.zshrc ~/.aliases ~/.colors ~/.hooks"
-alias er="vcr ~/ ~/.zshrc ~/.aliases ~/.colors ~/.hooks"
+alias e=".open_code -p Default -f \"~/ ~/.zshrc ~/.aliases ~/.colors ~/.hooks\" -n"
 alias r="source ~/.zshrc"
 
 alias zs="zsh_stats"

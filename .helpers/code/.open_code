@@ -1,0 +1,35 @@
+#!/bin/bash
+
+while getopts ":f:p:n:" opt; do
+    case $opt in
+        f) file="${OPTARG}"
+        ;;
+        p) profile="${OPTARG}"
+        ;;
+        n) new=""
+        ;;
+        \?) echo "Invalid option -${OPTARG}" >&2
+        exit 1
+    esac
+done
+
+if [ -z "${profile}" ]; then
+    echo -e "${B_RED}${T_WHITE}ERROR:${F_RESET} profile parameter is missing"
+    exit 1
+fi
+
+if [ "${!#}" == "-n" ]; then
+    new="--new-window "
+fi
+
+path="$( get_current_path )"
+if [[ "$path" != "." ]]; then
+    echo "${file}"
+    if [[ -z "$file" ]]; then
+        path="$path --goto `pwd`/"
+    else
+        path="$path $file"
+    fi
+fi
+
+run_cmd "code ${new}--profile ${profile} ${path}"
