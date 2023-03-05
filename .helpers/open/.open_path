@@ -24,4 +24,4 @@ if [[ -n "${isWSL}" ]]; then
     path=$(wslpath -w ${path})
 fi
 
-${OPEN} "${path}"
+run_cmd "${OPEN} \"${path}\""

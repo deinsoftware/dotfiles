@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Open
-alias o="open_path -p ." # open current folder
-alias op="open_path -p" # <path>
-alias opb="open_path -p build" # open build path
-alias opc="open_path -p coverage" # open coverage path
+alias o=".open_path -p ." # open current folder
+alias op=".open_path -p" # <path>
+alias opb=".open_path -p build" # open build path
+alias opc="'open_path -p coverage" # open coverage path
 
 # Browse
 alias b="open_browser -f ./index.html" # browse index.html

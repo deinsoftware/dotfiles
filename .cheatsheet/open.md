@@ -18,8 +18,8 @@
 
 |Alias|Command|Description|
 |---|---|---|
-|`obf`|`open_path -p build`|Open `.\build` folder inside current path on file explorer or finder|
-|`obc`|`open_path -p coverage`|Open `.\coverage` folder inside current path on file explorer or finder|
+|`obf`|`.open_path -p build`|Open `.\build` folder inside current path on file explorer or finder|
+|`obc`|`.open_path -p coverage`|Open `.\coverage` folder inside current path on file explorer or finder|
 |`bcr`|`open_browser -f coverage`|Open coverage `.\coverage\lcov-report\index.html` report on Browser|
 |`blh`|`open_browser -u http://localhost`|Open a browser as `localhost`|
 |`blhp <port>`|`open_browser -u http://localhost -p <port>`|Open a browser as `localhost` on specific `port`|
