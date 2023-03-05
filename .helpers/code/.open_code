@@ -26,8 +26,7 @@ path=""
 if [[ -z "$file" ]]; then
     path="$( get_current_path )"
 else
-    path="$path $file"
+    path="$file"
 fi
-
 
 run_cmd "code ${new}--profile ${profile} ${path}"
