@@ -33,7 +33,7 @@ export PATH="$HOME/.helpers/open/:$PATH"
 export PATH="$HOME/.helpers/os/:$PATH"
 export PATH="$HOME/.helpers/search/:$PATH"
 export PATH="$HOME/.helpers/terminal/:$PATH"
-chmod +x ~/.helpers/**/*
+chmod +x ~/.helpers/**/* ~/.helpers/**/.[!.]*
 
 # Custom
 [ -f ~/.aliases ] && . ~/.aliases
