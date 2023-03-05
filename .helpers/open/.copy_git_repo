@@ -1,4 +1,4 @@
 #!/bin/bash
 
 url="$( get_repo_url )"
-echo ${url} | clipboard
+run_cmd "echo ${url} | clipboard"
