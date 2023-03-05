@@ -1,7 +1,0 @@
-#!/bin/bash
-
-cake "$@"
-echo "${T_GREEN}❯ ${T_YELLOW}Installing...${f_reset}"
-npm i
-echo "${T_GREEN}❯ ${T_YELLOW}Opening...${f_reset}"
-code .

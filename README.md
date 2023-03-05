@@ -27,7 +27,6 @@ export OPEN="explorer.exe" #wsl2
 export BROWSER="${OPEN}" #wsl2
 
 export PATH="$HOME/.helpers/b64/:$PATH"
-export PATH="$HOME/.helpers/git/:$PATH"
 export PATH="$HOME/.helpers/md/:$PATH"
 export PATH="$HOME/.helpers/open/:$PATH"
 export PATH="$HOME/.helpers/os/:$PATH"
