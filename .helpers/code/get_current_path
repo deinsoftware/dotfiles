@@ -2,7 +2,7 @@
 
 path="."
 if [[ "$(uname -s)" == "Linux" ]]; then
-    path="--remote wsl+Ubuntu"
+    path="--remote wsl+Ubuntu --goto `pwd`/"
 fi
 
 echo "$path"

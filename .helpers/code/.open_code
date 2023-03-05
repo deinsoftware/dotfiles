@@ -22,14 +22,12 @@ if [ "${!#}" == "-n" ]; then
     new="--new-window "
 fi
 
-path="$( get_current_path )"
-if [[ "$path" != "." ]]; then
-    echo "${file}"
-    if [[ -z "$file" ]]; then
-        path="$path --goto `pwd`/"
-    else
-        path="$path $file"
-    fi
+path=""
+if [[ -z "$file" ]]; then
+    path="$( get_current_path )"
+else
+    path="$path $file"
 fi
+
 
 run_cmd "code ${new}--profile ${profile} ${path}"
