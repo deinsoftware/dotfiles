@@ -2,8 +2,8 @@
 
 alias c="clear"
 alias x="exit"
-alias e="code --profile \"Default\" -n ~/ ~/.zshrc ~/.aliases ~/.colors ~/.hooks"
-alias er="code --profile \"Remote\" -n ~/ ~/.zshrc ~/.aliases ~/.colors ~/.hooks"
+alias e="vc ~/ ~/.zshrc ~/.aliases ~/.colors ~/.hooks"
+alias er="vcr ~/ ~/.zshrc ~/.aliases ~/.colors ~/.hooks"
 alias r="source ~/.zshrc"
 
 alias zs="zsh_stats"
