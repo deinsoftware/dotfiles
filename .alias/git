@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Use Windos Git with Credentials Manager
+# Use Git from Windows with Credentials Manager
 alias git=git.exe
 
 # Git
