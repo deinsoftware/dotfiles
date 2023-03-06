@@ -23,10 +23,27 @@ if [ -n "${file}" ]; then
         ;;
     esac
 
-    isWSL=$(uname -a | grep WSL)
-    if [[ -n "${isWSL}" ]]; then
-        file=$(wslpath -w ${file})
+    if [[ ! -f "${file}" ]]; then
+        echo -e "${B_RED}${T_WHITE}ERROR:${F_RESET} file ${file} not found"
+        exit 1
     fi
+
+    case "$( which_os )" in
+        LINUX*)
+            isWSL=$(uname -a | grep WSL)
+            if [[ -n "${isWSL}" ]]; then
+                file="wslpath -w ${file/#./"\${PWD}"}"
+                run_cmd "${BROWSER} \$(${file})"
+                exit 0
+            fi
+        ;;
+        WIN*)
+            file="cygpath -w -a ${file}"
+            run_cmd "${BROWSER} \$(${file})"
+            exit 0
+        ;;
+    esac
+
     address="${file}"
 fi
 
@@ -45,4 +62,4 @@ if [ -n "${url}" ]; then
     address="${url}"
 fi
 
-${BROWSER} "${address}"
+run_cmd "${BROWSER} \"${address}\""
