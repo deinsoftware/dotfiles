@@ -40,7 +40,6 @@ case "$( which_os )" in
     ;;
     WIN*)
         path="cygpath -w -a ${path}"
-        echo "$( ${path} )"
         run_cmd "${OPEN} \$(${path})"
         exit 0
     ;;
