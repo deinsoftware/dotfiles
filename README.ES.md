@@ -41,13 +41,13 @@ chmod +x ~/.helpers/**/* ~/.helpers/**/.[!.]*
 [ -f ~/.hooks ] && . ~/.hooks
 ```
 
-> Las constantes `OPEN` y `BROWSE` necesitan ser configuradas de acuerdo al SO que se este usando. Windows (WSL2) y macOS usan el mismo comando para abrir el explorador de archivos como el navegador por defecto, en Ubuntu (Linux) se debe especificar cada uno por separado.
+> Las constantes `OPEN`, `BROWSE` y `UNC` necesitan ser configuradas de acuerdo al SO que se este usando. Windows (WSL2) y macOS usan el mismo comando para abrir el explorador de archivos como el navegador por defecto, en Ubuntu (Linux) se debe especificar cada uno por separado.
 
-|SO|`OPEN`|`BROWSER`|
-|---|---|---|
-|Windows (WSL2)|`"explorer.exe"`|`"${OPEN}"`|
-|macOS|`"open"`|`"${OPEN}"`|
-|Ubuntu|`"xdg-open"`, `"gnome-open"`, `"nautilus"` ...|`"googlechrome"`, `"firefox"` ...|
+|SO|`OPEN`|`BROWSER`|`UNC`|
+|---|---|---|---|
+|Windows (WSL2)|`"explorer.exe"`|`"${OPEN}"`|`powershell.exe -c ii`|
+|macOS|`"open"`|`"${OPEN}"`| |
+|Ubuntu|`"xdg-open"`, `"gnome-open"`, `"nautilus"` ...|`"googlechrome"`, `"firefox"` ...| |
 
 ### 3. Permisos
 

@@ -19,9 +19,31 @@ case $path in
     ;;
 esac
 
-isWSL=$(uname -a | grep WSL)
-if [[ -n "${isWSL}" ]]; then
-    path=$(wslpath -w ${path})
+if [ -z "${path}" ]; then
+    echo -e "${B_RED}${T_WHITE}ERROR:${F_RESET} path parameter is missing"
+    exit 1
 fi
+
+if [[ ! -d "${path}" ]]; then
+  echo -e "${B_RED}${T_WHITE}ERROR:${F_RESET} path ${path} not found"
+    exit 1
+fi
+
+case "$( which_os )" in
+    LINUX*)
+        isWSL=$(uname -a | grep WSL)
+        if [[ -n "${isWSL}" ]]; then
+            path="wslpath -w ${path/#./"\${PWD}"}"
+            run_cmd "${UNC} \$(${path})"
+            exit 0
+        fi
+    ;;
+    WIN*)
+        path="cygpath -w -a ${path}"
+        echo "$( ${path} )"
+        run_cmd "${OPEN} \$(${path})"
+        exit 0
+    ;;
+esac
 
 run_cmd "${OPEN} \"${path}\""
