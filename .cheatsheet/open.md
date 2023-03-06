@@ -11,8 +11,8 @@
 
 |Alias|Command|Description|
 |---|---|---|
-|`b`|`open_browser -f ./index.htm`|Open a browser with `index.html` on current path|
-|`bu <url>`|`open_browser -u <url>`|Open a browser with specified URL|
+|`b`|`.open_browser -f ./index.htm`|Open a browser with `index.html` on current path|
+|`bu <url>`|`.open_browser -u <url>`|Open a browser with specified URL|
 
 ## React/Web
 
@@ -20,9 +20,9 @@
 |---|---|---|
 |`obf`|`.open_path -p build`|Open `.\build` folder inside current path on file explorer or finder|
 |`obc`|`.open_path -p coverage`|Open `.\coverage` folder inside current path on file explorer or finder|
-|`bcr`|`open_browser -f coverage`|Open coverage `.\coverage\lcov-report\index.html` report on Browser|
-|`blh`|`open_browser -u http://localhost`|Open a browser as `localhost`|
-|`blhp <port>`|`open_browser -u http://localhost -p <port>`|Open a browser as `localhost` on specific `port`|
+|`bcr`|`.open_browser -f coverage`|Open coverage `.\coverage\lcov-report\index.html` report on Browser|
+|`blh`|`.open_browser -u http://localhost`|Open a browser as `localhost`|
+|`blhp <port>`|`.open_browser -u http://localhost -p <port>`|Open a browser as `localhost` on specific `port`|
 
 ## GitHub
 
