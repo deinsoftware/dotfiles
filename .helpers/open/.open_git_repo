@@ -1,0 +1,4 @@
+#!/bin/bash
+
+address="$( get_repo_url )"
+run_cmd "${BROWSER} \"${address}\""

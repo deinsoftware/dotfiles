@@ -1,4 +1,0 @@
-#!/bin/bash
-
-url="$( get_repo_url )"
-${BROWSER} "${url}/pulls"

@@ -2,4 +2,6 @@
 
 url="$( get_repo_url )"
 current="$( git branch --show-current )"
-${BROWSER} "${url}/tree/${current}"
+address="${url}/tree/${current}"
+
+run_cmd "${BROWSER} \"${address}\""

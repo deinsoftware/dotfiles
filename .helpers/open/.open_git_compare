@@ -12,4 +12,6 @@ if [ "$current" != "${base}" ]; then
 else
     url="${url}/compare/${base}..."
 fi
-${BROWSER} ${url}
+address=${url}
+
+run_cmd "${BROWSER} \"${address}\""
