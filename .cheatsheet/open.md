@@ -39,5 +39,5 @@
 
 |Alias|Command|Description|
 |---|---|---|
-|`bnp`|`open_npm_package`| Browse the NPM package on `package.json`|
-|`bnc`|`open_npm_clipboard`|Browse the NPM package on browser searching by name on clipboard|
+|`bnp`|`.open_npm_package`| Browse the NPM package on `package.json`|
+|`bnc`|`.open_npm_clipboard`|Browse the NPM package on browser searching by name on clipboard|
