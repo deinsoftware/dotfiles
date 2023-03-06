@@ -28,6 +28,7 @@
 
 |Alias|Command|Description|
 |---|---|---|
+|`cgr`|`.copy_git_repo`|Copy the current GitHub repo url to clipboard|
 |`bgr`|`.open_git_repo`|Browse the current GitHub repo url|
 |`bgb`|`.open_git_branch`|Browse the current GitHub current Branch url|
 |`bgp`|`.open_git_pull`|Browse the current GitHub Pull Request url|
