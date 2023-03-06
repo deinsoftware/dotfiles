@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Use Git from Windows with Credentials Manager
-alias git=git.exe
-
 # Git
 alias gcgm="git config --global init.defaultBranch main"
 alias gcg="git config --edit --global"

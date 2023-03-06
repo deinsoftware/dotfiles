@@ -6,4 +6,5 @@ if [[ -z "$package" ]]; then
     exit 1
 fi
 
-${BROWSER} "https://www.npmjs.com/package/${package}"
+url="https://www.npmjs.com/package/${package}"
+run_cmd "${BROWSER} \"${url}\""

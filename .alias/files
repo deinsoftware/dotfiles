@@ -17,8 +17,8 @@ alias bgr="open_git_repo" # browse git repo
 alias bgb="open_git_branch" # browse git repo on current branch
 alias bgp="open_git_pull" # browse git repo pulls
 alias bgc="open_git_compare" # <base-branch>
-alias bnp="open_npm_package" #browse npm package
-alias bnc="open_npm_clipboard" #browse npm package from clipboard
+alias bnp=".open_npm_package" #browse npm package
+alias bnc=".open_npm_clipboard" #browse npm package from clipboard
 
 # Search
 alias s="search_text" # -t <text> [-p <path>]
