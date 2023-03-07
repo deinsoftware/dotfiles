@@ -19,7 +19,7 @@
 |`ga <file>`|`git add <file>`|Add a file to the staging area|
 |`gru <file>`|`git reset -- <file>`|Remove a file from staging area|
 |`gcmsg "<message>"`|`git commit -m "<message>"`|Commit changes with message description|
-|`gcam`|`git commit -a -m "<message>"`|Add all new files and commit changes with message description.|
+|`gce`|`git commit -a -m "<message>"`|Add all new files and commit changes with message description.|
 
 ## Stash
 
@@ -74,7 +74,7 @@
 |`gma`|`git merge --abort`|Cancel the whole merge process|
 |`glog`|`git log --oneline --decorate --graph`|View changes|
 
-## Oh Shit!
+## Oh Shit
 
 |Alias|Command|Description|
 |---|---|---|
