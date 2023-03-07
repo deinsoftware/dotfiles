@@ -41,13 +41,16 @@ chmod +x ~/.helpers/**/* ~/.helpers/**/.[!.]*
 [ -f ~/.hooks ] && . ~/.hooks
 ```
 
-> `OPEN`, `BROWSE` and `UNC` constants need to be configured according yor OS. Windows (WSL2) and macOS use the same command to open the file explorer or the default web browser, on Ubuntu (Linux) need to be specified each one.
+> `OPEN` and `BROWSE` constants need to be configured according yor OS. Windows (WSL2) and macOS use the same command to open the file explorer or the default web browser, on Ubuntu (Linux) need to be specified each one.
 
-|SO|`OPEN`|`BROWSER`|`UNC`|
-|---|---|---|---|
-|Windows (WSL2)|`"explorer.exe"`|`"${OPEN}"`|`powershell.exe -c ii`|
-|macOS|`"open"`|`"${OPEN}"`| |
-|Ubuntu|`"xdg-open"`, `"gnome-open"`, `"nautilus"` ...|`"googlechrome"`, `"firefox"` ...| |
+|SO|`OPEN`|`BROWSER`|
+|---|---|---|
+|Windows (GitBash)|`"explorer.exe"`|`"${OPEN}"`|
+|Windows (WSL2)|`"wslview"`|`"${OPEN}"`|
+|macOS|`"open"`|`"${OPEN}"`|
+|Ubuntu|`"xdg-open"`, `"gnome-open"`, `"nautilus"` ...|`"googlechrome"`, `"firefox"` ...|
+
+> On WSL require to install [wslu](https://wslutiliti.es)
 
 ### 3. Permissions
 
