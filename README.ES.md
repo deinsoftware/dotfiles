@@ -1,4 +1,4 @@
-# ZSH Dev Toolkit
+# dot Files
 
 Idiomas: [🇺🇸] [English](README.md) - [🇪🇸] [Español](README.ES.md)
 
