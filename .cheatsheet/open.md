@@ -5,7 +5,7 @@
 |Alias|Command|Description|
 |---|---|---|
 |`o`|`.open_path -p .`|Open current path on file explorer or finder|
-|`op <path>`|`.open_path -p <path>`|Open a relative or absolute path on file explorer or finder|
+|`op <path>`|`.open_path -p <path>`|Open a relative or absolute path on file explorer or a file in a program|
 
 ## Browser
 

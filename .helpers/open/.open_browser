@@ -32,8 +32,7 @@ if [ -n "${file}" ]; then
         LINUX*)
             isWSL=$(uname -a | grep WSL)
             if [[ -n "${isWSL}" ]]; then
-                file="wslpath -w ${file/#./"\${PWD}"}"
-                run_cmd "${BROWSER} \$(${file})"
+                run_cmd "${BROWSER} ${file}"
                 exit 0
             fi
         ;;

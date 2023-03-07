@@ -23,14 +23,13 @@ En el archivo `.zshrc` adicionar.
 ```bash
 # Helpers
 export WINHOME=$(wslpath "$(wslvar USERPROFILE)")
-export OPEN="explorer.exe" #wsl2
+export OPEN="wslview" #wsl2
 export BROWSER="${OPEN}" #wsl2
 
 export PATH="$HOME/.helpers/b64/:$PATH"
 export PATH="$HOME/.helpers/code/:$PATH"
 export PATH="$HOME/.helpers/md/:$PATH"
 export PATH="$HOME/.helpers/open/:$PATH"
-export PATH="$HOME/.helpers/os/:$PATH"
 export PATH="$HOME/.helpers/search/:$PATH"
 export PATH="$HOME/.helpers/terminal/:$PATH"
 chmod +x ~/.helpers/**/* ~/.helpers/**/.[!.]*
@@ -57,7 +56,7 @@ chmod +x ~/.helpers/**/* ~/.helpers/**/.[!.]*
 Ahora adicione permisos de ejecución a los scripts de los `Helpers`:
 
 ```bash
-chmod +x ~/.helpers/**/*
+chmod +x ~/.helpers/**/* ~/.helpers/**/.[!.]*
 ```
 
 ### 4. Actualizar
@@ -150,10 +149,11 @@ Set-Alias wst -value wslStatus
 │   └── open.md
 ├── .helpers
 │   ├── b64
-│   ├── git
+│   ├── code
 │   ├── md
 │   ├── open
-│   └── search
+│   ├── search
+│   └── terminal
 ├── .aliases
 ├── .colors
 ├── .hooks
@@ -165,10 +165,11 @@ Set-Alias wst -value wslStatus
 |`.cheatsheet`| Carpeta con archivos de markdown para ver el pastel de los comandos de los `helpers` y commando `alias`|
 |`.helpers`| Carpeta con las funciones `helper` (ayudantes) para usar como comandos en la terminal |
 | ── `b64`| Comandos para la conversion de archivos desde/hacia base64 |
-| ── `git`| Comandos para clonar repositorios de git con opciones extra (TEP) |
+| ── `code`| Comandos para lanzar VSCode |
 | ── `md`| Comandos para ver archivos MarkDown en la terminal (TEP) |
 | ── `open`| Commandos para abrir archivos/rutas en el Explorador de Archivos o abrir archivos/url en el Navegador |
 | ── `search`| Comandos para buscar textos en los archivos |
+| ── `terminal`| Comandos utilitarios del Sistema Operativo |
 |`.aliases`| Archivo con la definición de los alias |
 |`.colors`| Archivo con colores de terminal para usar en otros scripts |
 |`.hooks`| Archivo con hooks de ZSH con funciones que corren antes o después de ejecutar algún comando en la terminal |

@@ -23,14 +23,13 @@ On `.zshrc` file add.
 ```bash
 # Helpers
 export WINHOME=$(wslpath "$(wslvar USERPROFILE)")
-export OPEN="explorer.exe" #wsl2
+export OPEN="wslview" #wsl2
 export BROWSER="${OPEN}" #wsl2
 
 export PATH="$HOME/.helpers/b64/:$PATH"
 export PATH="$HOME/.helpers/code/:$PATH"
 export PATH="$HOME/.helpers/md/:$PATH"
 export PATH="$HOME/.helpers/open/:$PATH"
-export PATH="$HOME/.helpers/os/:$PATH"
 export PATH="$HOME/.helpers/search/:$PATH"
 export PATH="$HOME/.helpers/terminal/:$PATH"
 chmod +x ~/.helpers/**/* ~/.helpers/**/.[!.]*
@@ -57,7 +56,7 @@ chmod +x ~/.helpers/**/* ~/.helpers/**/.[!.]*
 Now add execution permission:
 
 ```bash
-chmod +x ~/.helpers/**/*
+chmod +x ~/.helpers/**/* ~/.helpers/**/.[!.]*
 ```
 
 ### 4. Update
@@ -150,10 +149,11 @@ Set-Alias wst -value wslStatus
 │   └── open.md
 ├── .helpers
 │   ├── b64
-│   ├── git
+│   ├── code
 │   ├── md
 │   ├── open
-│   └── search
+│   ├── search
+│   └── terminal
 ├── .aliases
 ├── .colors
 ├── .hooks
@@ -165,10 +165,11 @@ Set-Alias wst -value wslStatus
 |`.cheatsheet`| Folder with basic markdown file to see a cheatsheet with `helpers` and `alias` |
 |`.helpers`| Folder with custom helper functions to use as terminal commands |
 | ── `b64`| Helper commands for file conversions to/from base64 |
-| ── `git`| Helper commands for git cloning with extra features (WIP) |
+| ── `code`| Helper commands to open VSCode |
 | ── `md`| Helper commands to see MarkDown files on terminal (WIP) |
 | ── `open`| Helper commands to open file/folder on the File Explorer or open files/url on the Browser |
 | ── `search`| Helper commands to search text inside files |
+| ── `terminal`| Helper commands to talk with the OS |
 |`.aliases`| File for aliases definitions |
 |`.colors`| File with terminal colors to use in other scripts |
 |`.hooks`| ZSH hooks file with custom functions to run as validation before and after run commands |
