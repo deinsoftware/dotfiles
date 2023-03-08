@@ -10,3 +10,5 @@ alias mu="history -10"
 alias hc="history -c"
 alias hg="history | grep" # <command>
 alias ag="alias | grep" # <command>
+
+alias rf="rm -rf " # <dir|file>

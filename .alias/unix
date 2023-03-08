@@ -13,7 +13,7 @@ alias t="htop"
 alias d="ncdu --exclude /mnt --color dark" # <path>
 
 # https://the.exa.website/install/linux
-# apt install exa
+# sudo apt install exa
 alias et='exa --icons --tree'
 alias et1='exa --icons --tree --level=1 --ignore-glob="*node_modules*"'
 alias et2='exa --icons --tree --level=2 --ignore-glob="*node_modules*"'
