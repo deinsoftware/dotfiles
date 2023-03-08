@@ -15,3 +15,6 @@ alias xfk="swpx fkill-cli" # [<pid|name|:port> …] #kill processes
 alias iow="swpx @squoosh/cli --webp auto" # <file-name>
 alias ioa="swpx @squoosh/cli --avif auto" # <file-name>
 alias iop="swpx @squoosh/cli --oxipng auto" # <file-name>
+
+# Live Server
+alias svd="swpx vite dev"
