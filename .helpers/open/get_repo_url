@@ -6,7 +6,7 @@ if [ "${url:(-4)}" == ".git" ]; then
 fi
 
 if [ -z "${url}" ]; then
-    echo -e "${B_RED}${T_WHITE}ERROR:${F_RESET} no repository or url found"
+    msg_error "no repository or url found"
     exit 1
 fi
 

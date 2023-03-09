@@ -28,10 +28,9 @@ for file in ${path}*.b64; do
             rm -r "${filename}.${ext}"
         fi
         mv "${filename}.tmp" "${filename}.${ext}"
-
-        echo "SUCCESS: '${filename}.${ext}' file was created"
+        msg_success "'${filename}.${ext}' file was created"
     else
         rm -r "${filename}.tmp"
-        echo "ERROR: '${filename}.b64' has no mime-type"
+        msg_error "'${filename}.b64' has no mime-type"
     fi
 done

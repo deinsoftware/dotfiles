@@ -18,7 +18,7 @@ if [ -z "${text}" ] && [ -n "${1}" ]; then
 fi
 
 if [ -z "${text}" ]; then
-    echo -e "${B_RED}${T_WHITE}ERROR:${F_RESET} text parameter is missing"
+    msg_error "text parameter is missing"
     exit 1
 fi
 

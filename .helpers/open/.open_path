@@ -20,12 +20,12 @@ case $path in
 esac
 
 if [ -z "${path}" ]; then
-    echo -e "${B_RED}${T_WHITE}ERROR:${F_RESET} path parameter is missing"
+    msg_error "$path parameter is missing"
     exit 1
 fi
 
 if ! ([[ -d "${path}" ]] || [[ -f "${path}" ]]); then
-    echo -e "${B_RED}${T_WHITE}ERROR:${F_RESET} path or file ${path} not found"
+    msg_error "path or file ${path} not found"
     exit 1
 fi
 

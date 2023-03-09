@@ -24,7 +24,7 @@ if [ -n "${file}" ]; then
     esac
 
     if [[ ! -f "${file}" ]]; then
-        echo -e "${B_RED}${T_WHITE}ERROR:${F_RESET} file ${file} not found"
+        msg_error "file ${file} not found"
         exit 1
     fi
 
