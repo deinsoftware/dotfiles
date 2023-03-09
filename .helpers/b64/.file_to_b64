@@ -28,7 +28,9 @@ for file in ${path}*.${ext}; do
     if [ -f "${filename}.b64" ]; then
         rm -r "${filename}.b64"
     fi
-    base64 ${file}|tr -d '\n' > "${filename}.b64"
+
+    cmd="base64 ${file}|tr -d '\n' > \"${filename}.b64\""
+    run_cmd "${cmd}"
 
     echo "SUCCESS: '${filename}.b64' file was created"
 done

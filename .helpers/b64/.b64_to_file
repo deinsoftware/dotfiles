@@ -17,8 +17,10 @@ fi
 for file in ${path}*.b64; do
     [ -e "$file" ] || continue
     filename=${file%%.*}
-    
-    base64 --decode --ignore-garbage ${file} > "${filename}.tmp"
+
+    cmd="base64 --decode --ignore-garbage ${file} > \"${filename}.tmp\""
+    run_cmd "${cmd}"
+
     ext=$(file -b --mime-type ${filename}.tmp | cut -d'/' -f2)
 
     if [ ! -z ${ext} ]; then

@@ -25,5 +25,5 @@ alias s=".search_text" # -t <text> [-p <path>]
 alias sff="find " # <path> -type d -name <folder>
 
 # Base 64
-alias b2f="b64_to_file"
-alias f2b="file_to_b64"
+alias b2f=".b64_to_file"
+alias f2b=".file_to_b64"
