@@ -22,4 +22,5 @@ if [ -z "${text}" ]; then
     exit 1
 fi
 
-grep -rlw "${text}" ${path} --exclude-dir={node_modules,build,coverage,.git} --exclude="package-lock.json"
+cmd="grep -rlw \"${text}\" ${path} --exclude-dir={node_modules,build,coverage,.git} --exclude=\"package-lock.json\""
+run_cmd "${cmd}"
