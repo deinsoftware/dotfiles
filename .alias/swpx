@@ -6,6 +6,9 @@ alias xcg="swpx npm-check -g"
 alias xul="swpx npm-check -u"
 alias xug="swpx npm-check -gu"
 
+# Live Server
+alias xvd="swpx vite dev"
+
 # Files and Ports
 alias xpk="swpx npkill" #clean unused node_modules
 alias xkp="swpx kill-port" # <port>
@@ -15,6 +18,3 @@ alias xfk="swpx fkill-cli" # [<pid|name|:port> …] #kill processes
 alias iow="swpx @squoosh/cli --webp auto" # <file-name>
 alias ioa="swpx @squoosh/cli --avif auto" # <file-name>
 alias iop="swpx @squoosh/cli --oxipng auto" # <file-name>
-
-# Live Server
-alias svd="swpx vite dev"
