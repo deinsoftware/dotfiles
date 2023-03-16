@@ -15,6 +15,7 @@ alias bcr=".open_browser -f coverage" # browse coverage
 alias cgr=".copy_git_repo" # copy git repo url to clipboard
 alias bgr=".open_git_repo" # browse git repo
 alias bgb=".open_git_branch" # browse git repo on current branch
+alias bga=".open_git_actions" # browse git repo actions
 alias bgp=".open_git_pull" # browse git repo pulls
 alias bgc=".open_git_compare" # <base-branch>
 alias bnp=".open_npm_package" #browse npm package

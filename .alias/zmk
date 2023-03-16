@@ -2,4 +2,7 @@
 
 # ZMK
 # pip3 install -U west
-alias zcb="west build --build-dir build/"
+alias zwi="west init" #create workspace
+alias zwu="west update" #update workspace
+alias zwe="west zephyr-export" #set cmake config
+alias zwb="west build /config --build-dir build/"
