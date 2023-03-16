@@ -1,0 +1,5 @@
+# !/bin/bash
+
+# ZMK
+# pip3 install -U west
+alias zcb="west build --build-dir build/"

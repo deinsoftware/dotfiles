@@ -13,6 +13,7 @@
 [ -f ~/.alias/serverless ] && . ~/.alias/serverless
 [ -f ~/.alias/volta ] && . ~/.alias/volta
 [ -f ~/.alias/python ] && . ~/.alias/python
+[ -f ~/.alias/zmk ] && . ~/.alias/zmk
 
 # Files and Folders
 [ -f ~/.alias/files ] && . ~/.alias/files
