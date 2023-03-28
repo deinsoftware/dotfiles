@@ -6,6 +6,7 @@ alias gcg="git config --edit --global"
 alias gcl="git config --edit --local"
 alias guc="git reset --hard HEAD" # undo changes and preserve untracked files
 alias gca="git clean -f -d -x" # clean ALL changes and remove untracked files
+alias gral="git checkout -- ." #revert at last commit
 alias gcd="git checkout dev"
 alias glod="git pull origin dev"
 alias glom="git pull origin main"
