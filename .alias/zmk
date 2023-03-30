@@ -4,5 +4,5 @@
 # pip3 install -U west
 alias zwi="west init" #create workspace
 alias zwu="west update" #update workspace
-alias zwe="west zephyr-export" #set cmake config
-alias zwb="west build /config --build-dir build/"
+alias zwl="west build -d build/left -b nice_nano_v2 -- -DSHIELD=swept_left -DZMK_CONFIG=\"/workspaces/zmk-config/config\""
+alias zwr="west build -d build/right -b nice_nano_v2 -- -DSHIELD=swept_right -DZMK_CONFIG=\"/workspaces/zmk-config/config\""
