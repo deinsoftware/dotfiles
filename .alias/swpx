@@ -8,7 +8,8 @@ alias xug="swpx npm-check -gu"
 
 # Live Server
 alias xvd="swpx vite dev"
-alias xvdp="swpx vite dev --port 3000"
+alias xvp="swpx vite dev --port 3000"
+alias xvh="swpx vite dev --port 3000 --host"
 
 # Files and Ports
 alias xpk="swpx npkill" #clean unused node_modules
