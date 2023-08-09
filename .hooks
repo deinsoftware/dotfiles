@@ -107,9 +107,9 @@ run(){
 
 after_validation(){
   if [[ -f "$file" ]] && ( [[ "$cmd" =~ ^"git pull" ]] || [[ "$cmd" =~ ^"gl" ]] && [[ !"$cmd" =~ ^"glog" ]] ); then
-    run "sci"
+    run "scf"
   elif [[ -f "$file" ]] && ( [[ "$cmd" =~ ^"git pull origin" ]] || [[ "$cmd" =~ ^"gl origin" ]] ); then
-    run "sci"
+    run "scf"
   elif [[ -f "$file" ]] && ( [[ "$cmd" =~ ^"git checkout -b " ]] || [[ "$cmd" =~ ^"gcb " ]] ); then
       run "gpsup && git pull && scf"
   elif [[ "$cmd" =~ ^"git checkout -b " ]] || [[ "$cmd" =~ ^"gcb " ]]; then
