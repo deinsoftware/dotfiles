@@ -12,3 +12,9 @@ alias glod="git pull origin dev"
 alias glom="git pull origin main"
 alias gpnv="git push --no-verify"
 alias gce="git commit --allow-empty -m " # <message>
+
+
+# https://github.com/Everduin94/better-commits
+# sag better-commits
+alias gbc="better-commits"
+alias gbb="better-branch"
