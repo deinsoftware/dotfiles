@@ -50,6 +50,6 @@ else
             line=$(md_format_text "${line}")
             echo -e "${line}"
         fi
-    done < ~/.cheatsheet/${sheet}.md
+    done < ~/cheatsheet/${sheet}.md
     print_table "${table}"
 fi

@@ -8,12 +8,10 @@ ZSH setup and productivity tools for development
 
 ### 1. Clone
 
-On `~` (home) path clone this repo
+On  `~/.dotfiles` path clone this repo
 
 ```bash
-git init 
-git remote add origin https://github.com/deinsoftware/dot-files.git
-git pull origin main
+git clone https://github.com/deinsoftware/dotfiles.git ~/.dotfiles
 ```
 
 ### 2. Setup
@@ -26,13 +24,13 @@ export WINHOME=$(wslpath "$(wslvar USERPROFILE)")
 export OPEN="wslview" #wsl2
 export BROWSER="${OPEN}" #wsl2
 
-export PATH="$HOME/.helpers/b64/:$PATH"
-export PATH="$HOME/.helpers/code/:$PATH"
-export PATH="$HOME/.helpers/md/:$PATH"
-export PATH="$HOME/.helpers/open/:$PATH"
-export PATH="$HOME/.helpers/search/:$PATH"
-export PATH="$HOME/.helpers/terminal/:$PATH"
-chmod +x ~/.helpers/**/* ~/.helpers/**/.[!.]*
+export PATH="$HOME/.dotfiles/helpers/b64/:$PATH"
+export PATH="$HOME/.dotfiles/helpers/code/:$PATH"
+export PATH="$HOME/.dotfiles/helpers/md/:$PATH"
+export PATH="$HOME/.dotfiles/helpers/open/:$PATH"
+export PATH="$HOME/.dotfiles/helpers/search/:$PATH"
+export PATH="$HOME/.dotfiles/helpers/terminal/:$PATH"
+chmod +x ~/.dotfiles/helpers/**/* ~/.dotfiles/helpers/**/.[!.]*
 
 # Custom
 [ -f ~/.aliases ] && . ~/.aliases
@@ -56,7 +54,7 @@ chmod +x ~/.helpers/**/* ~/.helpers/**/.[!.]*
 Now add execution permission:
 
 ```bash
-chmod +x ~/.helpers/**/* ~/.helpers/**/.[!.]*
+chmod +x ~/.dotfiles/helpers/**/* ~/.dotfiles/helpers/**/.[!.]*
 ```
 
 ### 4. Update
@@ -65,89 +63,14 @@ Once finish, save `.zshrc` file, close and reopen all terminals or update his so
 
 That's all folks! It's ready to use.
 
-### 5. Extra
-
-Useful alias to use on PowerShell side to deal with `WSL`.
-
-```powershell
-# Alias
-function getAliases() {
-    echo "(Get-Alias).DisplayName"
-    (Get-Alias).DisplayName
-}
-Set-Alias a -value getAliases
-
-# Profile
-function checkIfProfileExist() {
-    echo "Test-Path $PROFILE"
-    Test-Path $PROFILE
-}
-Set-Alias pe -value checkIfProfileExist
-
-function createProfile() {
-    echo "New-Item -path $PROFILE -type file -force"
-    New-Item -path $PROFILE -type file -force
-}
-Set-Alias pc -value createProfile
-
-function editProfile() {
-    echo "code $PROFILE"
-    code $PROFILE
-}
-Set-Alias e -value editProfile
-
-function reloadProfile() {
-    echo ". $PROFILE"
-    . $PROFILE
-}
-Set-Alias r -value reloadProfile
-
-# WSL
-function editWslConfig() {
-    echo "code $HOME/.wslconfig"
-    code $HOME/.wslconfig
-}
-Set-Alias wc -value editWslConfig
-
-function wslShutdown() {
-    echo "wsl --shutdown"
-    wsl --shutdown
-}
-Set-Alias ws -value wslShutdown
-
-function wslList() {
-    echo "wsl -l -v"
-    wsl -l -v
-}
-Set-Alias wl -value wslList
-
-function wslRun() {
-    echo "wsl"
-    wsl
-}
-Set-Alias wr -value wslRun
-
-function wslRunUbuntu() {
-    echo "wsl --distribution Ubuntu"
-    wsl --distribution Ubuntu
-}
-Set-Alias wru -value wslRunUbuntu
-
-function wslStatus() {
-    echo "wsl --status"
-    wsl --status
-}
-Set-Alias wst -value wslStatus
-```
-
 ## Folder Structure
 
 ```bash
 ~
-├── .cheatsheet
+├── cheatsheet
 │   └── git.md
 │   └── open.md
-├── .helpers
+├── helpers
 │   ├── b64
 │   ├── code
 │   ├── md
@@ -162,8 +85,8 @@ Set-Alias wst -value wslStatus
 
 |Name|Description|
 |---|---|
-|`.cheatsheet`| Folder with basic markdown file to see a cheatsheet with `helpers` and `alias` |
-|`.helpers`| Folder with custom helper functions to use as terminal commands |
+|`cheatsheet`| Folder with basic markdown file to see a cheatsheet with `helpers` and `alias` |
+|`helpers`| Folder with custom helper functions to use as terminal commands |
 | ── `b64`| Helper commands for file conversions to/from base64 |
 | ── `code`| Helper commands to open VSCode |
 | ── `md`| Helper commands to see MarkDown files on terminal (WIP) |

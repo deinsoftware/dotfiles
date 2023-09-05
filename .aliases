@@ -1,28 +1,28 @@
 #!/bin/bash
 
 # Utils
-[ -f ~/.alias/terminal ] && . ~/.alias/terminal
-[ -f ~/.alias/utils ] && . ~/.alias/utils
-[ -f ~/.alias/markdown ] && . ~/.alias/markdown
+[ -f ~/alias/terminal ] && . ~/alias/terminal
+[ -f ~/alias/utils ] && . ~/alias/utils
+[ -f ~/alias/markdown ] && . ~/alias/markdown
 
 # Development
-[ -f ~/.alias/code ] && . ~/.alias/code
-[ -f ~/.alias/git ] && . ~/.alias/git
-[ -f ~/.alias/swpm ] && . ~/.alias/swpm
-[ -f ~/.alias/swpx ] && . ~/.alias/swpx
-[ -f ~/.alias/serverless ] && . ~/.alias/serverless
-[ -f ~/.alias/volta ] && . ~/.alias/volta
-[ -f ~/.alias/python ] && . ~/.alias/python
-[ -f ~/.alias/zmk ] && . ~/.alias/zmk
+[ -f ~/alias/code ] && . ~/alias/code
+[ -f ~/alias/git ] && . ~/alias/git
+[ -f ~/alias/swpm ] && . ~/alias/swpm
+[ -f ~/alias/swpx ] && . ~/alias/swpx
+[ -f ~/alias/serverless ] && . ~/alias/serverless
+[ -f ~/alias/volta ] && . ~/alias/volta
+[ -f ~/alias/python ] && . ~/alias/python
+[ -f ~/alias/zmk ] && . ~/alias/zmk
 
 # Files and Folders
-[ -f ~/.alias/files ] && . ~/.alias/files
+[ -f ~/alias/files ] && . ~/alias/files
 
 # Updates
 if [[ "$( which_os )" == "OSX" ]]; then
-    [ -f ~/.alias/brew ] && . ~/.alias/brew
+    [ -f ~/alias/brew ] && . ~/alias/brew
 fi
 if [[ "$( which_os )" == "LINUX" ]]; then
-    [ -f ~/.alias/unix ] && . ~/.alias/unix
-    [ -f ~/.alias/ubuntu ] && . ~/.alias/ubuntu
+    [ -f ~/alias/unix ] && . ~/alias/unix
+    [ -f ~/alias/ubuntu ] && . ~/alias/ubuntu
 fi
