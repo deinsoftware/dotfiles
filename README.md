@@ -33,9 +33,9 @@ export PATH="$HOME/.dotfiles/helpers/terminal/:$PATH"
 chmod +x ~/.dotfiles/helpers/**/* ~/.dotfiles/helpers/**/.[!.]*
 
 # Custom
-[ -f ~/.aliases ] && . ~/.aliases
-[ -f ~/.colors ] && . ~/.colors
-[ -f ~/.hooks ] && . ~/.hooks
+[ -f ~/.dotfiles/.aliases ] && . ~/.aliases
+[ -f ~/.dotfiles/.colors ] && . ~/.colors
+[ -f ~/.dotfiles/.hooks ] && . ~/.hooks
 ```
 
 > `OPEN` and `BROWSE` constants need to be configured according yor OS. Windows (WSL2) and macOS use the same command to open the file explorer or the default web browser, on Ubuntu (Linux) need to be specified each one.
