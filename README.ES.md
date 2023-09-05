@@ -1,4 +1,4 @@
-# dot Files
+# dotfiles
 
 Idiomas: [🇺🇸] [English](README.md) - [🇪🇸] [Español](README.ES.md)
 
