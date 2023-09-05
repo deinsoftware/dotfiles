@@ -40,12 +40,12 @@ chmod +x ~/.dotfiles/helpers/**/* ~/.dotfiles/helpers/**/.[!.]*
 
 > Las constantes `OPEN` y `BROWSE` necesitan ser configuradas de acuerdo al SO que se este usando. Windows (WSL2) y macOS usan el mismo comando para abrir el explorador de archivos como el navegador por defecto, en Ubuntu (Linux) se debe especificar cada uno por separado.
 
-|SO|`OPEN`|`BROWSER`|
-|---|---|---|
-|Windows (GitBash)|`"explorer.exe"`|`"${OPEN}"`|
-|Windows (WSL2)|`"wslview"`|`"${OPEN}"`|
-|macOS|`"open"`|`"${OPEN}"`|
-|Ubuntu|`"xdg-open"`, `"gnome-open"`, `"nautilus"` ...|`"googlechrome"`, `"firefox"` ...|
+| SO                | `OPEN`                                         | `BROWSER`                         |
+| ----------------- | ---------------------------------------------- | --------------------------------- |
+| Windows (GitBash) | `"explorer.exe"`                               | `"${OPEN}"`                       |
+| Windows (WSL2)    | `"wslview"`                                    | `"${OPEN}"`                       |
+| macOS             | `"open"`                                       | `"${OPEN}"`                       |
+| Ubuntu            | `"xdg-open"`, `"gnome-open"`, `"nautilus"` ... | `"googlechrome"`, `"firefox"` ... |
 
 > Para WSL se require instalar [wslu](https://wslutiliti.es)
 
@@ -67,24 +67,26 @@ Una vez termine, guarde el archivo `.zshrc`, cierre y reabra todas las terminale
 
 ```bash
 ~
-├── cheatsheet
-│   └── git.md
-│   └── open.md
-├── helpers
-│   ├── b64
-│   ├── code
-│   ├── md
-│   ├── open
-│   ├── search
-│   └── terminal
-├── .aliases
-├── .colors
-├── .hooks
 └── .zshrc
+└── .dotfiles
+    ├── cheatsheet
+    │   └── git.md
+    │   └── open.md
+    ├── helpers
+    │   ├── b64
+    │   ├── code
+    │   ├── md
+    │   ├── open
+    │   ├── search
+    │   └── terminal
+    ├── .aliases
+    ├── .colors
+    └── .hooks
 ```
 
 |Name|Description|
 |---|---|
+|`.zshrc`| Archivo fuente de ZSH |
 |`cheatsheet`| Carpeta con archivos de markdown para ver el pastel de los comandos de los `helpers` y commando `alias`|
 |`helpers`| Carpeta con las funciones `helper` (ayudantes) para usar como comandos en la terminal |
 | ── `b64`| Comandos para la conversion de archivos desde/hacia base64 |
@@ -96,7 +98,6 @@ Una vez termine, guarde el archivo `.zshrc`, cierre y reabra todas las terminale
 |`.aliases`| Archivo con la definición de los alias |
 |`.colors`| Archivo con colores de terminal para usar en otros scripts |
 |`.hooks`| Archivo con hooks de ZSH con funciones que corren antes o después de ejecutar algún comando en la terminal |
-|`.zshrc`| Archivo fuente de ZSH |
 
 ## ZSH plugins
 

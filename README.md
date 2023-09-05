@@ -40,12 +40,12 @@ chmod +x ~/.dotfiles/helpers/**/* ~/.dotfiles/helpers/**/.[!.]*
 
 > `OPEN` and `BROWSE` constants need to be configured according yor OS. Windows (WSL2) and macOS use the same command to open the file explorer or the default web browser, on Ubuntu (Linux) need to be specified each one.
 
-|SO|`OPEN`|`BROWSER`|
-|---|---|---|
-|Windows (GitBash)|`"explorer.exe"`|`"${OPEN}"`|
-|Windows (WSL2)|`"wslview"`|`"${OPEN}"`|
-|macOS|`"open"`|`"${OPEN}"`|
-|Ubuntu|`"xdg-open"`, `"gnome-open"`, `"nautilus"` ...|`"googlechrome"`, `"firefox"` ...|
+| SO                | `OPEN`                                         | `BROWSER`                         |
+| ----------------- | ---------------------------------------------- | --------------------------------- |
+| Windows (GitBash) | `"explorer.exe"`                               | `"${OPEN}"`                       |
+| Windows (WSL2)    | `"wslview"`                                    | `"${OPEN}"`                       |
+| macOS             | `"open"`                                       | `"${OPEN}"`                       |
+| Ubuntu            | `"xdg-open"`, `"gnome-open"`, `"nautilus"` ... | `"googlechrome"`, `"firefox"` ... |
 
 > On WSL require to install [wslu](https://wslutiliti.es)
 
@@ -67,24 +67,26 @@ That's all folks! It's ready to use.
 
 ```bash
 ~
-├── cheatsheet
-│   └── git.md
-│   └── open.md
-├── helpers
-│   ├── b64
-│   ├── code
-│   ├── md
-│   ├── open
-│   ├── search
-│   └── terminal
-├── .aliases
-├── .colors
-├── .hooks
 └── .zshrc
+└── .dotfiles
+    ├── cheatsheet
+    │   └── git.md
+    │   └── open.md
+    ├── helpers
+    │   ├── b64
+    │   ├── code
+    │   ├── md
+    │   ├── open
+    │   ├── search
+    │   └── terminal
+    ├── .aliases
+    ├── .colors
+    └── .hooks
 ```
 
 |Name|Description|
 |---|---|
+|`.zshrc`| ZSH source file |
 |`cheatsheet`| Folder with basic markdown file to see a cheatsheet with `helpers` and `alias` |
 |`helpers`| Folder with custom helper functions to use as terminal commands |
 | ── `b64`| Helper commands for file conversions to/from base64 |
@@ -96,7 +98,6 @@ That's all folks! It's ready to use.
 |`.aliases`| File for aliases definitions |
 |`.colors`| File with terminal colors to use in other scripts |
 |`.hooks`| ZSH hooks file with custom functions to run as validation before and after run commands |
-|`.zshrc`| ZSH source file |
 
 ## ZSH plugins
 
