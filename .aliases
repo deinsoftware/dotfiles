@@ -1,28 +1,28 @@
 #!/bin/bash
 
 # Utils
-[ -f ~/alias/terminal ] && . ~/alias/terminal
-[ -f ~/alias/utils ] && . ~/alias/utils
-[ -f ~/alias/markdown ] && . ~/alias/markdown
+[ -f ~/.dotfiles/alias/terminal ] && . ~/.dotfiles/alias/terminal
+[ -f ~/.dotfiles/alias/utils ] && . ~/.dotfiles/alias/utils
+[ -f ~/.dotfiles/alias/markdown ] && . ~/.dotfiles/alias/markdown
 
 # Development
-[ -f ~/alias/code ] && . ~/alias/code
-[ -f ~/alias/git ] && . ~/alias/git
-[ -f ~/alias/swpm ] && . ~/alias/swpm
-[ -f ~/alias/swpx ] && . ~/alias/swpx
-[ -f ~/alias/serverless ] && . ~/alias/serverless
-[ -f ~/alias/volta ] && . ~/alias/volta
-[ -f ~/alias/python ] && . ~/alias/python
-[ -f ~/alias/zmk ] && . ~/alias/zmk
+[ -f ~/.dotfiles/alias/code ] && . ~/.dotfiles/alias/code
+[ -f ~/.dotfiles/alias/git ] && . ~/.dotfiles/alias/git
+[ -f ~/.dotfiles/alias/swpm ] && . ~/.dotfiles/alias/swpm
+[ -f ~/.dotfiles/alias/swpx ] && . ~/.dotfiles/alias/swpx
+[ -f ~/.dotfiles/alias/serverless ] && . ~/.dotfiles/alias/serverless
+[ -f ~/.dotfiles/alias/volta ] && . ~/.dotfiles/alias/volta
+[ -f ~/.dotfiles/alias/python ] && . ~/.dotfiles/alias/python
+[ -f ~/.dotfiles/alias/zmk ] && . ~/.dotfiles/alias/zmk
 
 # Files and Folders
-[ -f ~/alias/files ] && . ~/alias/files
+[ -f ~/.dotfiles/alias/files ] && . ~/.dotfiles/alias/files
 
 # Updates
 if [[ "$( which_os )" == "OSX" ]]; then
-    [ -f ~/alias/brew ] && . ~/alias/brew
+    [ -f ~/.dotfiles/alias/brew ] && . ~/.dotfiles/alias/brew
 fi
 if [[ "$( which_os )" == "LINUX" ]]; then
-    [ -f ~/alias/unix ] && . ~/alias/unix
-    [ -f ~/alias/ubuntu ] && . ~/alias/ubuntu
+    [ -f ~/.dotfiles/alias/unix ] && . ~/.dotfiles/alias/unix
+    [ -f ~/.dotfiles/alias/ubuntu ] && . ~/.dotfiles/alias/ubuntu
 fi
