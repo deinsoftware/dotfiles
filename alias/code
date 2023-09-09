@@ -9,6 +9,8 @@ alias vr="code --profile React" # <path|file>
 alias vro=".open_code -p React"
 alias vn="code --profile Node" # <path|file>
 alias vno=".open_code -p Node"
+alias vb="code --profile Bun" # <path|file>
+alias vbo=".open_code -p Bun"
 
 # Extensions
 # npm install -g vsce
