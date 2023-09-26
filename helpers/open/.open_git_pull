@@ -1,6 +1,0 @@
-#!/bin/bash
-
-url="$( get_repo_url )"
-address="${url}/pulls"
-
-run_cmd "${BROWSER} \"${address}\""
