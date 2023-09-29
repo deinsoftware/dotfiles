@@ -35,7 +35,7 @@ alias spt="swpm publish --tag " #<name> --opt=<number>
 alias su="swpm unpublish " #<package-name>@<version> --otp=<number>
 alias sd="swpm deprecate " #<package-name>@<version> "<message>" --otp=<number>
 # undeprecate (message empty)
-alias sud="swpm deprecate " #<package-name>@<version> "" --otp=<number>
+alias sdu="swpm deprecate " #<package-name>@<version> "" --otp=<number>
 
 # Updates
 alias spl="swpm list --depth 0 -g" #list global packages installed
