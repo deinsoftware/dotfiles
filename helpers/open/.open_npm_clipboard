@@ -2,7 +2,7 @@
 
 # Requires:
 # https://github.com/sindresorhus/clipboard-cli
-# sae clipboard-cli
+# sag clipboard-cli
 
 url="https://www.npmjs.com/package"
 value="$( clipboard )"
