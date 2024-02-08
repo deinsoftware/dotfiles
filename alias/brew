@@ -3,5 +3,5 @@
 alias bru="brew update"
 alias bro="brew outdated"
 alias brg="brew upgrade"
-alias brc="brew cleanup"
+alias brc="brew cleanup --prune=all"
 alias brd="brew doctor"
