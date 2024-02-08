@@ -1,7 +1,7 @@
 #!/bin/bash
 
-alias brd="brew update"
+alias bru="brew update"
 alias bro="brew outdated"
 alias brg="brew upgrade"
-alias brc="brew cleanup && brew cask cleanup"
+alias brc="brew cleanup"
 alias brd="brew doctor"
