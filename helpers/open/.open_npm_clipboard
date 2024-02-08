@@ -2,7 +2,7 @@
 
 # Requires:
 # https://github.com/sindresorhus/clipboard-cli
-# npm install -g clipboard-cli
+# sae clipboard-cli
 
 url="https://www.npmjs.com/package"
 value="$( clipboard )"

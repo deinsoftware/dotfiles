@@ -13,5 +13,5 @@ alias vb="code --profile Bun" # <path|file>
 alias vbo=".open_code -p Bun"
 
 # Extensions
-# npm install -g vsce
+# sae vsce
 alias vcp="vsce package --out build/"
