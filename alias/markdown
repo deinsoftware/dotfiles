@@ -1,6 +1,0 @@
-#!/bin/bash
-
-# Markdown Cheatsheets
-alias mdv="md_viewer -s" # <name>
-alias mdvg="md_viewer -s git"
-alias mdvo="md_viewer -s open"
