@@ -13,5 +13,5 @@ alias vb="code --profile Bun" # <path|file>
 alias vbo=".open_code -p Bun"
 
 # Extensions
-# sae vsce
+# sag vsce
 alias vcp="vsce package --out build/"
