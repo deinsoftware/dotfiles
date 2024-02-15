@@ -19,6 +19,10 @@ git clone https://github.com/deinsoftware/dotfiles.git ~/.dotfiles
 On `.zshrc` file add.
 
 ```bash
+# Default branches
+export MAIN="main"
+export DEV="dev"
+
 # Helpers
 export WINHOME=$(wslpath "$(wslvar USERPROFILE)")
 export OPEN="wslview" #wsl2
