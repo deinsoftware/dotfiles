@@ -1,16 +1,15 @@
 #!/bin/bash
 
+# Insiders
+alias codi="code-insiders"
+
 # VSCode
-alias vc="code --profile Default" # <path|file>
-alias vco=".open_code -p Default"
-alias vd="code --profile DotNet" # <path|file>
-alias vdo=".open_code -p DotNet"
-alias vr="code --profile React" # <path|file>
-alias vro=".open_code -p React"
-alias vn="code --profile Node" # <path|file>
-alias vno=".open_code -p Node"
-alias vb="code --profile Bun" # <path|file>
-alias vbo=".open_code -p Bun"
+alias vc=".open_code -p Default" # <path|file>
+alias vci=".open_code -p Default -i" # <path|file>
+alias vcd=".open_code -p DotNet -i" # <path|file>
+alias vcr=".open_code -p React -i" # <path|file>
+alias vcn=".open_code -p Node -i" # <path|file>
+alias vcb=".open_code -p Bun -i" # <path|file>
 
 # Extensions
 # sag vsce
