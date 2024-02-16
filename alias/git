@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Git
-alias gcgm="git config --global init.defaultBranch ${MAIN}"
-alias gcg="git config --edit --global"
-alias gcl="git config --edit --local"
+alias gkm="git config --global init.defaultBranch ${MAIN}"
+alias gkg="git config --edit --global"
+alias gkl="git config --edit --local"
 alias guc="git reset --hard HEAD" # undo changes and preserve untracked files
 alias gca="git clean -f -d -x" # clean ALL changes and remove untracked files
 alias gral="git checkout -- ." #revert at last commit
