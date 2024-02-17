@@ -1,14 +1,14 @@
 #!/bin/bash
 
-while getopts ":f:p:n:" opt; do
+while getopts ":f:p:i:n:" opt; do
     case $opt in
         f) file="${OPTARG}"
         ;;
         p) profile="${OPTARG}"
         ;;
-        n) new=""
-        ;;
         i) insiders=""
+        ;;
+        n) new=""
         ;;
         \?) echo "Invalid option -${OPTARG}" >&2
         exit 1
@@ -31,9 +31,9 @@ else
     path="$file"
 fi
 
-version="code"
+app="code"
 if [ "${!#}" == "-i" ]; then
-    version="code-insiders"
+    app="code-insiders"
 fi
 
-run_cmd "${version} ${new}--profile ${profile} ${path}"
+run_cmd "${app} ${new}--profile ${profile} ${path}"
