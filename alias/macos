@@ -1,3 +1,4 @@
+#!/bin/bash
 
 #XCode reinstall
 alias xcd="sudo rm -rf /Library/Developer/CommandLineTools"
