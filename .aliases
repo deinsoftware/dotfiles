@@ -21,6 +21,7 @@
 # Updates
 if [[ "$( which_os )" == "OSX" ]]; then
     [ -f ~/.dotfiles/alias/brew ] && . ~/.dotfiles/alias/brew
+    [ -f ~/.dotfiles/alias/macos ] && . ~/.dotfiles/alias/macos
 fi
 if [[ "$( which_os )" == "LINUX" ]]; then
     [ -f ~/.dotfiles/alias/unix ] && . ~/.dotfiles/alias/unix

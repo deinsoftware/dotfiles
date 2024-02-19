@@ -1,0 +1,5 @@
+
+#XCode reinstall
+alias xcd="sudo rm -rf /Library/Developer/CommandLineTools"
+alias xci="sudo xcode-select --install"
+alias xcr="sudo xcode-select -r"
