@@ -4,4 +4,4 @@
 .LSOverride
 
 # Private
-alias/private
+**/private
