@@ -31,14 +31,14 @@ expand_command_line() {
   if [[ -n "${first//-//}" ]]; then # is not hypen
     cmd_alias="$(alias_for "${first}" "${rest:1}")" # Check if there's an alias for the command
     if [[ -n $cmd_alias ]] && [[ "${cmd_alias:0:1}" != "." ]]; then # If there was and not start with dot
-      echo -n "${T_GREEN}❯ ${T_YELLOW}${cmd_alias}${F_RESET}\n" # Print it
+      echo "${T_GREEN}❯ ${T_YELLOW}${cmd_alias}${F_RESET}\n" # Print it
     fi
   fi
 }
 
 danger(){
-  echo -n "${B_RED}${T_WHITE}DANGER:${F_RESET} Are you sure? really?"
-  echo -n "${T_GREEN}[ANY] = Continue ${F_RESET}| ${T_RED}[Ctrl+c] = Cancel ${F_RESET}"
+  echo "${B_RED}${T_WHITE}DANGER:${F_RESET} Are you sure? really?"
+  echo "${T_GREEN}[ANY] = Continue ${F_RESET}| ${T_RED}[Ctrl+c] = Cancel ${F_RESET}"
   read -sk key
   quit="n"
 }
@@ -56,8 +56,8 @@ danger_validation(){
 }
 
 cancel(){
-  echo -n "${B_YELLOW}${T_BLACK}ALERT:${F_RESET} Did you run ${F_BOLD}'$1'${F_RESET} command before?"
-  echo -n "${T_GREEN}[ANY] = Continue ${F_RESET}| ${T_RED}[Ctrl+c] = Cancel ${F_RESET}"
+  echo "${B_YELLOW}${T_BLACK}ALERT:${F_RESET} Did you run ${F_BOLD}'$1'${F_RESET} command before?"
+  echo "${T_GREEN}[ANY] = Continue ${F_RESET}| ${T_RED}[Ctrl+c] = Cancel ${F_RESET}"
   read -sk key
   quit="n"
 }
@@ -96,11 +96,11 @@ pre_validation() {
 }
 
 run(){
-  echo -n "${B_YELLOW}${T_BLACK}ALERT:${F_RESET} Do you want to run ${F_BOLD}'$1'${F_RESET} command after?"
-  echo -n "${T_GREEN}[Y] = Yes ${F_RESET}| ${T_RED}[ANY] = Cancel ${F_RESET}"
+  echo "${B_YELLOW}${T_BLACK}ALERT:${F_RESET} Do you want to run ${F_BOLD}'$1'${F_RESET} command after?"
+  echo "${T_GREEN}[Y] = Yes ${F_RESET}| ${T_RED}[ANY] = Cancel ${F_RESET}"
   read -sk key
   if [[ "$key" == "y" ]] || [[ "$key" == "Y" ]]; then
-    echo -n "${T_GREEN}❯ ${T_YELLOW}Running...${F_RESET}"
+    echo "${T_GREEN}❯ ${T_YELLOW}Running...${F_RESET}"
     eval $1
   fi
 }
