@@ -1,8 +1,9 @@
 #!/bin/bash
 
 if [ -n "${1}" ]; then
-    echo -n -e "${T_GREEN}❯ ${T_YELLOW}"    # Chage colors
-    echo -n "${1}"                          # Print command
-    echo -n -e "${F_RESET}\n"               # Reset colors
+    echo -en "${T_GREEN}❯ ${T_YELLOW}"    # Chage colors
+    echo -n "${1}"                        # Print command
+    echo -en "${F_RESET}\n"               # Reset colors
+
     eval $1
 fi
