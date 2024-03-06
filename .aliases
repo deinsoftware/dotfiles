@@ -3,7 +3,6 @@
 # Utils
 [ -f ~/.dotfiles/alias/terminal ] && . ~/.dotfiles/alias/terminal
 [ -f ~/.dotfiles/alias/utils ] && . ~/.dotfiles/alias/utils
-[ -f ~/.dotfiles/alias/markdown ] && . ~/.dotfiles/alias/markdown
 
 # Development
 [ -f ~/.dotfiles/alias/code ] && . ~/.dotfiles/alias/code
