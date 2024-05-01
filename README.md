@@ -8,7 +8,7 @@ ZSH setup and productivity tools for development
 
 ### 1. Clone
 
-On  `~/.dotfiles` path clone this repo
+Clone this repo on `~/.dotfiles` path:
 
 ```bash
 git clone https://github.com/deinsoftware/dotfiles.git ~/.dotfiles
@@ -73,9 +73,6 @@ That's all folks! It's ready to use.
 ~
 └── .zshrc
 └── .dotfiles
-    ├── cheatsheet
-    │   └── git.md
-    │   └── open.md
     ├── helpers
     │   ├── b64
     │   ├── code
@@ -88,30 +85,29 @@ That's all folks! It's ready to use.
     └── .hooks
 ```
 
-|Name|Description|
-|---|---|
-|`.zshrc`| ZSH source file |
-|`cheatsheet`| Folder with basic markdown file to see a cheatsheet with `helpers` and `alias` |
-|`helpers`| Folder with custom helper functions to use as terminal commands |
-| ── `b64`| Helper commands for file conversions to/from base64 |
-| ── `code`| Helper commands to open VSCode |
-| ── `md`| Helper commands to see MarkDown files on terminal (WIP) |
-| ── `open`| Helper commands to open file/folder on the File Explorer or open files/url on the Browser |
-| ── `search`| Helper commands to search text inside files |
-| ── `terminal`| Helper commands to talk with the OS |
-|`.aliases`| File for aliases definitions |
-|`.colors`| File with terminal colors to use in other scripts |
-|`.hooks`| ZSH hooks file with custom functions to run as validation before and after run commands |
+|Name          |Description                                                                                |
+|--------------|-------------------------------------------------------------------------------------------|
+|`.zshrc`      | ZSH source file                                                                           |
+|`helpers`     | Folder with custom helper functions to use as terminal commands                           |
+| ── `b64`     | Helper commands for file conversions to/from base64                                       |
+| ── `code`    | Helper commands to open VSCode                                                            |
+| ── `open`    | Helper commands to open file/folder on the File Explorer or open files/url on the Browser |
+| ── `search`  | Helper commands to search text inside files                                               |
+| ── `terminal`| Helper commands to talk with the OS                                                       |
+|`.aliases`    | File for aliases definitions                                                              |
+|`.colors`     | File with terminal colors to use in other scripts                                         |
+|`.hooks`      | ZSH hooks file with custom functions to run as validation before and after run commands   |
 
-## ZSH plugins
+## Plugins
 
-There are a lot of [plugins for ZSH](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins), those are the most useful that I found.
+**Oh My zsh!** have [a lot of plugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins) to use. It's recommended to explore the options and use what is good for your needs.
+
+> If you are using **NVM** take care of following this [configuration to avoid slowing the zsh start-up](https://lakur.tech/2021/12/10/fix-slow-zsh-startup-nvm/) and this [configuration to speed up the compinit](https://gist.github.com/ctechols/ca1035271ad134841284?permalink_comment_id=3365691)
 
 ### Official
 
 * [adb](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/adb)
 * [command-not-found](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/command-not-found)
-* [deno](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/deno)
 * [docker](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker)
 * [git](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)
 * [git-lfs](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git-lfs)
@@ -120,29 +116,47 @@ There are a lot of [plugins for ZSH](https://github.com/ohmyzsh/ohmyzsh/tree/mas
 * [history-substring-search](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/history-substring-search)
 * [node](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/node)
 * [npm](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/npm)
-* [yarn](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/yarn)
-* [volta](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/volta)
+* [nvm](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/nvm)
 * [vscode](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vscode)
 * [sudo](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo)
-* [ubuntu](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/ubuntu)
 * [web-search](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search)
 * [z](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/z)
 
 ### Extras
 
-* [zsh-nvm](https://github.com/lukechilds/zsh-nvm)
 * [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+* [OhMyZsh-full-autoupdate](https://github.com/Pilaton/OhMyZsh-full-autoupdate)
+
+```bash
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/Pilaton/OhMyZsh-full-autoupdate.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/ohmyzsh-full-autoupdate
+```
+
+Edit the `~/.zshrc` file and add it inside the `plugins` property (don't use commas as separators).
+
+```diff
++ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root line)
++ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
+
+plugins=(
+    ...
++   zsh-autosuggestions
++   zsh-syntax-highlighting
++   ohmyzsh-full-autoupdate
+)
+```
 
 ## Article Series
 
+* [iTerm2 + Oh My Zsh! + Powerlevel10K best terminal combination for Geeks!](https://dev.to/equiman/iterm2--oh-my-zsh--powerlevel9k-best-terminal-combination-for-geeks-58l5)
+* [Why Oh My ZSH is so cool?](https://dev.to/equiman/why-oh-my-zsh-is-so-cool-31gd)
 * [Useful Alias for ZSH](https://dev.to/equiman/useful-alias-for-zsh-1j8b)
 * [Reveal the command behind an alias with ZSH](https://dev.to/equiman/reveal-the-command-behind-an-alias-with-zsh-4d96)
 * [Command validations with ZSH](https://dev.to/equiman/command-validations-with-zsh-2boa)
 * [Open File Explorer and Browser from ZSH](https://dev.to/equiman/open-file-explorer-and-browser-mbb)
 * [ZSH cheatsheet for git plugin](https://dev.to/equiman/zsh-cheatsheet-for-git-plugin-1f6a)
-* [Move WSL File System to another Drive](https://dev.to/equiman/move-wsl-file-system-to-another-drive-2a3d)
-* [ZSH on Windows without WSL](https://dev.to/equiman/zsh-on-windows-without-wsl-4ah9)
 
 ---
 

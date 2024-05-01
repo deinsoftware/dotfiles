@@ -73,13 +73,9 @@ Una vez termine, guarde el archivo `.zshrc`, cierre y reabra todas las terminale
 ~
 └── .zshrc
 └── .dotfiles
-    ├── cheatsheet
-    │   └── git.md
-    │   └── open.md
     ├── helpers
     │   ├── b64
     │   ├── code
-    │   ├── md
     │   ├── open
     │   ├── search
     │   └── terminal
@@ -88,30 +84,29 @@ Una vez termine, guarde el archivo `.zshrc`, cierre y reabra todas las terminale
     └── .hooks
 ```
 
-|Name|Description|
-|---|---|
-|`.zshrc`| Archivo fuente de ZSH |
-|`cheatsheet`| Carpeta con archivos de markdown para ver el pastel de los comandos de los `helpers` y commando `alias`|
-|`helpers`| Carpeta con las funciones `helper` (ayudantes) para usar como comandos en la terminal |
-| ── `b64`| Comandos para la conversion de archivos desde/hacia base64 |
-| ── `code`| Comandos para lanzar VSCode |
-| ── `md`| Comandos para ver archivos MarkDown en la terminal (TEP) |
-| ── `open`| Commandos para abrir archivos/rutas en el Explorador de Archivos o abrir archivos/url en el Navegador |
-| ── `search`| Comandos para buscar textos en los archivos |
-| ── `terminal`| Comandos utilitarios del Sistema Operativo |
-|`.aliases`| Archivo con la definición de los alias |
-|`.colors`| Archivo con colores de terminal para usar en otros scripts |
-|`.hooks`| Archivo con hooks de ZSH con funciones que corren antes o después de ejecutar algún comando en la terminal |
+|Name          |Description                                                                                                 |
+|--------------|------------------------------------------------------------------------------------------------------------|
+|`.zshrc`      | Archivo fuente de ZSH                                                                                      |
+|`helpers`     | Carpeta con las funciones `helper` (ayudantes) para usar como comandos en la terminal                      |
+| ── `b64`     | Comandos para la conversion de archivos desde/hacia base64                                                 |
+| ── `code`    | Comandos para lanzar VSCode                                                                                |
+| ── `open`    | Commandos para abrir archivos/rutas en el Explorador de Archivos o abrir archivos/url en el Navegador      |
+| ── `search`  | Comandos para buscar textos en los archivos                                                                |
+| ── `terminal`| Comandos utilitarios del Sistema Operativo                                                                 |
+|`.aliases`    | Archivo con la definición de los alias                                                                     |
+|`.colors`     | Archivo con colores de terminal para usar en otros scripts                                                 |
+|`.hooks`      | Archivo con hooks de ZSH con funciones que corren antes o después de ejecutar algún comando en la terminal |
 
 ## ZSH plugins
 
-Hay un montón de [plugins para ZSH](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins), estos son los mas útiles que he encontrado.
+**Oh My zsh!** tiene [un montón de plugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins) para usar. Se recomienda explorar las opciones y usar las que son más adecuadas para tus necesidades.
+
+> Si estás utilizando **NVM**, asegúrate de revisar esta [configuración para evitar ralentizar el inicio de Zsh](https://lakur.tech/2021/12/10/fix-slow-zsh-startup-nvm-es/) y esta [configuración para acelerar el compinit](https://gist.github.com/ctechols/ca1035271ad134841284?permalink_comment_id=3365691)
 
 ### Oficiales
 
 * [adb](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/adb)
 * [command-not-found](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/command-not-found)
-* [deno](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/deno)
 * [docker](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker)
 * [git](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)
 * [git-lfs](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git-lfs)
@@ -120,30 +115,43 @@ Hay un montón de [plugins para ZSH](https://github.com/ohmyzsh/ohmyzsh/tree/mas
 * [history-substring-search](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/history-substring-search)
 * [node](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/node)
 * [npm](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/npm)
-* [yarn](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/yarn)
-* [volta](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/volta)
+* [nvm](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/nvm)
 * [vscode](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vscode)
 * [sudo](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo)
-* [ubuntu](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/ubuntu)
 * [web-search](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search)
 * [z](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/z)
 
 ### Extras
 
-* [zsh-nvm](https://github.com/lukechilds/zsh-nvm)
 * [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+* [OhMyZsh-full-autoupdate](https://github.com/Pilaton/OhMyZsh-full-autoupdate)
+
+Edita el archivo `~/.zshrc` y agrega los plugins dentro de la propiedad `plugins` (no uses comas como separadores).
+
+```diff
++ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root line)
++ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
+
+plugins=(
+    ...
++   zsh-autosuggestions
++   zsh-syntax-highlighting
++   ohmyzsh-full-autoupdate
+)
+```
 
 ## Serie de Articulo
 
 Inglés:
 
+* [iTerm2 + Oh My Zsh! + Powerlevel10K best terminal combination for Geeks!](https://dev.to/equiman/iterm2--oh-my-zsh--powerlevel9k-best-terminal-combination-for-geeks-58l5)
+* [Why Oh My ZSH is so cool?](https://dev.to/equiman/why-oh-my-zsh-is-so-cool-31gd)
 * [Useful Alias for ZSH](https://dev.to/equiman/useful-alias-for-zsh-1j8b)
 * [Reveal the command behind an alias with ZSH](https://dev.to/equiman/reveal-the-command-behind-an-alias-with-zsh-4d96)
 * [Command validations with ZSH](https://dev.to/equiman/command-validations-with-zsh-2boa)
 * [Open File Explorer and Browser from ZSH](https://dev.to/equiman/open-file-explorer-and-browser-mbb)
 * [ZSH cheatsheet for git plugin](https://dev.to/equiman/zsh-cheatsheet-for-git-plugin-1f6a)
-* [base64 encode/decode multiple files](https://dev.to/equiman/base64-encode-decode-multiple-files-2ol1)
 
 Español:
 
