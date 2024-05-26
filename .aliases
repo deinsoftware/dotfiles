@@ -5,6 +5,7 @@
 [ -f ~/.dotfiles/alias/utils ] && . ~/.dotfiles/alias/utils
 
 # Development
+[ -f ~/.dotfiles/alias/android ] && . ~/.dotfiles/alias/android
 [ -f ~/.dotfiles/alias/code ] && . ~/.dotfiles/alias/code
 [ -f ~/.dotfiles/alias/git ] && . ~/.dotfiles/alias/git
 [ -f ~/.dotfiles/alias/swpm ] && . ~/.dotfiles/alias/swpm
