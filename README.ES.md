@@ -28,6 +28,7 @@ export WINHOME=$(wslpath "$(wslvar USERPROFILE)")
 export OPEN="wslview" #wsl2
 export BROWSER="${OPEN}" #wsl2
 
+export PATH="$HOME/.dotfiles/helpers/android/:$PATH"
 export PATH="$HOME/.dotfiles/helpers/b64/:$PATH"
 export PATH="$HOME/.dotfiles/helpers/code/:$PATH"
 export PATH="$HOME/.dotfiles/helpers/md/:$PATH"
@@ -74,6 +75,7 @@ Una vez termine, guarde el archivo `.zshrc`, cierre y reabra todas las terminale
 └── .zshrc
 └── .dotfiles
     ├── helpers
+    │   ├── android
     │   ├── b64
     │   ├── code
     │   ├── open
@@ -88,6 +90,7 @@ Una vez termine, guarde el archivo `.zshrc`, cierre y reabra todas las terminale
 |--------------|------------------------------------------------------------------------------------------------------------|
 |`.zshrc`      | Archivo fuente de ZSH                                                                                      |
 |`helpers`     | Carpeta con las funciones `helper` (ayudantes) para usar como comandos en la terminal                      |
+| ── `android` | Comandos utilitarios para herramientas de Android                                                          |
 | ── `b64`     | Comandos para la conversion de archivos desde/hacia base64                                                 |
 | ── `code`    | Comandos para lanzar VSCode                                                                                |
 | ── `open`    | Commandos para abrir archivos/rutas en el Explorador de Archivos o abrir archivos/url en el Navegador      |

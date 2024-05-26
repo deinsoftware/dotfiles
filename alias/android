@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Android Debug Bus
+alias ad="adb devices"
+
+# Screen and Sound Copy
+alias sndcpy="sh sndcpy"
+alias scr="scrcpy"
+alias snd="sndcpy"

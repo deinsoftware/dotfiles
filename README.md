@@ -28,6 +28,7 @@ export WINHOME=$(wslpath "$(wslvar USERPROFILE)")
 export OPEN="wslview" #wsl2
 export BROWSER="${OPEN}" #wsl2
 
+export PATH="$HOME/.dotfiles/helpers/android/:$PATH"
 export PATH="$HOME/.dotfiles/helpers/b64/:$PATH"
 export PATH="$HOME/.dotfiles/helpers/code/:$PATH"
 export PATH="$HOME/.dotfiles/helpers/md/:$PATH"
@@ -74,6 +75,7 @@ That's all folks! It's ready to use.
 └── .zshrc
 └── .dotfiles
     ├── helpers
+    │   ├── android
     │   ├── b64
     │   ├── code
     │   ├── md
@@ -89,6 +91,7 @@ That's all folks! It's ready to use.
 |--------------|-------------------------------------------------------------------------------------------|
 |`.zshrc`      | ZSH source file                                                                           |
 |`helpers`     | Folder with custom helper functions to use as terminal commands                           |
+| ── `android` | Helper commands for Android tools                                                         |
 | ── `b64`     | Helper commands for file conversions to/from base64                                       |
 | ── `code`    | Helper commands to open VSCode                                                            |
 | ── `open`    | Helper commands to open file/folder on the File Explorer or open files/url on the Browser |
