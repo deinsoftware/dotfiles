@@ -8,6 +8,7 @@ alias guc="git reset --hard HEAD" # undo changes and preserve untracked files
 alias gca="git clean -f -d -x" # clean ALL changes and remove untracked files
 alias gral="git checkout -- ." #revert at last commit
 alias gcd="git checkout ${DEV}"
+alias gcm="git checkout ${MAIN}"
 alias glod="git pull origin ${DEV}"
 alias glom="git pull origin ${MAIN}"
 alias gpnv="git push --no-verify"
