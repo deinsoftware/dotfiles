@@ -6,5 +6,5 @@ alias ad="adb devices"
 # Screen and Sound Copy
 alias sndcpy="sh sndcpy"
 alias scp="scrcpy"
-alias scpr="scrcpy --no-audio --record=android-screen-record.mkv"
+alias scpr="scrcpy --no-audio --record=android-screen-record.mp4"
 alias snd="sndcpy"
