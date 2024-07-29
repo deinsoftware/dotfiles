@@ -15,7 +15,7 @@ alias gpnv="git push --no-verify"
 alias gce="git commit --allow-empty -m " # <message>
 
 # Precommit
-alias psc="PRE_COMMIT_ALLOW_NO_CONFIG=1"
+alias pcsc="PRE_COMMIT_ALLOW_NO_CONFIG=1" # skip pre-commit config
 
 # https://github.com/Everduin94/better-commits
 # sag better-commits
