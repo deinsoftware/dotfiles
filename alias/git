@@ -14,6 +14,8 @@ alias glom="git pull origin ${MAIN}"
 alias gpnv="git push --no-verify"
 alias gce="git commit --allow-empty -m " # <message>
 
+# Precommit
+alias psc="PRE_COMMIT_ALLOW_NO_CONFIG=1"
 
 # https://github.com/Everduin94/better-commits
 # sag better-commits

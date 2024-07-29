@@ -6,5 +6,6 @@ alias ad="adb devices"
 # Screen and Sound Copy
 alias sndcpy="sh sndcpy"
 alias scp="scrcpy"
+alias scpl="scrcpy --lock-video-orientation=3" # rotate 90 degrees # landscape
 alias scpr="scrcpy --no-audio --show-touches --record=android-screen-record.mp4"
 alias snd="sndcpy"
