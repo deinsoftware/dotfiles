@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # https://github.com/abishekvashok/cmatrix
-# sudo apt install cmatrix / brew install cmatrix
+# sudo apt install cmatrix
 alias m="cmatrix -abs"
 
 # https://htop.dev/
