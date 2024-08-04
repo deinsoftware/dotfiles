@@ -1,0 +1,38 @@
+#!/bin/bash
+
+run(){
+  echo "${B_YELLOW}${T_BLACK}ALERT:${F_RESET} Do you want to run ${F_BOLD}'$1'${F_RESET} command after?"
+  echo "${T_GREEN}[Y] = Yes ${F_RESET}| ${T_RED}[ANY] = Cancel ${F_RESET}"
+  read -sk key
+  if [[ "$key" == "y" ]] || [[ "$key" == "Y" ]]; then
+    echo "${T_GREEN}❯ ${T_YELLOW}Running...${F_RESET}"
+    eval $1
+  fi
+}
+
+after_validation(){
+  if [[ -f "$file" ]] && ( [[ "$cmd" =~ ^"git pull" ]] || [[ "$cmd" =~ ^"gl" ]] && [[ !"$cmd" =~ ^"glog" ]] ); then
+    run "scf"
+  elif [[ -f "$file" ]] && ( [[ "$cmd" =~ ^"git pull origin" ]] || [[ "$cmd" =~ ^"gl origin" ]] ); then
+    run "scf"
+  elif [[ -f "$file" ]] && ( [[ "$cmd" =~ ^"git checkout -b " ]] || [[ "$cmd" =~ ^"gcb " ]] ); then
+      run "gpsup && git pull && scf"
+  elif [[ "$cmd" =~ ^"git checkout -b " ]] || [[ "$cmd" =~ ^"gcb " ]]; then
+    run "gpsup && git pull"
+  elif [[ -f "$file" ]] && ( [[ "$cmd" =~ ^"git checkout" ]] || [[ "$cmd" =~ ^"gco" ]] || [[ "$cmd" =~ ^"gcd" ]] ); then
+      run "git pull && scf"
+  elif [[ "$cmd" =~ ^"git checkout" ]] || [[ "$cmd" =~ ^"gco" ]] || [[ "$cmd" =~ ^"gcd" ]]; then
+    run "git pull"
+  fi
+}
+
+pos_validation() {
+  [[ -z $cmd ]] && return # If there's no cmd, return. Else...
+  if [[ "$quit" == "n" ]]; then
+    after_validation
+  fi
+  quit="y"
+}
+
+add-zsh-hook precmd pos_validation        # Adds the pos hook
+# add-zsh-hook -d precmd pos_validation   # Remove it for this hook
