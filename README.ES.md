@@ -109,6 +109,7 @@ Una vez termine, guarde el archivo `.zshrc`, cierre y reabra todas las terminale
 ### Oficiales
 
 * [adb](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/adb)
+* [brew](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/brew)
 * [command-not-found](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/command-not-found)
 * [docker](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker)
 * [git](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)
