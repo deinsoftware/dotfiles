@@ -5,7 +5,6 @@
 alias ad="adb devices"
 
 # Screen Copy
-# brew install --cask vlc
 # brew install scrcpy
 alias scp="scrcpy --no-audio"
 alias snd="scrcpy"
