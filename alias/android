@@ -1,9 +1,12 @@
 #!/bin/bash
 
 # Android Debug Bus
+# brew install --cask android-platform-tools
 alias ad="adb devices"
 
 # Screen Copy
+# brew install --cask vlc
+# brew install scrcpy
 alias scp="scrcpy --no-audio"
 alias snd="scrcpy"
 alias scpl="scrcpy ---no-audio -lock-video-orientation=3" # rotate 90 degrees # landscape
