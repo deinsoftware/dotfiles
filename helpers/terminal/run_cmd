@@ -5,5 +5,5 @@ if [ -n "${1}" ]; then
     echo -n "${1}"                        # Print command
     echo -en "${F_RESET}\n"               # Reset colors
 
-    eval $1
+    eval "${1}"
 fi

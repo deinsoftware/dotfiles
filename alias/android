@@ -8,5 +8,4 @@ alias ad="adb devices"
 # brew install scrcpy
 alias scp="scrcpy --no-audio"
 alias snd="scrcpy"
-alias scpl="scrcpy ---no-audio -lock-video-orientation=3" # rotate 90 degrees # landscape
 alias scpr="scrcpy --no-audio --show-touches --record=android-screen-record.mp4"

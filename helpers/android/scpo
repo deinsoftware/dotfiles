@@ -1,0 +1,4 @@
+#!/bin/bash
+
+degrees=${1:-0} # 0, 90, 180, 270
+run_cmd "scrcpy --no-audio --lock-video-orientation=${degrees}"
