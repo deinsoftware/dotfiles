@@ -1,16 +1,16 @@
 #!/bin/bash
 
 # Git
-alias gkm="git config --global init.defaultBranch ${MAIN}"
+alias gkm="git config --global init.defaultBranch $(git_main_branch)"
 alias gkg="git config --edit --global"
 alias gkl="git config --edit --local"
 alias guc="git reset --hard HEAD" # undo changes and preserve untracked files
 alias gca="git clean -f -d -x" # clean ALL changes and remove untracked files
 alias gral="git checkout -- ." #revert at last commit
-alias gcd="git checkout ${DEV}"
-alias gcm="git checkout ${MAIN}"
-alias glod="git pull origin ${DEV}"
-alias glom="git pull origin ${MAIN}"
+alias gcd="git checkout $(git_develop_branch)"
+alias gcm="git checkout $(git_main_branch)"
+alias glod="git pull origin $(git_develop_branch)"
+alias glom="git pull origin $(git_main_branch)"
 alias gpnv="git push --no-verify"
 alias gce="git commit --allow-empty -m " # <message>
 
