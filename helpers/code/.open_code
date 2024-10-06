@@ -15,13 +15,12 @@ while getopts ":f:p:i:n:" opt; do
     esac
 done
 
-if [ -z "${profile}" ]; then
-    msg_error "profile parameter is missing"
-    exit 1
+if [[ "$@" =~ "-n" ]]; then
+    new="--new-window "
 fi
 
-if [ "${!#}" == "-n" ]; then
-    new="--new-window "
+if [[ -n "$profile" ]]; then
+    profile="--profile ${profile} "
 fi
 
 path=""
@@ -32,8 +31,8 @@ else
 fi
 
 app="code"
-if [ "${!#}" == "-i" ]; then
+if [[ "$@" =~ "-i" ]]; then
     app="code-insiders"
 fi
 
-run_cmd "${app} ${new}--profile ${profile} ${path}"
+run_cmd "${app} ${new}${profile}${path}"

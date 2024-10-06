@@ -4,8 +4,8 @@
 alias codi="code-insiders"
 
 # VSCode
-alias vc=".open_code -p Default" # <path|file>
-alias vci=".open_code -p Default -i" # <path|file>
+alias vc=".open_code " # <path|file>
+alias vci=".open_code -i" # <path|file>
 alias vcd=".open_code -p DotNet -i" # <path|file>
 alias vcr=".open_code -p React -i" # <path|file>
 alias vcn=".open_code -p Node -i" # <path|file>
