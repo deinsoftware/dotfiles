@@ -6,5 +6,8 @@
         "firefox",
         "googlechrome",
         "wslview"
-    ]
+    ],
+    "explorer.fileNesting.patterns": {
+        "README.md": "README.ES.md, CHEATSHEET.md, LICENSE",
+    },
 }
