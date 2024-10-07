@@ -1,9 +1,7 @@
 #!/bin/bash
 
-while getopts ":f:p:i:n:" opt; do
+while getopts ":p:i:n:" opt; do
     case $opt in
-        f) file="${OPTARG}"
-        ;;
         p) profile="${OPTARG}"
         ;;
         i) insiders=""
@@ -15,19 +13,8 @@ while getopts ":f:p:i:n:" opt; do
     esac
 done
 
-if [[ "$@" =~ "-n" ]]; then
-    new="--new-window "
-fi
-
 if [[ -n "$profile" ]]; then
     profile="--profile ${profile} "
-fi
-
-path=""
-if [[ -z "$file" ]]; then
-    path="$( get_current_path )"
-else
-    path="$file"
 fi
 
 app="code"
@@ -35,4 +22,14 @@ if [[ "$@" =~ "-i" ]]; then
     app="code-insiders"
 fi
 
-run_cmd "${app} ${new}${profile}${path}"
+if [[ "$@" =~ "-n" ]]; then
+    new="--new-window "
+fi
+
+shift $((OPTIND-1)) # remove options from positional parameters
+path=("$@")
+if [ ${#path[@]} -eq 0 ]; then
+    path="$( get_current_path )"
+fi
+
+run_cmd "${app} ${profile}${new}${path}"

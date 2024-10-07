@@ -2,7 +2,7 @@
 
 alias c="clear"
 alias x="exit"
-alias e=".open_code -p Default -f \"~/.dotfiles/ ~/.zshrc ~/.dotfiles/.aliases ~/.dotfiles/.colors ~/.dotfiles/.hooks\" -n -i"
+alias e=".vscode -p Default -n -i \"~/.dotfiles/ ~/.zshrc ~/.dotfiles/.aliases ~/.dotfiles/.colors ~/.dotfiles/.hooks\""
 alias r="source ~/.zshrc"
 
 alias zs="zsh_stats"

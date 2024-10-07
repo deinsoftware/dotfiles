@@ -1,15 +1,12 @@
 #!/bin/bash
 
-# Insiders
-alias codi="code-insiders"
-
 # VSCode
-alias vc=".open_code " # <path|file>
-alias vci=".open_code -i" # <path|file>
-alias vcd=".open_code -p DotNet -i" # <path|file>
-alias vcr=".open_code -p React -i" # <path|file>
-alias vcn=".open_code -p Node -i" # <path|file>
-alias vcb=".open_code -p Bun -i" # <path|file>
+alias vc=".vscode" # <path> | "<paths> [-n]"
+alias vci=".vscode -n -i" # <path> | "<paths>"
+alias vcd=".vscode -p DotNet -n -i" # <path> | "<paths>"
+alias vcr=".vscode -p React -n -i" # <path> | "<paths>"
+alias vcn=".vscode -p Node -n -i" # <path> | "<paths>"
+alias vcb=".vscode -p Bun -n -i" # <path> | "<paths>"
 
 # Extensions
 # sag vsce
