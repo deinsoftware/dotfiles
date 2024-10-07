@@ -35,6 +35,7 @@ chmod +x ~/.dotfiles/helpers/**/* ~/.dotfiles/helpers/**/.[!.]*
 
 # Custom
 [ -f ~/.dotfiles/.aliases ] && . ~/.dotfiles/.aliases
+[ -f ~/.dotfiles/.configs ] && . ~/.dotfiles/.configs
 [ -f ~/.dotfiles/.colors ] && . ~/.dotfiles/.colors
 [ -f ~/.dotfiles/.hooks ] && . ~/.dotfiles/.hooks
 ```
