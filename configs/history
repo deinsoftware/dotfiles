@@ -5,13 +5,15 @@ HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase # Erase duplicates in history
 
-#zsh history configurations
-setopt append_history # Immediately append to the history file, not just when a term is killed
-setopt share_history # Share history between all sessions
-setopt hist_ignore_space # Don't record an entry starting with a space
-setopt hist_ignore_all_dups # Delete old recorded entry if new entry is a duplicate
-setopt hist_save_no_dups # Don't write duplicate entries in the history file
-setopt hist_ignore_dups # Delete old recorded entry if new entry is a duplicate
-setopt hist_find_no_dups # Do not display a line previously found
-setopt hist_reduce_blanks # Remove superfluous blanks from each command line being added to the history list
-setopt hist_expire_dups_first # Delete duplicates first when HISTFILE size exceeds HISTSIZE
+## History command configuration
+setopt hist_ignore_all_dups   # delete old recorded entry if new entry is a duplicate
+setopt hist_save_no_dups      # don't write duplicate entries in the history file
+setopt hist_find_no_dups      # do not display a line previously found
+setopt hist_reduce_blanks     # remove superfluous blanks from each command line being added to the history list
+setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
+setopt append_history         # immediately append to the history file, not just when a term is killed
+setopt extended_history       # record timestamp of command in HISTFILE
+setopt hist_ignore_dups       # ignore duplicated commands history list
+setopt hist_ignore_space      # ignore commands that start with space
+setopt hist_verify            # show command with history expansion to user before running it
+setopt share_history          # share command history data

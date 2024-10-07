@@ -1,0 +1,5 @@
+#!/bin/bash
+
+[ -f ~/.dotfiles/configs/directories ] && . ~/.dotfiles/configs/directories
+[ -f ~/.dotfiles/configs/history ] && . ~/.dotfiles/configs/history
+[ -f ~/.dotfiles/configs/syntax-highlight ] && . ~/.dotfiles/configs/syntax-highlight

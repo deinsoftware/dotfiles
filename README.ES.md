@@ -80,6 +80,7 @@ Una vez termine, guarde el archivo `.zshrc`, cierre y reabra todas las terminale
     │   └── terminal
     ├── .aliases
     ├── .colors
+    ├── .configs
     └── .hooks
 ```
 
@@ -95,6 +96,7 @@ Una vez termine, guarde el archivo `.zshrc`, cierre y reabra todas las terminale
 | ── `terminal`| Comandos utilitarios del Sistema Operativo                                                                 |
 |`.aliases`    | Archivo con la definición de los alias                                                                     |
 |`.colors`     | Archivo con colores de terminal para usar en otros scripts                                                 |
+|`.configs`    | Archivo con la definición de las configuraciones globales                                                  |
 |`.hooks`      | Archivo con hooks de ZSH con funciones que corren antes o después de ejecutar algún comando en la terminal |
 
 ## ZSH plugins

@@ -81,6 +81,7 @@ That's all folks! It's ready to use.
     │   └── terminal
     ├── .aliases
     ├── .colors
+    ├── .configs
     └── .hooks
 ```
 
@@ -96,6 +97,7 @@ That's all folks! It's ready to use.
 | ── `terminal`| Helper commands to talk with the OS                                                       |
 |`.aliases`    | File for aliases definitions                                                              |
 |`.colors`     | File with terminal colors to use in other scripts                                         |
+|`.configs`    | File for global configuratins.                                                            |
 |`.hooks`      | ZSH hooks file with custom functions to run as validation before and after run commands   |
 
 ## Plugins
