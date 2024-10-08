@@ -27,10 +27,8 @@ zinit light zsh-users/zsh-history-substring-search
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light agkozak/zhooks
 zinit light Aloxaf/fzf-tab
-zinit light MichaelAquilina/zsh-you-should-use
 
 # Snippets
-zinit snippet OMZP::git
 zinit snippet OMZP::1password
 zinit snippet OMZP::brew
 zinit snippet OMZP::git
@@ -50,9 +48,10 @@ zinit snippet OMZL::history.zsh
 
 # After Terminal Load
 zinit wait lucid atload'_zsh_autosuggest_start' light-mode for zsh-users/zsh-autosuggestions
-zinit ice wait"0" silent
+zinit wait lucid atload'_zsh_autosuggest_start' light-mode for MichaelAquilina/zsh-you-should-use
+zinit ice wait"0" lucid
 zinit snippet OMZP::nvm
-zinit ice wait"0" silent
+zinit ice wait"0" lucid
 zinit snippet OMZP::command-not-found
 
 # Turbo
