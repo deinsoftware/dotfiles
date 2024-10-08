@@ -49,3 +49,7 @@ zinit snippet OMZL::git.zsh
 autoload -Uz compinit
 compinit
 zinit cdreplay -q
+
+# Keybindings
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
