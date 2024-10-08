@@ -2,3 +2,7 @@
 
 alias ziug="zinit self-update"
 alias ziud="zinit update --parallel"
+alias zit="zinit times"
+alias zist="zinit status"
+alias zisl="zinit snippets"
+alias zipl="zinit plugins"
