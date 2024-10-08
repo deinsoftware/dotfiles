@@ -28,8 +28,8 @@
 | `↓`                      | Next command history                     |
 | `⌃` + `A`                | Go to beginning of line                  |
 | `⌃` + `E`                | Go to end of line                        |
-| `⌥` + `b`                | Go back between words                    |
-| `⌥` + `f`                | Go forward between words                 |
+| `⌥` + `B`                | Go back between words                    |
+| `⌥` + `F`                | Go forward between words                 |
 | `⌥` + `Left Click`       | Cursor jump                              |
 
 ### Editing
@@ -38,8 +38,9 @@
 | ------------------------ | ---------------------------------------------- |
 | `⌃` + `U`                | Clean prompt (Undo)                            |
 | `⌃` + `⇧` + `-`          | Undo last changes                              |
-| `⌃` + `K`                | Clean to end of line (change history commands) |
+| `⌃` + `K`                | Kill text from the point to end of the line    |
 | `^` + `D`                | Delete current character                       |
+| `^` + `H`                | Delete previous character                      |
 | `⌃` + `W`                | Delete last Word                               |
 | `⌃` + `Y`                | Yank recall last deleted (Command or Word)     |
 | `⌃` + `L`                | Clean screen                                   |
@@ -49,6 +50,7 @@
 
 | Shortcut                 | Function                                 |
 | ------------------------ | ---------------------------------------- |
+| `⌃` + `P`                | Previous History                         |
 | `⌃` + `R`                | Search command history                   |
 | `⌃` + `R`                | Loop through search result               |
 | `⌃` + `R` (twice)        | Search the last remember search term     |
@@ -106,10 +108,19 @@
 
 ### Editing
 
-| Shortcut                 | Function                                       |
-| ------------------------ | ---------------------------------------------- |
-| `⌘` + `K`                | Clean screen                                   |
-| `⌘` + `W`                | Exit shell (close window)                      |
-| `⌘` + `⌥` + `I`          | Enable/Disable broadcast mode                  |
+| Shortcut                 | Function                                                 |
+| ------------------------ | -------------------------------------------------------- |
+| `⌘` + `K`                | Clean buffer                                             |
+| `^` + `L`                | Move current line on top                                 |
+| `⌘` + `W`                | Exit shell (close window)                                |
+| `⌘` + `⇧` + `I`          | Enable/Disable broadcast mode in all panes in all tabs   |
+| `⌘` + `⌥` + `I`          | Enable/Disable broadcast mode in all tabs in current tab |
+
+### Search
+
+| Shortcut                 | Function                                 |
+| ------------------------ | ---------------------------------------- |
+| `⌘` + `F`                | Open search bar                          |
+| `⌘` + `G`                | Find next                                |
 
 ⇧ [Back to menu](#menu)
