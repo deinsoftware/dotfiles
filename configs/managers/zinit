@@ -22,7 +22,6 @@ elif [ "$USE_PROMPT" = "starship" ]; then
 fi
 
 # Plugins
-zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-history-substring-search
 zinit light zsh-users/zsh-syntax-highlighting
@@ -34,13 +33,10 @@ zinit light MichaelAquilina/zsh-you-should-use
 zinit snippet OMZP::git
 zinit snippet OMZP::1password
 zinit snippet OMZP::brew
-zinit snippet OMZP::command-not-found
 zinit snippet OMZP::git
 zinit snippet OMZP::github
 zinit snippet OMZP::gitignore
 zinit snippet OMZP::node
-zinit snippet OMZP::nvm
-zinit snippet OMZP::pyenv
 zinit snippet OMZP::sudo
 zinit snippet OMZP::vscode
 zinit snippet OMZP::web-search
@@ -51,6 +47,13 @@ zinit snippet OMZL::directories.zsh
 zinit snippet OMZL::functions.zsh #take
 zinit snippet OMZL::git.zsh
 zinit snippet OMZL::history.zsh
+
+# After Terminal Load
+zinit wait lucid atload'_zsh_autosuggest_start' light-mode for zsh-users/zsh-autosuggestions
+zinit ice wait"0" silent
+zinit snippet OMZP::nvm
+zinit ice wait"0" silent
+zinit snippet OMZP::command-not-found
 
 # Turbo
 autoload -Uz compinit
