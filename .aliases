@@ -7,12 +7,14 @@
 # Development
 [ -f ~/.dotfiles/alias/android ] && . ~/.dotfiles/alias/android
 [ -f ~/.dotfiles/alias/code ] && . ~/.dotfiles/alias/code
+[ -f ~/.dotfiles/alias/fzf ] && . ~/.dotfiles/alias/fzf
 [ -f ~/.dotfiles/alias/git ] && . ~/.dotfiles/alias/git
 [ -f ~/.dotfiles/alias/swpm ] && . ~/.dotfiles/alias/swpm
 [ -f ~/.dotfiles/alias/swpx ] && . ~/.dotfiles/alias/swpx
 [ -f ~/.dotfiles/alias/serverless ] && . ~/.dotfiles/alias/serverless
 [ -f ~/.dotfiles/alias/volta ] && . ~/.dotfiles/alias/volta
 [ -f ~/.dotfiles/alias/python ] && . ~/.dotfiles/alias/python
+[ -f ~/.dotfiles/alias/zinit ] && . ~/.dotfiles/alias/zinit
 [ -f ~/.dotfiles/alias/zmk ] && . ~/.dotfiles/alias/zmk
 
 # Files and Folders

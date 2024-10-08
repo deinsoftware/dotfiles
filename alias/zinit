@@ -1,0 +1,4 @@
+#!/bin/bash
+
+alias ziug="zinit self-update"
+alias ziud="zinit update --parallel"
