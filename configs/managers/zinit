@@ -25,7 +25,7 @@ fi
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-history-substring-search
-zinit light zsh-users/zsh-syntax-higchlighting
+zinit light zsh-users/zsh-syntax-highlighting
 zinit light agkozak/zhooks
 zinit light Aloxaf/fzf-tab
 zinit light MichaelAquilina/zsh-you-should-use
