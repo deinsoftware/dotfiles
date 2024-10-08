@@ -74,8 +74,8 @@ export PATH="/bin:$PATH"
 export PATH="/usr/sbin:$PATH"
 export PATH="/sbin:$PATH"
 
-# Frameworks
-[ -f ~/.dotfiles/configs/frameworks/plugins ] && . ~/.dotfiles/configs/frameworks/plugins
+# OMZ Plugins
+[ -f ~/.dotfiles/configs/managers/omz-plugins ] && . ~/.dotfiles/configs/managers/omz-plugins
 
 source $ZSH/oh-my-zsh.sh
 

@@ -12,7 +12,6 @@ plugins=(
     1password
     brew
     command-not-found
-    # extract
     git
     github
     gitignore
@@ -21,7 +20,6 @@ plugins=(
     nvm
     pyenv
     sudo
-    # volta
     vscode
     web-search
     z
@@ -31,6 +29,7 @@ plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
     ohmyzsh-full-autoupdate
+    you-should-use
 )
 
 # Z Plugin
@@ -41,6 +40,7 @@ fi
 source /opt/homebrew/etc/profile.d/z.sh
 
 # Plugins
+source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/you-should-use/zsh-you-should-use.plugin.zsh
 source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zhooks/zhooks.plugin.zsh
 source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

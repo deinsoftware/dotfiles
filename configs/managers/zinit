@@ -10,16 +10,22 @@ source "${ZINIT_HOME}/zinit.zsh"
 export NVM_LAZY=1
 
 # Prompt
-zinit ice as"command" from"gh-r" \
-    atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
-    atpull"%atclone" src"init.zsh"
-zinit light starship/starship
+
+if [ "$USE_PROMPT" = "p10k" ]; then
+    zinit ice depth"1" # git clone depth
+    zinit light romkatv/powerlevel10k
+elif [ "$USE_PROMPT" = "starship" ]; then
+    zinit ice as"command" from"gh-r" \
+        atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+        atpull"%atclone" src"init.zsh"
+    zinit light starship/starship
+fi
 
 # Plugins
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-history-substring-search
-zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-syntax-higchlighting
 zinit light agkozak/zhooks
 zinit light Aloxaf/fzf-tab
 zinit light MichaelAquilina/zsh-you-should-use
@@ -44,6 +50,7 @@ zinit snippet OMZP::z
 zinit snippet OMZL::directories.zsh
 zinit snippet OMZL::functions.zsh #take
 zinit snippet OMZL::git.zsh
+zinit snippet OMZL::history.zsh
 
 # Turbo
 autoload -Uz compinit

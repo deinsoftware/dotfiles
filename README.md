@@ -19,6 +19,32 @@ git clone https://github.com/deinsoftware/dotfiles.git ~/.dotfiles
 On `.zshrc` file add.
 
 ```bash
+# Configs
+export USE_PROMPT="p10k" # p10k | starship
+export USE_MANAGER="zinit" # omz | zinit
+
+# Prompt
+if [ "$USE_PROMPT" = "p10k" ]; then
+    [ -f ~/.dotfiles/configs/prompts/p10k ] && . ~/.dotfiles/configs/prompts/p10k
+fi
+
+# <source packages required to be load before the plugins>
+
+# Manager
+if [ "$USE_MANAGER" = "omz" ]; then
+    [ -f ~/.dotfiles/configs/managers/omz ] && . ~/.dotfiles/configs/managers/omz
+elif [ "$USE_MANAGER" = "zinit" ]; then
+    [ -f ~/.dotfiles/configs/managers/zinit ] && . ~/.dotfiles/configs/managers/zinit
+fi
+# Prompt
+if [ "$USE_PROMPT" = "starship" ]; then
+    [ -f ~/.dotfiles/configs/prompts/starship ] && . ~/.dotfiles/configs/prompts/starship
+fi
+# Plugins
+[ -f ~/.dotfiles/configs/plugins/fzf ] && . ~/.dotfiles/configs/plugins/fzf
+
+# <source packages required to be load after the plugins>
+
 # Helpers
 export WINHOME=$(wslpath "$(wslvar USERPROFILE)")
 export OPEN="wslview" #wsl2
@@ -71,6 +97,7 @@ That's all folks! It's ready to use.
 ~
 └── .zshrc
 └── .dotfiles
+    ├── configs
     ├── helpers
     │   ├── android
     │   ├── b64
@@ -88,6 +115,7 @@ That's all folks! It's ready to use.
 |Name          |Description                                                                                |
 |--------------|-------------------------------------------------------------------------------------------|
 |`.zshrc`      | ZSH source file                                                                           |
+|`configs`     | Folder with global configurations to use in other scripts                                 |
 |`helpers`     | Folder with custom helper functions to use as terminal commands                           |
 | ── `android` | Helper commands for Android tools                                                         |
 | ── `b64`     | Helper commands for file conversions to/from base64                                       |
@@ -130,24 +158,24 @@ That's all folks! It's ready to use.
 * [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 * [OhMyZsh-full-autoupdate](https://github.com/Pilaton/OhMyZsh-full-autoupdate)
+* [zsh-you-should-use](https://github.com/MichaelAquilina/zsh-you-should-use)
 
 ```bash
 git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/Pilaton/OhMyZsh-full-autoupdate.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/ohmyzsh-full-autoupdate
+git clone https://github.com/MichaelAquilina/zsh-you-should-use.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-you-should-use
 ```
 
 Edit the `~/.zshrc` file and add it inside the `plugins` property (don't use commas as separators).
 
 ```diff
-+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root line)
-+ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
-
 plugins=(
     ...
 +   zsh-autosuggestions
 +   zsh-syntax-highlighting
 +   ohmyzsh-full-autoupdate
++   you-should-use
 )
 ```
 
