@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# brew install starship
+export STARSHIP_CONFIG="$HOME/.dotfiles/configs/prompts/starship.toml"
+eval "$(starship init zsh)"

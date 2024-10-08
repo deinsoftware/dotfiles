@@ -1,0 +1,66 @@
+format = """
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$git_metrics\
+$fill\
+$nodejs\
+$cmd_duration $jobs\
+$line_break
+$character"""
+
+[directory]
+format = '[$read_only]($read_only_style) [$path]($style) '
+read_only = " "
+read_only_style = "cyan"
+style = "cyan"
+truncation_length = 1
+truncation_symbol = '…/'
+truncate_to_repo = false
+
+[directory.substitutions]
+'Documents' = '󰈙 Documents'
+'Downloads' = ' Dowloads'
+'Music' = ' Music'
+'Pictures' = ' Pictures'
+"Developer" = '󱌢 Developer'
+
+[git_branch]
+symbol = " "
+format = "[$symbol$branch]($style) "
+style = "bright-black"
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "cyan"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bright-black"
+
+[git_metrics]
+disabled = false
+
+[fill]
+symbol = " "
+
+[nodejs]
+format = "[$symbol($version )]($style)"
+
+[cmd_duration]
+format = "[$duration]($style)"
+style = "yellow"
+
+[jobs]
+symbol = ""
+style = "bold red"
+number_threshold = 1
+format = "[$symbol]($style)"
+
+[line_break]
+disabled = true
+
+[character]
+success_symbol = "[❯](purple)"
+error_symbol = "[❯](red)"

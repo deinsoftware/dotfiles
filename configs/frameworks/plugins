@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# NVM
+export NVM_LAZY=1
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+    1password
+    brew
+    command-not-found
+    # extract
+    git
+    github
+    gitignore
+    macos
+    node
+    nvm
+    pyenv
+    sudo
+    # volta
+    vscode
+    web-search
+    z
+    # custom
+    zhooks
+    history-substring-search
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    ohmyzsh-full-autoupdate
+)
+
+# Z Plugin
+if command -v brew >/dev/null 2>&1; then
+  # Load rupa's z if installed
+  [ -f $(brew --prefix)/etc/profile.d/z.sh ] && source $(brew --prefix)/etc/profile.d/z.sh
+fi
+source /opt/homebrew/etc/profile.d/z.sh
+
+# Plugins
+source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zhooks/zhooks.plugin.zsh
+source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

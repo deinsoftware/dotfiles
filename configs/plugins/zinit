@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# Zinit
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
+
+# NVM
+export NVM_LAZY=1
+
+# Prompt
+zinit ice as"command" from"gh-r" \
+    atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+    atpull"%atclone" src"init.zsh"
+zinit light starship/starship
+
+# Plugins
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-history-substring-search
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light agkozak/zhooks
+zinit light Aloxaf/fzf-tab
+zinit light MichaelAquilina/zsh-you-should-use
+
+# Snippets
+zinit snippet OMZP::git
+zinit snippet OMZP::1password
+zinit snippet OMZP::brew
+zinit snippet OMZP::command-not-found
+zinit snippet OMZP::git
+zinit snippet OMZP::github
+zinit snippet OMZP::gitignore
+zinit snippet OMZP::node
+zinit snippet OMZP::nvm
+zinit snippet OMZP::pyenv
+zinit snippet OMZP::sudo
+zinit snippet OMZP::vscode
+zinit snippet OMZP::web-search
+zinit snippet OMZP::z
+
+# OMZ
+zinit snippet OMZL::directories.zsh
+zinit snippet OMZL::functions.zsh #take
+zinit snippet OMZL::git.zsh
+
+# Turbo
+autoload -Uz compinit
+compinit
+zinit cdreplay -q
