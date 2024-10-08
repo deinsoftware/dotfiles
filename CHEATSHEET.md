@@ -1,5 +1,23 @@
 # Cheatsheet
 
+---
+
+## Menu
+
+* [Emacs](#emacs)
+  * [Navigation](#navigation)
+  * [Editing](#editing)
+  * [Search](#search)
+* [iTerm2](#iterm2)
+  * [Windows](#windows)
+  * [Tabs](#tabs)
+  * [Splitting](#splitting)
+  * [Navigation](#navigation)
+  * [Editing](#editing)
+  * [Search](#search)
+
+---
+
 ## Emacs
 
 ### Navigation
@@ -21,6 +39,7 @@
 | `⌃` + `U`                | Clean prompt (Undo)                            |
 | `⌃` + `⇧` + `-`          | Undo last changes                              |
 | `⌃` + `K`                | Clean to end of line (change history commands) |
+| `^` + `D`                | Delete current character                       |
 | `⌃` + `W`                | Delete last Word                               |
 | `⌃` + `Y`                | Yank recall last deleted (Command or Word)     |
 | `⌃` + `L`                | Clean screen                                   |
@@ -35,6 +54,10 @@
 | `⌃` + `R` (twice)        | Search the last remember search term     |
 | `⌃` + `Y`                | End search at current history entry      |
 | `⌃` + `G`                | Cancel search and restore original line  |
+
+⇧ [Back to menu](#menu)
+
+---
 
 ## iTerm2
 
@@ -88,3 +111,5 @@
 | `⌘` + `K`                | Clean screen                                   |
 | `⌘` + `W`                | Exit shell (close window)                      |
 | `⌘` + `⌥` + `I`          | Enable/Disable broadcast mode                  |
+
+⇧ [Back to menu](#menu)
