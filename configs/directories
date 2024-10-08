@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# # Configuration
-export LS_COLORS="rs=0:no=00:mi=00:mh=00:ln=01;36:or=01;31:di=01;34:ow=04;01;34:st=34:tw=04;34:pi=01;33:so=01;33:do=01;33:bd=01;33:cd=01;33:su=01;35:sg=01;35:ca=01;35:ex=01;32:"
-alias ls="ls --color=auto"
+# brew install vivid
+export LS_COLORS="$(vivid generate snazzy)"
 
-# Completion
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+# brew install coreutils
+alias ls="gls --color"

@@ -1,8 +1,22 @@
 #!/bin/bash
 
 # FZF
+# brew install fzf
 source <(fzf --zsh)
+export FZF_DEFAULT_COMMAND='find . -type f ! -path "*git*"'
 
-# Completion
+# Tab
+# brew install gawk grep gnu-sed coreutils
+
+# set optinal matcher as no key sensitive
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+# set list-colors to enable filename colorizing
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# force zsh not to show completion menu, which allows fzf-tab to capture the unambiguous prefix
 zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+# cd tab completion
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'gls --color $realpath'
+# only for git
+zstyle ':completion:*:*:git:*' fzf-search-display true
+# or for everything
+zstyle ':completion:*' fzf-search-display false
