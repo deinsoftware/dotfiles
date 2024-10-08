@@ -18,7 +18,6 @@ plugins=(
     macos
     node
     nvm
-    pyenv
     sudo
     vscode
     web-search
