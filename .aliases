@@ -1,32 +1,32 @@
 #!/bin/bash
 
 # Utils
-[ -f ~/.dotfiles/alias/terminal ] && . ~/.dotfiles/alias/terminal
-[ -f ~/.dotfiles/alias/utils ] && . ~/.dotfiles/alias/utils
+zsh_add_source ~/.dotfiles/alias/terminal
+zsh_add_source ~/.dotfiles/alias/utils
 
 # Development
-[ -f ~/.dotfiles/alias/android ] && . ~/.dotfiles/alias/android
-[ -f ~/.dotfiles/alias/code ] && . ~/.dotfiles/alias/code
-[ -f ~/.dotfiles/alias/fzf ] && . ~/.dotfiles/alias/fzf
-[ -f ~/.dotfiles/alias/git ] && . ~/.dotfiles/alias/git
-[ -f ~/.dotfiles/alias/swpm ] && . ~/.dotfiles/alias/swpm
-[ -f ~/.dotfiles/alias/swpx ] && . ~/.dotfiles/alias/swpx
-[ -f ~/.dotfiles/alias/volta ] && . ~/.dotfiles/alias/volta
-[ -f ~/.dotfiles/alias/python ] && . ~/.dotfiles/alias/python
-[ -f ~/.dotfiles/alias/zinit ] && . ~/.dotfiles/alias/zinit
-[ -f ~/.dotfiles/alias/zmk ] && . ~/.dotfiles/alias/zmk
+zsh_add_source ~/.dotfiles/alias/android
+zsh_add_source ~/.dotfiles/alias/code
+zsh_add_source ~/.dotfiles/alias/fzf
+zsh_add_source ~/.dotfiles/alias/git
+zsh_add_source ~/.dotfiles/alias/swpm
+zsh_add_source ~/.dotfiles/alias/swpx
+zsh_add_source ~/.dotfiles/alias/volta
+zsh_add_source ~/.dotfiles/alias/python
+zsh_add_source ~/.dotfiles/alias/zinit
+zsh_add_source ~/.dotfiles/alias/zmk
 
 # Files and Folders
-[ -f ~/.dotfiles/alias/files ] && . ~/.dotfiles/alias/files
+zsh_add_source ~/.dotfiles/alias/files
 
 # Updates
 if [[ "$( which_os )" == "OSX" ]]; then
-    [ -f ~/.dotfiles/alias/macos ] && . ~/.dotfiles/alias/macos
+    zsh_add_source ~/.dotfiles/alias/macos
 fi
 if [[ "$( which_os )" == "LINUX" ]]; then
-    [ -f ~/.dotfiles/alias/unix ] && . ~/.dotfiles/alias/unix
-    [ -f ~/.dotfiles/alias/ubuntu ] && . ~/.dotfiles/alias/ubuntu
+    zsh_add_source ~/.dotfiles/alias/unix
+    zsh_add_source ~/.dotfiles/alias/ubuntu
 fi
 
 # Private
-[ -f ~/.dotfiles/alias/private ] && . ~/.dotfiles/alias/private
+zsh_add_source ~/.dotfiles/alias/private
