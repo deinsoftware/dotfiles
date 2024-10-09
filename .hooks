@@ -8,7 +8,7 @@ local cmd_alias=""
 # File
 local file="package.json"
 
-[ -f ~/.dotfiles/hooks/pos_validation ] && . ~/.dotfiles/hooks/pos_validation
-[ -f ~/.dotfiles/hooks/pre_validation ] && . ~/.dotfiles/hooks/pre_validation
+zsh_add_source ~/.dotfiles/hooks/pos_validation
+zsh_add_source ~/.dotfiles/hooks/pre_validation
 
 autoload -U add-zsh-hook                  # Load the zsh hook module

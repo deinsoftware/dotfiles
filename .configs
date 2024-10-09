@@ -1,4 +1,4 @@
 #!/bin/bash
 
-[ -f ~/.dotfiles/configs/directories ] && . ~/.dotfiles/configs/directories
-[ -f ~/.dotfiles/configs/history ] && . ~/.dotfiles/configs/history
+zsh_add_source ~/.dotfiles/configs/directories
+zsh_add_source ~/.dotfiles/configs/history

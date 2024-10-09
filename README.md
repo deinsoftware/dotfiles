@@ -19,29 +19,32 @@ git clone https://github.com/deinsoftware/dotfiles.git ~/.dotfiles
 On `.zshrc` file add.
 
 ```bash
+# Utils
+source ~/.dotfiles/utils/source
+
 # Configs
 export USE_PROMPT="p10k" # p10k | starship
 export USE_MANAGER="zinit" # omz | zinit
 
 # Prompt
 if [ "$USE_PROMPT" = "p10k" ]; then
-    [ -f ~/.dotfiles/configs/prompts/p10k ] && . ~/.dotfiles/configs/prompts/p10k
+    zsh_add_source ~/.dotfiles/configs/prompts/p10k
 fi
 
 # <source packages required to be load before the plugins>
 
 # Manager
 if [ "$USE_MANAGER" = "omz" ]; then
-    [ -f ~/.dotfiles/configs/managers/omz ] && . ~/.dotfiles/configs/managers/omz
+    zsh_add_source ~/.dotfiles/configs/managers/omz
 elif [ "$USE_MANAGER" = "zinit" ]; then
-    [ -f ~/.dotfiles/configs/managers/zinit ] && . ~/.dotfiles/configs/managers/zinit
+    zsh_add_source ~/.dotfiles/configs/managers/zinit
 fi
 # Prompt
 if [ "$USE_PROMPT" = "starship" ]; then
-    [ -f ~/.dotfiles/configs/prompts/starship ] && . ~/.dotfiles/configs/prompts/starship
+    zsh_add_source ~/.dotfiles/configs/prompts/starship
 fi
 # Plugins
-[ -f ~/.dotfiles/configs/plugins/fzf ] && . ~/.dotfiles/configs/plugins/fzf
+zsh_add_source ~/.dotfiles/configs/plugins/fzf
 
 # <source packages required to be load after the plugins>
 
@@ -60,10 +63,10 @@ export PATH="$HOME/.dotfiles/helpers/terminal/:$PATH"
 chmod +x ~/.dotfiles/helpers/**/* ~/.dotfiles/helpers/**/.[!.]*
 
 # Custom
-[ -f ~/.dotfiles/.aliases ] && . ~/.dotfiles/.aliases
-[ -f ~/.dotfiles/.configs ] && . ~/.dotfiles/.configs
-[ -f ~/.dotfiles/.colors ] && . ~/.dotfiles/.colors
-[ -f ~/.dotfiles/.hooks ] && . ~/.dotfiles/.hooks
+zsh_add_source ~/.dotfiles/.aliases
+zsh_add_source ~/.dotfiles/.configs
+zsh_add_source ~/.dotfiles/.colors
+zsh_add_source ~/.dotfiles/.hooks
 ```
 
 > `OPEN` and `BROWSE` constants need to be configured according yor OS. Windows (WSL2) and macOS use the same command to open the file explorer or the default web browser, on Ubuntu (Linux) need to be specified each one.
@@ -138,7 +141,6 @@ That's all folks! It's ready to use.
 
 * [adb](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/adb)
 * [brew](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/brew)
-* [command-not-found](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/command-not-found)
 * [docker](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker)
 * [git](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)
 * [git-lfs](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git-lfs)

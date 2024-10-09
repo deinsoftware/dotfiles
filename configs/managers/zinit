@@ -48,7 +48,7 @@ zinit wait lucid light-mode for Aloxaf/fzf-tab
 zinit ice wait"0" lucid
 zinit snippet OMZP::nvm
 zinit ice wait"0" lucid
-zinit snippet OMZP::command-not-found
+zinit light zdharma-continuum/fast-syntax-highlighting
 
 # Turbo
 autoload -Uz compinit

@@ -85,7 +85,6 @@ export NVM_LAZY=1
 plugins=(
     1password
     brew
-    command-not-found
     git
     node
     nvm
