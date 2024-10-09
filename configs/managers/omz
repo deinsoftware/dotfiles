@@ -74,8 +74,45 @@ export PATH="/bin:$PATH"
 export PATH="/usr/sbin:$PATH"
 export PATH="/sbin:$PATH"
 
-# OMZ Plugins
-[ -f ~/.dotfiles/configs/managers/omz-plugins ] && . ~/.dotfiles/configs/managers/omz-plugins
+# NVM
+export NVM_LAZY=1
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+    1password
+    brew
+    command-not-found
+    git
+    node
+    nvm
+    sudo
+    vscode
+    web-search
+    z
+    # custom
+    history-substring-search
+    zsh-autosuggestions
+    fast-syntax-highlighting
+    ohmyzsh-full-autoupdate
+    you-should-use
+    zhooks
+)
+
+# Z Plugin
+if command -v brew >/dev/null 2>&1; then
+  # Load rupa's z if installed
+  [ -f $(brew --prefix)/etc/profile.d/z.sh ] && source $(brew --prefix)/etc/profile.d/z.sh
+fi
+source /opt/homebrew/etc/profile.d/z.sh
+
+# Plugins
+source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/you-should-use/you-should-use.plugin.zsh
+source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zhooks/zhooks.plugin.zsh
 
 source $ZSH/oh-my-zsh.sh
 

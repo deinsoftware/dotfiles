@@ -11,7 +11,6 @@
 [ -f ~/.dotfiles/alias/git ] && . ~/.dotfiles/alias/git
 [ -f ~/.dotfiles/alias/swpm ] && . ~/.dotfiles/alias/swpm
 [ -f ~/.dotfiles/alias/swpx ] && . ~/.dotfiles/alias/swpx
-[ -f ~/.dotfiles/alias/serverless ] && . ~/.dotfiles/alias/serverless
 [ -f ~/.dotfiles/alias/volta ] && . ~/.dotfiles/alias/volta
 [ -f ~/.dotfiles/alias/python ] && . ~/.dotfiles/alias/python
 [ -f ~/.dotfiles/alias/zinit ] && . ~/.dotfiles/alias/zinit

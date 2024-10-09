@@ -156,13 +156,13 @@ That's all folks! It's ready to use.
 ### Extras
 
 * [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-* [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+* [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting)
 * [OhMyZsh-full-autoupdate](https://github.com/Pilaton/OhMyZsh-full-autoupdate)
 * [zsh-you-should-use](https://github.com/MichaelAquilina/zsh-you-should-use)
 
 ```bash
 git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
 git clone https://github.com/Pilaton/OhMyZsh-full-autoupdate.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/ohmyzsh-full-autoupdate
 git clone https://github.com/MichaelAquilina/zsh-you-should-use.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-you-should-use
 ```
@@ -173,7 +173,7 @@ Edit the `~/.zshrc` file and add it inside the `plugins` property (don't use com
 plugins=(
     ...
 +   zsh-autosuggestions
-+   zsh-syntax-highlighting
++   fast-syntax-highlighting
 +   ohmyzsh-full-autoupdate
 +   you-should-use
 )

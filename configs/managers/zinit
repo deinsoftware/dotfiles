@@ -10,7 +10,6 @@ source "${ZINIT_HOME}/zinit.zsh"
 export NVM_LAZY=1
 
 # Prompt
-
 if [ "$USE_PROMPT" = "p10k" ]; then
     zinit ice depth"1" # git clone depth
     zinit light romkatv/powerlevel10k
@@ -24,31 +23,28 @@ fi
 # Plugins
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-history-substring-search
-zinit light zsh-users/zsh-syntax-highlighting
-zinit light agkozak/zhooks
-zinit light Aloxaf/fzf-tab
+zinit light agkozak/zsh-z
 
 # Snippets
 zinit snippet OMZP::1password
 zinit snippet OMZP::brew
 zinit snippet OMZP::git
-zinit snippet OMZP::github
-zinit snippet OMZP::gitignore
 zinit snippet OMZP::node
 zinit snippet OMZP::sudo
 zinit snippet OMZP::vscode
 zinit snippet OMZP::web-search
-zinit snippet OMZP::z
 
-# OMZ
+# OMZ Libraries
 zinit snippet OMZL::directories.zsh
 zinit snippet OMZL::functions.zsh #take
 zinit snippet OMZL::git.zsh
 zinit snippet OMZL::history.zsh
 
-# After Terminal Load
+# Lazy loading
 zinit wait lucid atload'_zsh_autosuggest_start' light-mode for zsh-users/zsh-autosuggestions
-zinit wait lucid atload'_zsh_autosuggest_start' light-mode for MichaelAquilina/zsh-you-should-use
+zinit wait lucid atload'enable_you_should_use' light-mode for MichaelAquilina/zsh-you-should-use
+zinit wait lucid light-mode for agkozak/zhooks
+zinit wait lucid light-mode for Aloxaf/fzf-tab
 zinit ice wait"0" lucid
 zinit snippet OMZP::nvm
 zinit ice wait"0" lucid
