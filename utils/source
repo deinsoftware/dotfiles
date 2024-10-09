@@ -1,6 +1,6 @@
 #!/bin/bash
 
-zsh_add_source() {
+add_source() {
   if [ -f "$1" ]; then
     . "$1"
   fi

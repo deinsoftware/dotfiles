@@ -1,32 +1,32 @@
 #!/bin/bash
 
 # Utils
-zsh_add_source ~/.dotfiles/alias/terminal
-zsh_add_source ~/.dotfiles/alias/utils
+add_source ~/.dotfiles/alias/terminal
+add_source ~/.dotfiles/alias/utils
 
 # Development
-zsh_add_source ~/.dotfiles/alias/android
-zsh_add_source ~/.dotfiles/alias/code
-zsh_add_source ~/.dotfiles/alias/fzf
-zsh_add_source ~/.dotfiles/alias/git
-zsh_add_source ~/.dotfiles/alias/swpm
-zsh_add_source ~/.dotfiles/alias/swpx
-zsh_add_source ~/.dotfiles/alias/volta
-zsh_add_source ~/.dotfiles/alias/python
-zsh_add_source ~/.dotfiles/alias/zinit
-zsh_add_source ~/.dotfiles/alias/zmk
+add_source ~/.dotfiles/alias/android
+add_source ~/.dotfiles/alias/code
+add_source ~/.dotfiles/alias/fzf
+add_source ~/.dotfiles/alias/git
+add_source ~/.dotfiles/alias/swpm
+add_source ~/.dotfiles/alias/swpx
+add_source ~/.dotfiles/alias/volta
+add_source ~/.dotfiles/alias/python
+add_source ~/.dotfiles/alias/zinit
+add_source ~/.dotfiles/alias/zmk
 
 # Files and Folders
-zsh_add_source ~/.dotfiles/alias/files
+add_source ~/.dotfiles/alias/files
 
 # Updates
 if [[ "$( which_os )" == "OSX" ]]; then
-    zsh_add_source ~/.dotfiles/alias/macos
+    add_source ~/.dotfiles/alias/macos
 fi
 if [[ "$( which_os )" == "LINUX" ]]; then
-    zsh_add_source ~/.dotfiles/alias/unix
-    zsh_add_source ~/.dotfiles/alias/ubuntu
+    add_source ~/.dotfiles/alias/unix
+    add_source ~/.dotfiles/alias/ubuntu
 fi
 
 # Private
-zsh_add_source ~/.dotfiles/alias/private
+add_source ~/.dotfiles/alias/private

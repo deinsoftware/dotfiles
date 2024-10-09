@@ -28,23 +28,23 @@ export USE_MANAGER="zinit" # omz | zinit
 
 # Prompt
 if [ "$USE_PROMPT" = "p10k" ]; then
-    zsh_add_source ~/.dotfiles/configs/prompts/p10k
+    add_source ~/.dotfiles/configs/prompts/p10k
 fi
 
 # <source packages required to be load before the plugins>
 
 # Manager
 if [ "$USE_MANAGER" = "omz" ]; then
-    zsh_add_source ~/.dotfiles/configs/managers/omz
+    add_source ~/.dotfiles/configs/managers/omz
 elif [ "$USE_MANAGER" = "zinit" ]; then
-    zsh_add_source ~/.dotfiles/configs/managers/zinit
+    add_source ~/.dotfiles/configs/managers/zinit
 fi
 # Prompt
 if [ "$USE_PROMPT" = "starship" ]; then
-    zsh_add_source ~/.dotfiles/configs/prompts/starship
+    add_source ~/.dotfiles/configs/prompts/starship
 fi
 # Plugins
-zsh_add_source ~/.dotfiles/configs/plugins/fzf
+add_source ~/.dotfiles/configs/plugins/fzf
 
 # <source packages required to be load after the plugins>
 
@@ -63,10 +63,10 @@ export PATH="$HOME/.dotfiles/helpers/terminal/:$PATH"
 chmod +x ~/.dotfiles/helpers/**/* ~/.dotfiles/helpers/**/.[!.]*
 
 # Custom
-zsh_add_source ~/.dotfiles/.aliases
-zsh_add_source ~/.dotfiles/.configs
-zsh_add_source ~/.dotfiles/.colors
-zsh_add_source ~/.dotfiles/.hooks
+add_source ~/.dotfiles/.aliases
+add_source ~/.dotfiles/.configs
+add_source ~/.dotfiles/.colors
+add_source ~/.dotfiles/.hooks
 ```
 
 > `OPEN` and `BROWSE` constants need to be configured according yor OS. Windows (WSL2) and macOS use the same command to open the file explorer or the default web browser, on Ubuntu (Linux) need to be specified each one.

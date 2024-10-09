@@ -1,4 +1,4 @@
 #!/bin/bash
 
-zsh_add_source ~/.dotfiles/configs/directories
-zsh_add_source ~/.dotfiles/configs/history
+add_source ~/.dotfiles/configs/directories
+add_source ~/.dotfiles/configs/history
