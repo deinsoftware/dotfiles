@@ -58,3 +58,6 @@ zinit cdreplay -q
 # Keybindings
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
+# Plugins Config
+unset ZSH_AUTOSUGGEST_USE_ASYNC
