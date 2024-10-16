@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "${B_YELLOW}${T_BLACK}ALERT:${F_RESET} Did you run ${F_BOLD}'$1'${F_RESET} command before?"
+echo "${T_GREEN}[ANY] = Continue ${F_RESET}| ${T_RED}[Ctrl+c] = Cancel ${F_RESET}"
+
+if [[ "$( which_os )" == "OSX" ]]; then
+    # Disable echo and set input to raw mode
+    stty -echo -icanon time 0 min 1
+    key=$(dd bs=1 count=1 2>/dev/null)
+    # Re-enable echo and canonical mode
+    stty echo icanon
+else
+    read -sk key
+fi
+
+quit="n"
