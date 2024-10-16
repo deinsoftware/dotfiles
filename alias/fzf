@@ -3,9 +3,9 @@
 # brew install fzf
 # brew install bat
 alias f="fzf"
-alias fp='fzf --preview="bat --color=always {}"'
-alias fc='.vscode $(fzf --multi --preview="bat --color=always {}")' # use tab for multiple selection
-alias fci='.vscode $(fzf --multi --preview="bat --color=always {}") -i -n' # use tab for multiple selection
+alias fzp='fzf --preview="bat --color=always {}"'
+alias fzc='.vscode $(fzf --multi --preview="bat --color=always {}")' # use tab for multiple selection
+alias fzi='.vscode $(fzf --multi --preview="bat --color=always {}") -i -n' # use tab for multiple selection
 
 alias fco='git branch | fzf | cut -c 3- | xargs git checkout'
 
