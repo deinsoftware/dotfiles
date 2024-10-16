@@ -1,0 +1,24 @@
+#!/bin/bash
+
+danger_validation(){
+  local cmd_current=$(echo $1 | xargs)
+
+  if [[ "$cmd_current" =~ ^"rm -rf /" ]]; then
+    ask_sure
+  elif [[ "$cmd_current" =~ ^"rm -rf" ]] || [[  "$cmd_current" =~ ^"rf" ]]; then
+    ask_sure
+  elif [[ "$cmd_current" =~ ^"git reset --hard HEAD" ]] || [[ "$cmd_current" =~ ^"guc" ]]; then
+    ask_sure
+  elif [[ "$cmd_current" =~ ^"git clean -f -d -x" ]] || [[ "$cmd_current" =~ ^"gca" ]]; then
+    ask_sure
+  fi
+}
+
+pre_danger() {
+  [[ $# -eq 0 ]] && return # If there's no input, return. Else...
+
+  danger_validation "$@"
+}
+
+add-zsh-hook preexec pre_danger       # Adds the pre hook
+# add-zsh-hook -d preexec pre_danger  # Remove it for this hook

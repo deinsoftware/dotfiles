@@ -1,14 +1,25 @@
 #!/bin/bash
 
 # Hooks
-local quit="y"
-local cmd=""
-local cmd_alias=""
+quit="y"
+cmd=""
+cmd_alias=""
 
 # File
-local file="package.json"
+config_file="package.json"
 
-add_source ~/.dotfiles/hooks/pos_validation
+# Package Manager
+package_manager="npm"
+install_frozen="rm -rf node_modules && npm cache clean --force && npm ci"
+if [[ ${SWPM+x} ]]; then
+    package_manager="swpm"
+    install_frozen="scf"
+fi
+
+add_source ~/.dotfiles/hooks/pre_command
+add_source ~/.dotfiles/hooks/pre_alias
+add_source ~/.dotfiles/hooks/pre_danger
 add_source ~/.dotfiles/hooks/pre_validation
+add_source ~/.dotfiles/hooks/pos_validation
 
 autoload -U add-zsh-hook                  # Load the zsh hook module

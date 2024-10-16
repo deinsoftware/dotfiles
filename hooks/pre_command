@@ -1,0 +1,12 @@
+#!/bin/bash
+
+pre_cmd() {
+    # Reset
+    quit="y" && cmd=""
+
+    [[ $# -eq 0 ]] && return # If there's no input, return. Else...
+    cmd="$1" # Save global for after validation
+}
+
+add-zsh-hook preexec pre_cmd       # Adds the pre hook
+# add-zsh-hook -d preexec pre_cmd  # Remove it for this hook
