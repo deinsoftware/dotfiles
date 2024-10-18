@@ -89,6 +89,7 @@ plugins=(
     1password
     brew
     git
+    history-substring-search
     node
     nvm
     sudo
@@ -96,7 +97,6 @@ plugins=(
     web-search
     z
     # custom
-    history-substring-search
     zsh-autosuggestions
     fast-syntax-highlighting
     ohmyzsh-full-autoupdate
