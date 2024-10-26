@@ -11,5 +11,5 @@ alias snd="scrcpy"
 alias scpr="scrcpy --no-audio --show-touches --record=android-screen-record.mp4"
 
 if [[ "$( which_os )" == "OSX" ]]; then
-    alias sdc='scrcpy && caffeinate -i -u -s "scrcpy"'
+    alias sdc='caffeinate -i -u -s "scrcpy"'
 fi
