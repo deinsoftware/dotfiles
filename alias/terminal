@@ -5,6 +5,10 @@ alias x="exit"
 alias e=".vscode -p Default -n -i \"~/.dotfiles/ ~/.zshrc ~/.dotfiles/configs/managers/${USE_MANAGER} ~/.dotfiles/.aliases ~/.dotfiles/.colors ~/.dotfiles/.hooks\""
 alias r="source ~/.zshrc"
 
+if [[ "$( which_os )" == "OSX" ]]; then
+    alias cf="caffeinate"
+fi
+
 alias zs="zsh_stats"
 alias mu="history -10"
 alias hc="history -c"
