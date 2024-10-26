@@ -9,3 +9,7 @@ alias ad="adb devices"
 alias scp="scrcpy --no-audio"
 alias snd="scrcpy"
 alias scpr="scrcpy --no-audio --show-touches --record=android-screen-record.mp4"
+
+if [[ "$( which_os )" == "OSX" ]]; then
+    alias sdc='scrcpy && caffeinate -i -u -s "scrcpy"'
+fi

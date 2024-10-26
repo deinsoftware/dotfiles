@@ -6,7 +6,7 @@ alias e=".vscode -p Default -n -i \"~/.dotfiles/ ~/.zshrc ~/.dotfiles/configs/ma
 alias r="source ~/.zshrc"
 
 if [[ "$( which_os )" == "OSX" ]]; then
-    alias cf="caffeinate"
+    alias cf="caffeinate -i -u"
 fi
 
 alias zs="zsh_stats"
