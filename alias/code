@@ -1,13 +1,24 @@
 #!/bin/bash
 
-# VSCode
+# vscode
 alias vc=".vscode" # <path> | "<paths> [-n]"
+# vscode insider
 alias vci=".vscode -n -i" # <path> | "<paths>"
+# vscode dotnet
 alias vcd=".vscode -p DotNet -n -i" # <path> | "<paths>"
+# vscode react
 alias vcr=".vscode -p React -n -i" # <path> | "<paths>"
+# vscode node
 alias vcn=".vscode -p Node -n -i" # <path> | "<paths>"
+# vscode bun
 alias vcb=".vscode -p Bun -n -i" # <path> | "<paths>"
+
+# Dev Playground (Run JS Alternativ)
+# https://github.com/deinsoftware/dev-playgrownd
+# vscode playground
+alias vcp=".vscode -p DevPlaygrond -n -i" # <path> | "<paths>"
 
 # Extensions
 # sag vsce
-alias vcp="vsce package --out build/"
+# vsce package build
+alias vpb="vsce package --out build/"
