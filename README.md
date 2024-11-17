@@ -1,22 +1,22 @@
 # dotfiles
 
-Languages: [🇪🇸] [Español](README.ES.md) - [🇺🇸] [English](README.md)
+Idiomas: [🇺🇸] [English](README.md) - [🇪🇸] [Español](README.ES.md)
 
-ZSH setup and productivity tools for development
+Configuración de ZSH y herramientas de productividad para desarrollo
 
 ## Repo
 
-### 1. Clone
+### 1. Clonar
 
-Clone this repo on `~/.dotfiles` path:
+En la ruta `~/.dotfiles` clonar este repositorio
 
 ```bash
 git clone https://github.com/deinsoftware/dotfiles.git ~/.dotfiles
 ```
 
-### 2. Setup
+### 2. Configurar
 
-On `.zshrc` file add.
+En el archivo `.zshrc` adicionar.
 
 ```bash
 # Utils
@@ -49,6 +49,8 @@ add_source ~/.dotfiles/configs/plugins/fzf
 # <source packages required to be load after the plugins>
 
 # Helpers
+export PLAYGROUND_DIR="$HOME/Developer/dein/dev-playground"
+
 export WINHOME=$(wslpath "$(wslvar USERPROFILE)")
 export OPEN="wslview" #wsl2
 export BROWSER="${OPEN}" #wsl2
@@ -69,7 +71,7 @@ add_source ~/.dotfiles/.colors
 add_source ~/.dotfiles/.hooks
 ```
 
-> `OPEN` and `BROWSE` constants need to be configured according yor OS. Windows (WSL2) and macOS use the same command to open the file explorer or the default web browser, on Ubuntu (Linux) need to be specified each one.
+> Las constantes `OPEN` y `BROWSE` necesitan ser configuradas de acuerdo al SO que se este usando. Windows (WSL2) y macOS usan el mismo comando para abrir el explorador de archivos como el navegador por defecto, en Ubuntu (Linux) se debe especificar cada uno por separado.
 
 | SO                | `OPEN`                                         | `BROWSER`                         |
 | ----------------- | ---------------------------------------------- | --------------------------------- |
@@ -78,21 +80,21 @@ add_source ~/.dotfiles/.hooks
 | macOS             | `"open"`                                       | `"${OPEN}"`                       |
 | Ubuntu            | `"xdg-open"`, `"gnome-open"`, `"nautilus"` ... | `"googlechrome"`, `"firefox"` ... |
 
-> On WSL require to install [wslu](https://wslutiliti.es)
+> Para WSL se require instalar [wslu](https://wslutiliti.es)
 
-### 3. Permissions
+### 3. Permisos
 
-Now add execution permission:
+Ahora adicione permisos de ejecución a los scripts de los `Helpers`:
 
 ```bash
 chmod +x ~/.dotfiles/helpers/**/* ~/.dotfiles/helpers/**/.[!.]*
 ```
 
-### 4. Update
+### 4. Actualizar
 
-Once finish, save `.zshrc` file, close and reopen all terminals or update his source running `source ~/.zshrc` command.
+Una vez termine, guarde el archivo `.zshrc`, cierre y reabra todas las terminales o actualice el archivo fuente ejecutando el comando `source ~/.zshrc`.
 
-That's all folks! It's ready to use.
+¡Eso es todo amigxs! Ya quedó listo para ser usado.
 
 ## Folder Structure
 
@@ -105,7 +107,6 @@ That's all folks! It's ready to use.
     │   ├── android
     │   ├── b64
     │   ├── code
-    │   ├── md
     │   ├── open
     │   ├── search
     │   └── terminal
@@ -115,29 +116,29 @@ That's all folks! It's ready to use.
     └── .hooks
 ```
 
-|Name          |Description                                                                                |
-|--------------|-------------------------------------------------------------------------------------------|
-|`.zshrc`      | ZSH source file                                                                           |
-|`configs`     | Folder with global configurations to use in other scripts                                 |
-|`helpers`     | Folder with custom helper functions to use as terminal commands                           |
-| ── `android` | Helper commands for Android tools                                                         |
-| ── `b64`     | Helper commands for file conversions to/from base64                                       |
-| ── `code`    | Helper commands to open VSCode                                                            |
-| ── `open`    | Helper commands to open file/folder on the File Explorer or open files/url on the Browser |
-| ── `search`  | Helper commands to search text inside files                                               |
-| ── `terminal`| Helper commands to talk with the OS                                                       |
-|`.aliases`    | File for aliases definitions                                                              |
-|`.colors`     | File with terminal colors to use in other scripts                                         |
-|`.configs`    | File for global configuratins.                                                            |
-|`.hooks`      | ZSH hooks file with custom functions to run as validation before and after run commands   |
+|Name          |Description                                                                                                 |
+|--------------|------------------------------------------------------------------------------------------------------------|
+|`.zshrc`      | Archivo fuente de ZSH                                                                                      |
+|`configs`     | Archivo con la definición de las configuraciones globales                                                  |
+|`helpers`     | Carpeta con las funciones `helper` (ayudantes) para usar como comandos en la terminal                      |
+| ── `android` | Comandos utilitarios para herramientas de Android                                                          |
+| ── `b64`     | Comandos para la conversion de archivos desde/hacia base64                                                 |
+| ── `code`    | Comandos para lanzar VSCode                                                                                |
+| ── `open`    | Commandos para abrir archivos/rutas en el Explorador de Archivos o abrir archivos/url en el Navegador      |
+| ── `search`  | Comandos para buscar textos en los archivos                                                                |
+| ── `terminal`| Comandos utilitarios del Sistema Operativo                                                                 |
+|`.aliases`    | Archivo con la definición de los alias                                                                     |
+|`.colors`     | Archivo con colores de terminal para usar en otros scripts                                                 |
+|`.configs`    | Archivo con la definición de las configuraciones globales                                                  |
+|`.hooks`      | Archivo con hooks de ZSH con funciones que corren antes o después de ejecutar algún comando en la terminal |
 
-## Plugins
+## ZSH plugins
 
-**Oh My zsh!** have [a lot of plugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins) to use. It's recommended to explore the options and use what is good for your needs.
+**Oh My zsh!** tiene [un montón de plugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins) para usar. Se recomienda explorar las opciones y usar las que son más adecuadas para tus necesidades.
 
-> If you are using **NVM** take care of following this [configuration to avoid slowing the zsh start-up](https://lakur.tech/2021/12/10/fix-slow-zsh-startup-nvm/) and this [configuration to speed up the compinit](https://gist.github.com/ctechols/ca1035271ad134841284?permalink_comment_id=3365691)
+> Si estás utilizando **NVM**, asegúrate de revisar esta [configuración para evitar ralentizar el inicio de Zsh](https://lakur.tech/2021/12/10/fix-slow-zsh-startup-nvm-es/) y esta [configuración para acelerar el compinit](https://gist.github.com/ctechols/ca1035271ad134841284?permalink_comment_id=3365691)
 
-### Official
+### Oficiales
 
 * [adb](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/adb)
 * [brew](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/brew)
@@ -169,7 +170,7 @@ git clone https://github.com/Pilaton/OhMyZsh-full-autoupdate.git ${ZSH_CUSTOM:-~
 git clone https://github.com/MichaelAquilina/zsh-you-should-use.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-you-should-use
 ```
 
-Edit the `~/.zshrc` file and add it inside the `plugins` property (don't use commas as separators).
+Edita el archivo `~/.zshrc` y agrega los plugins dentro de la propiedad `plugins` (no uses comas como separadores).
 
 ```diff
 plugins=(
@@ -181,7 +182,9 @@ plugins=(
 )
 ```
 
-## Article Series
+## Serie de Articulo
+
+Inglés:
 
 * [iTerm2 + Oh My Zsh! + Powerlevel10K best terminal combination for Geeks!](https://dev.to/equiman/iterm2--oh-my-zsh--powerlevel9k-best-terminal-combination-for-geeks-58l5)
 * [Why Oh My ZSH is so cool?](https://dev.to/equiman/why-oh-my-zsh-is-so-cool-31gd)
@@ -191,32 +194,36 @@ plugins=(
 * [Open File Explorer and Browser from ZSH](https://dev.to/equiman/open-file-explorer-and-browser-mbb)
 * [ZSH cheatsheet for git plugin](https://dev.to/equiman/zsh-cheatsheet-for-git-plugin-1f6a)
 
+Español:
+
+* [Mover el Sistema de Archivos de WSL a otro disco](https://dev.to/equimancho/mover-el-sistema-de-archivos-de-wsl-a-otro-disco-3fbi)
+
 ---
 
-## About
+## Acerca
 
-### Built With
+### Construido
 
-* [VS Code](https://code.visualstudio.com/) - Code editing redefined.
-* [Widows Terminal](https://github.com/Microsoft/Terminal/) - A modern terminal application for users of command-line tools and shells.
+*-* [VS Code](https://code.visualstudio.com/) - Edición de código re-definida.
+*-* [Widows Terminal](https://github.com/Microsoft/Terminal/) - Una aplicación de terminal moderna para usuarios de la línea de comandos.
 
-### Versioning
+### Versionamiento
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [ZSH Dev Toolkit](https://github.com/deinsoftware/zsh-dev-toolkit/tags) on GitHub.
+Usamos [SemVer](https://semver.org/lang/es/) para el versionamiento. Para las versiones disponible, vaya a [ZSH Dev Toolkit](https://github.com/deinsoftware/zsh-dev-toolkit/tags) en GitHub.
 
 ### Authors
 
-* **Camilo Martinez** [Equiman](http://github.com/equiman)]
+* **Camilo Martinez** [[Equiman](http://stackoverflow.com/story/equiman)]
 
-See also the list of [contributors](https://github.com/deinsoftware/zsh-dev-toolkit/contributors) who participated in this project.
+También puede ver la lista de los [contribuyentes](https://github.com/deinsoftware/zsh-dev-toolkit/contributors) que han participado en este proyecto.
 
-### Sponsors
+### Patrocinadores
 
-If this project helps you, consider buying me a cup of coffee.
+Si este proyecto te ayudó, por favor considera invitarme a un café.
 
 [![GitHub Sponsors](https://img.shields.io/badge/-GitHub%20Sponsors-gray?style=flat&labelColor=171515&logo=github&logoColor=white&link=https://github.com/sponsors/deinsoftware)](https://github.com/sponsors/deinsoftware)
 [![paypal](https://img.shields.io/badge/-PayPal-gray?style=flat&labelColor=00457C&logo=paypal&logoColor=white&link=https://paypal.me/equiman/3)](https://paypal.me/equiman/3)
 
-### License
+### Licencia
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
+Este proyecto esta licenciado bajo la Licencia MIT - vea [LICENCIA](LICENSE.md) para mas detalles.
