@@ -15,8 +15,10 @@ alias vcb=".vscode -p Bun -n -i" # <path> | "<paths>"
 
 # Dev Playground (Run JS Alternative)
 # https://github.com/deinsoftware/dev-playgrownd
-# vscode playground
-alias vcp=".vscode -p DevPlayground -n -i ${PLAYGROUND_DIR}" # <path> | "<paths>"
+# vscode dev playground (project)
+alias vcdp=".vscode -p DevPlayground -n -i ${PLAYGROUND_DIR}" # <path> | "<paths>"
+# vscode dev playground (profile)
+alias vcp=".vscode -p DevPlayground -n -i " # <path> | "<paths>"
 
 # Extensions
 # sag vsce
