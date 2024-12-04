@@ -21,11 +21,11 @@ fish_style_pwd_dir_length = 2
 truncate_to_repo = true
 
 [directory.substitutions]
-'Documents' = '󰈙 Documents'
-'Downloads' = ' Downloads'
-'Music' = ' Music'
-'Pictures' = ' Pictures'
-"Developer" = '󱌢 Developer'
+'Documents' = '󰈙'
+'Downloads' = ''
+'Music' = ''
+'Pictures' = ''
+"Developer" = '󱌢'
 
 [git_branch]
 symbol = " "
