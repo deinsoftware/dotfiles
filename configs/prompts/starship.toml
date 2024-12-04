@@ -15,13 +15,14 @@ format = '[$read_only]($read_only_style) [$path]($style) '
 read_only = " "
 read_only_style = "cyan"
 style = "cyan"
-truncation_length = 1
+truncation_length = 3
 truncation_symbol = '…/'
+fish_style_pwd_dir_length = 2
 truncate_to_repo = false
 
 [directory.substitutions]
 'Documents' = '󰈙 Documents'
-'Downloads' = ' Dowloads'
+'Downloads' = ' Downloads'
 'Music' = ' Music'
 'Pictures' = ' Pictures'
 "Developer" = '󱌢 Developer'
@@ -32,8 +33,15 @@ format = "[$symbol$branch]($style) "
 style = "bright-black"
 
 [git_status]
-format = '([\[$all_status$ahead_behind\]]($style) )'
+format = '([$all_status$ahead_behind]($style) )'
 style = "cyan"
+# conflicted = "󰢪 "
+untracked = "󰘓 "
+stashed = "󰪶 "
+modified = " "
+staged = " "
+deleted = "󰮘 "
+renamed = "󱇧 "
 
 [git_state]
 format = '\([$state( $progress_current/$progress_total)]($style)\) '
