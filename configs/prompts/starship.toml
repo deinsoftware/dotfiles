@@ -1,20 +1,41 @@
-format = """
+
+format = """\
+[](bg:directory_bg)\
 $directory\
+[](fg:directory_bg bg:git_bg)\
 $git_branch\
 $git_state\
 $git_status\
 $git_metrics\
+[](fg:git_bg)\
 $fill\
 $nodejs\
 $cmd_duration $jobs\
 $line_break
-$character"""
+$character\
+"""
+
+palette = 'dein'
+
+[palettes.dein]
+directory_bg = '#006891'
+directory_fg = '#dbdfe5'
+directory_read_only = '#6ba1f2'
+git_bg = '#242d3c'
+git_fg = '#6ba1f2'
+git_icon = '#dbdfe5'
+node_bg = '#689d6a'
+node_fg = '#dbdfe5'
+duration_bg = '#d79920'
+duration_fg = '#dbdfe5'
+jobs_bg = '#d65c0e'
+jobs_fg = '#dbdfe5'
 
 [directory]
-format = '[$read_only]($read_only_style) [$path]($style) '
-read_only = " "
-read_only_style = "cyan"
-style = "cyan"
+format = '[$read_only]($read_only_style)[ $path]($style)'
+read_only = " "
+read_only_style = "bg:directory_bg fg:directory_read_only"
+style = "bg:directory_bg fg:directory_fg"
 truncation_length = 3
 truncation_symbol = '…/'
 fish_style_pwd_dir_length = 2
@@ -28,14 +49,14 @@ truncate_to_repo = true
 "Developer" = '󱌢'
 
 [git_branch]
-symbol = " "
-format = "[$symbol$branch]($style) "
-style = "bright-black"
+symbol = "  "
+format = "[$symbol](bg:git_bg fg:git_icon)[$branch ]($style)"
+style = "bg:git_bg fg:git_fg"
 
 [git_status]
-format = '([$all_status$ahead_behind]($style) )'
-style = "cyan"
-# conflicted = "󰢪 "
+format = '([$all_status$ahead_behind]($style))'
+style = "bg:git_bg fg:git_icon"
+conflicted = "󰢪 "
 untracked = "󰘓 "
 stashed = "󰪶 "
 modified = " "
@@ -54,15 +75,16 @@ disabled = false
 symbol = " "
 
 [nodejs]
-format = "[$symbol($version )]($style)"
+format = "[](node_bg)[ $symbol($version )]($style)"
+style = "bg:node_bg fg:black"
 
 [cmd_duration]
-format = "[$duration]($style)"
-style = "yellow"
+format = "[ $duration ]($style)"
+style = "bg:duration_bg fg:duration_fg"
 
 [jobs]
-symbol = ""
-style = "bold red"
+symbol = "  "
+style = "bg:jobs_bg fg:jobs_fg"
 number_threshold = 1
 format = "[$symbol]($style)"
 
@@ -70,5 +92,6 @@ format = "[$symbol]($style)"
 disabled = true
 
 [character]
-success_symbol = "[❯](purple)"
+success_symbol = "[❯](green)"
 error_symbol = "[❯](red)"
+vicmd_symbol = "[❮](purple)"
