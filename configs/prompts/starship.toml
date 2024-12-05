@@ -6,7 +6,6 @@ $directory\
 $git_branch\
 $git_state\
 $git_status\
-$git_metrics\
 [](fg:git_bg)\
 $fill\
 $nodejs\
@@ -70,12 +69,6 @@ renamed = "󱇧 "
 [git_state]
 format = '\([$state($progress_current/$progress_total) ]($style)\)'
 style = "bg:git_bg fg:git_fg"
-
-[git_metrics]
-format = '[+$added ]($added_style)[-$deleted]($deleted_style)'
-disabled = false
-added_style = 'bg:git_bg fg:git_fg_added'
-deleted_style = 'bg:git_bg fg:git_fg_deleted'
 
 [fill]
 symbol = " "
