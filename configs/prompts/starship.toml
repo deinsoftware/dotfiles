@@ -23,8 +23,7 @@ directory_read_only = '#6ba1f2'
 git_bg = '#242d3c'
 git_fg = '#6ba1f2'
 git_icon = '#dbdfe5'
-git_fg_added = 'green'
-git_fg_deleted = 'red'
+git_state_fg = '#d79920'
 node_bg = '#689d6a'
 node_fg = '#0e0e0e'
 node_icon = '#dbdfe5'
@@ -56,7 +55,7 @@ format = "[$symbol](bg:git_bg fg:git_icon)[$branch ]($style)"
 style = "bg:git_bg fg:git_fg"
 
 [git_status]
-format = '([$all_status$ahead_behind]($style))'
+format = '([ $all_status$ahead_behind]($style))'
 style = "bg:git_bg fg:git_icon"
 conflicted = "󰢪 "
 untracked = "󰘓 "
@@ -67,8 +66,8 @@ deleted = "󰮘 "
 renamed = "󱇧 "
 
 [git_state]
-format = '\([$state($progress_current/$progress_total) ]($style)\)'
-style = "bg:git_bg fg:git_fg"
+format = '\([$state($progress_current/$progress_total)]($style)\)'
+style = "bg:git_bg fg:git_state_fg"
 
 [fill]
 symbol = " "
