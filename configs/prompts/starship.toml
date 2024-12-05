@@ -24,6 +24,8 @@ directory_read_only = '#6ba1f2'
 git_bg = '#242d3c'
 git_fg = '#6ba1f2'
 git_icon = '#dbdfe5'
+git_fg_added = 'green'
+git_fg_deleted = 'red'
 node_bg = '#689d6a'
 node_fg = '#0e0e0e'
 node_icon = '#dbdfe5'
@@ -66,17 +68,20 @@ deleted = "󰮘 "
 renamed = "󱇧 "
 
 [git_state]
-format = '\([$state( $progress_current/$progress_total)]($style)\) '
-style = "bright-black"
+format = '\([$state($progress_current/$progress_total) ]($style)\)'
+style = "bg:git_bg fg:git_fg"
 
 [git_metrics]
+format = '[+$added ]($added_style)[-$deleted]($deleted_style)'
 disabled = false
+added_style = 'bg:git_bg fg:git_fg_added'
+deleted_style = 'bg:git_bg fg:git_fg_deleted'
 
 [fill]
 symbol = " "
 
 [nodejs]
-format = "[](node_bg)[ $symbol](bg:node_bg fg:node_icon)[($version )]($style)"
+format = "[](node_bg)[$symbol](bg:node_bg fg:node_icon)[($version )]($style)"
 style = "bg:node_bg fg:node_fg"
 
 [cmd_duration]
