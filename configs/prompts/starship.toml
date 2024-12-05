@@ -25,7 +25,8 @@ git_bg = '#242d3c'
 git_fg = '#6ba1f2'
 git_icon = '#dbdfe5'
 node_bg = '#689d6a'
-node_fg = '#dbdfe5'
+node_fg = '#0e0e0e'
+node_icon = '#dbdfe5'
 duration_bg = '#d79920'
 duration_fg = '#dbdfe5'
 jobs_bg = '#d65c0e'
@@ -75,8 +76,8 @@ disabled = false
 symbol = " "
 
 [nodejs]
-format = "[](node_bg)[ $symbol($version )]($style)"
-style = "bg:node_bg fg:black"
+format = "[](node_bg)[ $symbol](bg:node_bg fg:node_icon)[($version )]($style)"
+style = "bg:node_bg fg:node_fg"
 
 [cmd_duration]
 format = "[ $duration ]($style)"
