@@ -83,10 +83,10 @@ format = "[ $duration ]($style)"
 style = "bg:duration_bg fg:duration_fg"
 
 [jobs]
-symbol = "  "
+symbol = ""
 style = "bg:jobs_bg fg:jobs_fg"
 number_threshold = 1
-format = "[$symbol]($style)"
+format = "[ $symbol ]($style)"
 
 [line_break]
 disabled = true
