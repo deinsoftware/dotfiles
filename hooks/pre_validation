@@ -12,7 +12,7 @@ before_validation(){
   # publish package
   if [[ -f "$config_file" ]] && ( [[ "$cmd_current" =~ ^"${package_manager} publish" ]] || [[ "${cmd_alias}" =~ ^"${package_manager} publish" ]] ); then
     cmd_validation="${package_manager} run build"
-  # ceate Branch
+  # create branch
   elif [[ "$cmd_current" =~ ^"git checkout -b" ]] || [[ "${cmd_alias}" =~ ^"git checkout -b" ]]; then
     cmd_validation="git pull"
   elif [[ "$cmd_current" =~ ^"git switch -c" ]] || [[ "${cmd_alias}" =~ ^"git switch -c" ]]; then
