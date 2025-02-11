@@ -8,6 +8,7 @@ alias ad="adb devices"
 # brew install scrcpy
 alias scp="scrcpy --no-audio"
 alias snd="scrcpy"
+alias scpi="scrcpy --no-audio --show-touches --mouse=aoa --keyboard=aoa"
 alias scpr="scrcpy --no-audio --show-touches --record=android-screen-record.mp4"
 
 if [[ "$( which_os )" == "OSX" ]]; then
