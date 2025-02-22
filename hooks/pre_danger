@@ -7,7 +7,7 @@ danger_validation(){
     ask_sure
   elif [[ "$cmd_current" =~ ^"rm -rf" ]] || [[  "$cmd_current" =~ ^"rf" ]]; then
     ask_sure
-  elif [[ "$cmd_current" =~ ^"git reset --hard HEAD" ]] || [[ "$cmd_current" =~ ^"guc" ]]; then
+  elif [[ "$cmd_current" =~ "reset --hard HEAD"$ ]] || [[ "$cmd_current" =~ ^"guc" ]]; then
     ask_sure
   elif [[ "$cmd_current" =~ ^"git clean -f -d -x" ]] || [[ "$cmd_current" =~ ^"gca" ]]; then
     ask_sure
