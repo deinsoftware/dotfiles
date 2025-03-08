@@ -16,7 +16,7 @@ if [[ ${SWPM+x} ]]; then
     install_frozen="scf"
 fi
 if [[ -f "lerna.json" ]]; then
-    install_frozen="npm run clean && npm run init"
+    install_frozen="npm run clean:frozen && npm run init:frozen"
 fi
 
 add_source ~/.dotfiles/hooks/pre_command
