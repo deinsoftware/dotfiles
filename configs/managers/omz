@@ -87,7 +87,7 @@ export NVM_LAZY=1
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     1password
-    brew
+    # brew
     git
     history-substring-search
     node

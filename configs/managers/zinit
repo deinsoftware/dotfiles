@@ -30,7 +30,7 @@ zinit light agkozak/zsh-z
 
 # Snippets
 zinit snippet OMZP::1password
-zinit snippet OMZP::brew
+# zinit snippet OMZP::brew
 zinit snippet OMZP::git
 zinit snippet OMZP::node
 zinit snippet OMZP::sudo
