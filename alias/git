@@ -1,21 +1,33 @@
 #!/bin/bash
 
 # Git
-alias gkm="git config --global init.defaultBranch $(git_main_branch)"
-alias gkg="git config --edit --global"
-alias gkl="git config --edit --local"
-alias guc="git reset --hard HEAD" # undo changes and preserve untracked files
-alias gca="git clean -f -d -x" # clean ALL changes and remove untracked files
-alias gral="git checkout -- ." #revert at last commit
-alias gcd="git checkout $(git_develop_branch)"
-alias gcm="git checkout $(git_main_branch)"
-alias glod="git pull origin $(git_develop_branch)"
-alias glom="git pull origin $(git_main_branch)"
-alias gpnv="git push --no-verify"
-alias gce="git commit --allow-empty -m " # <message>
 
-# Precommit
-alias pcsc="PRE_COMMIT_ALLOW_NO_CONFIG=1" # skip pre-commit config
+# git config main as default branch
+alias gkm="git config --global init.defaultBranch $(git_main_branch)"
+# git konfig global
+alias gkg="git config --edit --global"
+# git konfig local
+alias gkl="git config --edit --local"
+# git undo changes
+alias guc="git reset --hard HEAD" # undo changes and preserve untracked files
+# git clean all
+alias gca="git clean -f -d -x" # clean ALL changes and remove untracked files
+# git revert at last commit
+alias gral="git checkout -- ." #revert at last commit
+# git checkout develop
+alias gcd="git checkout $(git_develop_branch)"
+# git checkout main/master
+alias gcm="git checkout $(git_main_branch)"
+# git pull origin develop
+alias glod="git pull origin $(git_develop_branch)"
+#git pull origin main/master
+alias glom="git pull origin $(git_main_branch)"
+# git push no verify
+alias gpnv="git push --no-verify"
+# git commit empty
+alias gce="git commit --allow-empty -m " # <message>
+# git re-commit
+alias grc="git commit --amend --no-edit && git push -f"
 
 # https://github.com/Everduin94/better-commits
 # sag better-commits
