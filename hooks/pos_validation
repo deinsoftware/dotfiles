@@ -26,6 +26,8 @@ after_validation(){
         ask_cancel_after "git pull${install_packages}"
     elif [[ "$cmd" =~ ^"gswd" ]] || [[ "$cmd" =~ ^"gswm" ]]; then
         ask_cancel_after "git pull${install_packages}"
+    elif [[ "$cmd" =~ ^"fco" ]]; then
+        ask_cancel_after "git pull${install_packages}"
     fi
 }
 

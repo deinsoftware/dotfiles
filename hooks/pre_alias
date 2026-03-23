@@ -20,7 +20,7 @@ expand_command_line() {
   first=$(echo "$1" | awk '{print $1;}')
   rest=$(echo ${${1}/"${first}"/})
 
-  if [[ -n "${first//-//}" ]]; then # is not hypen
+  if [[ -n "${first//-//}" ]]; then # is not hyphen
     cmd_alias="$(alias_for "${first}" "${rest:1}")" # Check if there's an alias for the command
     if [[ -n $cmd_alias ]] && [[ "${cmd_alias:0:1}" != "." ]]; then # If there was and not start with dot
       echo "${T_GREEN}❯ ${T_YELLOW}${cmd_alias}${F_RESET}\n" # Print it
