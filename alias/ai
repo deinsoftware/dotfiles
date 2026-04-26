@@ -25,4 +25,4 @@ alias aimd='aider --model ollama/deepseek-coder-v2:lite'
 alias aims='aider --model ollama/starcoder2:3b'
 
 # aider model qwen (basic and quick)
-alias aimq='aider --model ollama/qwen2.5-coder:7b-instruct-q4_K_M'
+alias aimq='aider --model ollama/qwen2.5-coder:1.5b'
