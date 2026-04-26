@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# aider install python uv (once)
+alias aipu='choco install python uv -y'
+
+# aides install (once)
+alias aii='uv tool install aider-chat'
+
+# aider install ollama (once)
+alias aio='choco install ollama  -y'
+
+# ollama pull deepseek (12+ gb ram)
+alias opd='ollama pull deepseek-coder-v2:lite'
+
+# ollama pull starcoder (3 gb ram)
+alias ops='ollama pull starcoder2:3b'
+
+# ollama pull qwen (1.5 gb ram)
+alias opq='ollama pull qwen2.5-coder:1.5b'
+
+# aider model ollama (excellent)
+alias aimd='aider --model ollama/deepseek-coder-v2:lite'
+
+# aider model starcoder (decent)
+alias aims='aider --model ollama/starcoder2:3b'
+
+# aider model qwen (basic and quick)
+alias aimq='aider --model ollama/qwen2.5-coder:7b-instruct-q4_K_M'

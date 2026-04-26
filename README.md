@@ -55,17 +55,12 @@ export WINHOME=$(wslpath "$(wslvar USERPROFILE)")
 export OPEN="wslview" #wsl2
 export BROWSER="${OPEN}" #wsl2
 
-export PATH="$HOME/.dotfiles/helpers/android/:$PATH"
-export PATH="$HOME/.dotfiles/helpers/b64/:$PATH"
-export PATH="$HOME/.dotfiles/helpers/code/:$PATH"
-export PATH="$HOME/.dotfiles/helpers/md/:$PATH"
-export PATH="$HOME/.dotfiles/helpers/open/:$PATH"
-export PATH="$HOME/.dotfiles/helpers/search/:$PATH"
-export PATH="$HOME/.dotfiles/helpers/terminal/:$PATH"
-chmod +x ~/.dotfiles/helpers/**/* ~/.dotfiles/helpers/**/.[!.]*
+# Utils
+source ${HOME}/.dotfiles/utils/source
 
 # Custom
 add_source ~/.dotfiles/.aliases
+add_source ~/.dotfiles/.helpers
 add_source ~/.dotfiles/.configs
 add_source ~/.dotfiles/.colors
 add_source ~/.dotfiles/.hooks

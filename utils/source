@@ -5,3 +5,13 @@ add_source() {
     . "$1"
   fi
 }
+
+which_os() {
+  case "$(uname -s)" in
+    Darwin*)  echo "OSX" ;;
+    Linux*)   echo "LINUX" ;;
+    CYGWIN*)  echo "WINDOWS" ;;
+    MINGW*)   echo "WINDOWS" ;;
+    *)        echo "UNKNOWN" ;;
+  esac
+}

@@ -1,0 +1,8 @@
+export PATH="$HOME/.dotfiles/helpers/b64/:$PATH"
+export PATH="$HOME/.dotfiles/helpers/code/:$PATH"
+export PATH="$HOME/.dotfiles/helpers/md/:$PATH"
+export PATH="$HOME/.dotfiles/helpers/open/:$PATH"
+export PATH="$HOME/.dotfiles/helpers/search/:$PATH"
+export PATH="$HOME/.dotfiles/helpers/terminal/:$PATH"
+
+chmod +x ~/.dotfiles/helpers/**/* ~/.dotfiles/helpers/**/.[!.]*

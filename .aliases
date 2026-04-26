@@ -5,6 +5,7 @@ add_source ~/.dotfiles/alias/terminal
 add_source ~/.dotfiles/alias/utils
 
 # Development
+add_source ~/.dotfiles/alias/ai
 add_source ~/.dotfiles/alias/android
 add_source ~/.dotfiles/alias/code
 add_source ~/.dotfiles/alias/fzf
