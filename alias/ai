@@ -26,3 +26,6 @@ alias aims='aider --model ollama/starcoder2:3b'
 
 # aider model qwen (basic and quick)
 alias aimq='aider --model ollama/qwen2.5-coder:1.5b'
+
+# aider model groq (cloud)
+alias aimg='aider --model groq/llama-3.1-70b-versatile'
